@@ -1,6 +1,6 @@
 # General
-node_modules
-public
+node_modules/
+public/
 .DS_Store
 .AppleDouble
 .LSOverride
