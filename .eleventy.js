@@ -1,18 +1,13 @@
-module.exports = function(eleventyConfig) {
-    eleventyConfig.addWatchTarget("./src/sass/");
+module.exports = function (eleventyConfig) {
+  eleventyConfig.addWatchTarget("src/assets/");
+  eleventyConfig.addPassthroughCopy("src/tailwind.config.js");
+  eleventyConfig.addPassthroughCopy("src/postcss.config.js");
+  eleventyConfig.addPassthroughCopy({ "src/assets/js/*": "assets/js" });
 
-    eleventyConfig.addFilter("randomPost", (arr) => {
-        arr.sort(() => {
-            return 0.5 - Math.random();
-        });
-
-        return arr.slice(0, 1);
-    });
-
-    return {
-        dir: {
-            input: "src",
-            output: "public",
-        }
-    };
+  return {
+    dir: {
+      input: "src",
+      output: "public",
+    },
+  };
 };
