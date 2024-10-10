@@ -7,6 +7,11 @@ module.exports = {
     "./src/index.{html,md,11ty.js,liquid,njk,hbs,mustache,ejs,haml,pug}",
   ],
   theme: {
+    fontFamily: {
+      sans: ["Work Sans", "regular"],
+      serif: ["Merriweather", "regular"],
+      slab: ["Montserrat Alternates", "black"],
+    },
     extend: {},
   },
   plugins: [],
