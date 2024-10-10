@@ -3,12 +3,12 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "npm-run-all -p dev:*",
+    "start": "npm-run-all clean --parallel watch:*",
     "build": "run-s clean build:*",
-    "dev:11ty": "eleventy --serve",
-    "dev:css": "tailwindcss -i src/assets/css/styles.css -o public/assets/css/styles.css --watch --postcss",
+    "watch:11ty": "eleventy --serve",
+    "watch:css": "tailwindcss -i src/assets/css/tailwind.css -o public/assets/css/tailwind.css --watch --postcss",
     "build:11ty": "eleventy",
-    "build:css": "tailwindcss -i src/assets/css/styles.css -o public/assets/css/styles.css --postcss",
+    "build:css": "tailwindcss -i src/assets/css/tailwind.css -o public/assets/css/tailwind.css --postcss",
     "clean": "rimraf public"
   },
   "keywords": [],
@@ -18,8 +18,7 @@
   "dependencies": {
     "@11ty/eleventy": "^2.0.1",
     "npm-run-all": "^4.1.5",
-    "rimraf": "^6.0.1",
-    "sass": "^1.78.0"
+    "rimraf": "^6.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.20",
