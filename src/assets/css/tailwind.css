@@ -7,10 +7,14 @@
         @apply text-6xl font-bold tracking-tight sm:text-8xl lg:mb-8 lg:mt-10;
     }
 
-    h1.home_header {
-        -webkit-text-stroke: 8px white;
+    .hero h1 {
+        /* -webkit-text-stroke: 8px white;
         paint-order: stroke fill;
-        text-shadow: 10px 10px 0 #000;
+        text-shadow: 10px 10px 0 #000; */
+    }
+
+    .hero p {
+        @apply text-2xl mb-4;
     }
 
     h2 {
