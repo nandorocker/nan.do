@@ -4,9 +4,10 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addWatchTarget("tailwind.config.js");
 
   // Passthrough copy for assets (JS, images, fonts)
-  eleventyConfig.addPassthroughCopy({ "src/assets/js/*": "." });
-  eleventyConfig.addPassthroughCopy({ "src/assets/images/*": "assets/images" });
-  eleventyConfig.addPassthroughCopy({ "src/assets/fonts/*": "assets/fonts" });
+  eleventyConfig.addPassthroughCopy("src/assets/css/style.css");
+  eleventyConfig.addPassthroughCopy("src/assets/js/*");
+  eleventyConfig.addPassthroughCopy("src/assets/images/*");
+  eleventyConfig.addPassthroughCopy("src/assets/fonts/*");
 
   // Optional advanced chokidar setup
   eleventyConfig.setServerOptions({
