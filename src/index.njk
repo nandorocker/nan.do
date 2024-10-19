@@ -2,49 +2,53 @@
 title: "nan.do rossi, freelance product designer"
 layout: "base.njk"
 ---
-
-<section class="bg-violet-300 flex items-end hero">
-  <div class="relative isolate lg:max-w-5xl xl:max-w-7xl">
-    <h3 class="text-blue-950">
-      Hi, I'm nando rossi — available for freelance work
-    </h3>
-    <h1 class="text-blue-950">
-      I make soulful software that people love to use.
-    </h1>
-    <p>
-      With almost 20 years of experience, I’ve helped brands like TestFlight,
-      the Berlin Philharmonic, and Disney to create and evolve beloved products,
-      through strategy, function with delight. How can I help you?
-    </p>
-  </div>
-</section>
-<section class="grid lg:grid-cols-2 bg-teal-700 text-slate-50">
-  <h1>My Services</h1>
-  <ul>
-    <li class="mb-10">
-      <h2>Workshops</h2>
+<main class="relative min-h-screen flex flex-col bg-lavender transition-colors duration-700 overflow-hidden"
+  data-bg-scroll>
+  <section class="hero" data-bg-class="bg-lavender">
+    <div class="lg:max-w-5xl xl:max-w-7xl px-6 lg:px-16 py-24">
+      <h3 class="text-blue-950">
+        Hi, I'm nando rossi — available for freelance work
+      </h3>
+      <h1 class="text-blue-950">
+        I make soulful software that people love to use.
+      </h1>
       <p>
-        Facilitate team workshops both remotely and on-site, out-of-the-box or
-        custom to your needs. My Foundation Workshop helps kickoff successful
-        projects.
+        With almost 20 years of experience, I’ve helped brands like TestFlight,
+        the Berlin Philharmonic, and Disney to create and evolve beloved products,
+        through strategy, function with delight. How can I help you?
       </p>
-    </li>
-
-    <li class="mb-10">
-      <h2>Direction & Strategy Consultation</h2>
-      <p>Pointing your business towards the bigger picture by setting out strategical goals for your team and product.
-      </p>
-    </li>
-    <li class="mb-10">
-      <h2>User Experience (UX) Design</h2>
-      <p>Helping you identify core bottlenecks and offer meaningful solutions for faster production.</p>
-    </li>
     </div>
-</section>
-<section class="bg-emerald-600 text-slate-50">
-  <h1>Work Highlights</h1>
+  </section>
+  <section class="grid lg:grid-cols-2 text-blue-950" data-bg-class="bg-lime">
+    <h1>My Services</h1>
+    <ul>
+      <li class="mb-10">
+        <h2>Workshops</h2>
+        <p>
+          Facilitate team workshops both remotely and on-site, out-of-the-box or
+          custom to your needs. My Foundation Workshop helps kickoff successful
+          projects.
+        </p>
+      </li>
 
-</section>
+      <li class="mb-10">
+        <h2>Direction & Strategy Consultation</h2>
+        <p>Pointing your business towards the bigger picture by setting out strategical goals for your team and product.
+        </p>
+      </li>
+      <li class="mb-10">
+        <h2>User Experience (UX) Design</h2>
+        <p>Helping you identify core bottlenecks and offer meaningful solutions for faster production.</p>
+      </li>
+      </div>
+  </section>
+  <section class="text-slate-50" data-bg-class="bg-cherry">
+    <h1>Work Highlights</h1>
+
+  </section>
+</main>
 <footer>
   Some text here.
 </footer>
+
+<script src="{{ 'assets/js/scroll_anim.js' | url }}"></script>
