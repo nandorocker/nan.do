@@ -9,7 +9,15 @@ module.exports = {
       serif: ["Merriweather", "regular"],
       slab: ["Montserrat Alternates", "black"],
     },
-    extend: {},
+    extend: {
+      colors: {
+        lavender: "#c6c2f2",
+        obsidian: "#262628",
+        cream: "#fff6ee",
+        lime: "#d6dc82",
+        cherry: "#d86072",
+      },
+    },
   },
   plugins: [],
 };
