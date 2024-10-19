@@ -17,6 +17,10 @@
         @apply text-2xl mb-4;
     }
 
+    .hero .photo {
+        
+    }
+
     h2 {
         @apply text-5xl font-bold lg:mb-4 lg:mt-8;
     }
@@ -34,6 +38,6 @@
     }
 
     section {
-        @apply px-6 lg:px-16 py-24 min-h-screen;
+        @apply min-h-screen;
     }
 }
