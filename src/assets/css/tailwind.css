@@ -14,7 +14,7 @@
     }
 
     .hero p {
-        @apply text-2xl mb-4;
+        @apply text-xl;
     }
 
     .hero .photo {
@@ -22,7 +22,7 @@
     }
 
     h2 {
-        @apply text-5xl font-bold lg:mb-4 lg:mt-8;
+        @apply text-6xl font-bold;
     }
 
     h3 {
@@ -34,10 +34,34 @@
     }
 
     p {
-        @apply text-lg font-serif;
+        @apply text-lg;
     }
 
-    section {
-        @apply min-h-screen;
+    .section {
+        @apply px-8 lg:px-16;
+    }
+
+    .section.standard {
+        @apply py-40 xl:max-w-screen-2xl;
+    }
+}
+
+@layer components {
+    .button {
+        @apply bg-obsidian hover:bg-slate-800 text-cream rounded-full;
+    }
+
+    .button.large {
+        @apply text-lg font-bold px-10 py-4;
+    }
+
+    .button.small {
+        @apply text-sm px-4 py-2;
+    }
+}
+
+@layer utilities {
+    .two-col {
+        @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1fr_2fr] gap-8;
     }
 }

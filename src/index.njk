@@ -2,54 +2,221 @@
 title: "nan.do rossi, freelance product designer"
 layout: "base.njk"
 ---
-<main
-  class="relative min-h-screen flex flex-col bg-lavender text-blue-950 transition-colors duration-700 overflow-hidden"
+<main class="relative min-h-screen bg-lavender text-obsidian transition-colors duration-700 overflow-hidden"
   data-bg-scroll>
-  <section class="hero" data-bg-class="bg-lavender">
-    <div class="lg:max-w-5xl xl:max-w-7xl px-6 lg:px-16 py-24">
-      <h3 class="text-blue-950">
-        Hi, I'm nando rossi — available for freelance work
+  {# Section: Intro #}
+  <section class="section hero relative flex items-end min-h-screen" data-bg-class="bg-lavender"
+    aria-labelledby="intro">
+    <div class="lg:max-w-5xl xl:max-w-7xl py-24 text-left z-10">
+      <h3 class="text-obsidian">
+        👋 Hi, I'm nando rossi — available for freelance work
       </h3>
-      <h1 class="text-blue-950">
+      <h1 class="text-obsidian font-black" id="intro">
         I make soulful software that people love to use.
       </h1>
-      <p>
-        With almost 20 years of experience, I’ve helped brands like TestFlight,
-        the Berlin Philharmonic, and Disney to create and evolve beloved products,
-        through strategy, function with delight. How can I help you?
+      <p class="mb-12">
+        With almost 20 years of experience, I’ve helped brands like TestFlight, the Berlin Philharmonic, and Disney to
+        create and evolve beloved products, through strategy, function with delight.
       </p>
+      <a href="" class="button large">Need a designer? Let's talk!</a>
+    </div>
+
+    <div
+      class="absolute bottom-0 right-0 -mb-20 mr-16 z-0 w-3/12 min-w-80 max-w-96 rounded-xl border-6 border-obsidian shadow-sm shadow-solid overflow-hidden">
+      <img src="assets/images/nando-stairs.jpg" alt="Profile Image" class="w-full">
     </div>
   </section>
-  <section class="grid lg:grid-cols-2" data-bg-class="bg-lime">
-    <h1>My Services</h1>
-    <ul>
-      <li class="mb-10">
-        <h2>Workshops</h2>
-        <p>
-          Facilitate team workshops both remotely and on-site, out-of-the-box or
-          custom to your needs. My Foundation Workshop helps kickoff successful
-          projects.
-        </p>
-      </li>
 
-      <li class="mb-10">
-        <h2>Direction & Strategy Consultation</h2>
+  {# Section: Creativity #}
+  <section class="section standard two-col" data-bg-class="bg-lime" aria-labelledby="creativity">
+    <h2>Creativity is only the beginning.</h2>
+    <p>I'm a senior product designer with nearly 20 years
+      experience—almost
+      15 independent and remote-first. In my
+      journey, I've done work for big brands (Lego, Nissan, Walgreens, Mattel) and helped create success stories like
+      TestFlight, Berlin Philharmonic and Disney SpellStruck.
+
+      As a freelancer, consultant, or full-time collaborator, I don't compromise on usability and accessibility. I know
+      when creativity, strategy, design and empathy align, people don’t just use a product—they choose it, time and
+      again. That approach has yielded concrete results on my proudest projects, and I look forward to bringing it to
+      yours.</p>
+  </section>
+
+  {# Section: Work #}
+  <section class="section standard" data-bg-class="bg-cherry" aria-labelledby="selected-works">
+    <h1 id="selected-works">Selected Works</h1>
+    <article>
+      <header>
+        <h3>Disney SpellStruck</h3>
+      </header>
+      <p>A twist on a classic—with your favorite characters.</p>
+      <button>Read the full story</button>
+    </article>
+
+    <article>
+      <header>
+        <h3>TestFlight</h3>
+      </header>
+      <p>Supporting the early mobile ecosystem, a story of product longevity.</p>
+      <button>See full project</button>
+    </article>
+
+    <article>
+      <header>
+        <h3>Berlin Philharmonic</h3>
+      </header>
+      <p>Redefining the digital viewing landscape of the Berlin Philharmonic.</p>
+      <button>Read the story</button>
+    </article>
+
+    <section aria-labelledby="other-projects">
+      <h3>Other Projects</h3>
+      <ul>
+        <li>Klang SEED - Game Dev</li>
+        <li>Cabits App - Prototype</li>
+        <li>HowStuffWorks - App Design</li>
+        <li>Pink Friday by Nicki Minaj - App Design</li>
+      </ul>
+    </section>
+  </section>
+
+  {# Section: My Services #}
+  <section class="section standard grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-16" data-bg-class="bg-lavender"
+    aria-labelledby="services">
+    <h2 id="services">Services</h2>
+    <div>
+      <article>
+        <header>
+          <h3>Direction &amp; Strategy Consultation</h3>
+        </header>
         <p>Pointing your business towards the bigger picture by setting out strategical goals for your team and product.
         </p>
-      </li>
-      <li class="mb-10">
-        <h2>User Experience (UX) Design</h2>
-        <p>Helping you identify core bottlenecks and offer meaningful solutions for faster production.</p>
-      </li>
+      </article>
+
+      <article>
+        <header>
+          <h3>Product Design &amp; Prototyping</h3>
+        </header>
+        <p>I’ll guide your team through the entire product development process, from initial sketches to market launch.
+          I'll
+          help identify and solve production bottlenecks, create rapid prototypes for testing and presentations, and
+          provide
+          strategy, wireframing, and hands-on design. Whether working directly or with my talented partners, we'll
+          ensure
+          your project receives expert attention at every stage.</p>
+      </article>
+
+      <article>
+        <header>
+          <h3>Workshops</h3>
+        </header>
+        <p>Workshops can be pivotal for team-building, as well as identifying and solving problems remotely and on-site
+          according to your requirements. My Foundation Workshop is a great starting point for any project (or a great
+          standalone tool). Using elements from Design Thinking, Design Sprints and HCD, we can map out challenges and
+          direction by leveraging the greatest experts on your product—your team.</p>
+      </article>
+
+      <article>
+        <header>
+          <h3>UX for Game Dev</h3>
+        </header>
+        <p>As a tech designer, I love to cross-pollinate. I can enhance your game development process by creating
+          intuitive,
+          engaging player experiences. I'll design user-friendly interfaces, streamline gameplay mechanics, and craft
+          compelling user journeys. My expertise in scalable design systems enables rapid prototyping and faster
+          implementation. I also prioritize usability and accessibility, ensuring your game appeals to a broad audience.
+          Through user testing and iterative design, I'll help resolve issues early, optimizing player satisfaction
+          while
+          saving time and resources.</p>
+      </article>
+    </div>
+  </section>
+
+  {# Section: Testimonials #}
+  <section class="section standard" data-bg-class="bg-cream" aria-labelledby="testimonials">
+    <h2 id="testimonials">What People Are Saying</h2>
+    <blockquote>
+      <p>Nando is an incredibly insightful designer who takes a user-centered approach, ensuring product success.</p>
+      <footer>
+        <cite>Jane Doe, Project Manager</cite>
+      </footer>
+    </blockquote>
+    <blockquote>
+      <p>He was instrumental in designing experiences that not only worked but also brought joy to users.</p>
+      <footer>
+        <cite>John Smith, Developer</cite>
+      </footer>
+    </blockquote>
+    <blockquote>
+      <p>Working with Nando brought out the best in our project—his focus on empathy is truly what makes a difference.
+      </p>
+      <footer>
+        <cite>Sarah Lee, UX Researcher</cite>
+      </footer>
+    </blockquote>
+  </section>
+
+  {# Section: Contact #}
+  <section aria-labelledby="contact" class="section standard two-col" data-bg-class="bg-lime">
+    <div>
+      <h2 id="contact">Reach Out</h2>
+      <p>Please feel free to ask questions and make quote requests through the form on this page. I will contact you as
+        soon as possible to continue our talk.</p>
+      <div>
+        <a href="#" class="bg-black text-white rounded-full w-12 h-12 flex items-center justify-center">git</a>
+        <a href="#" class="bg-black text-white rounded-full w-12 h-12 flex items-center justify-center">drib</a>
+        <a href="#" class="bg-black text-white rounded-full w-12 h-12 flex items-center justify-center">linked</a>
       </div>
-  </section>
-  <section data-bg-class="bg-cherry">
-    <h1>Work Highlights</h1>
+    </div>
+    <form>
+      <label for="topic">Topic</label>
+      <select id="topic" class="p-2 border">
+        <option value="consultation">Consultation</option>
+        <option value="freelance">Freelance</option>
+        <option value="full-time">Full-Time</option>
+      </select>
 
-  </section>
-</main>
-<footer>
-  Some text here.
-</footer>
+      <label for="email">Your Email</label>
+      <input type="email" id="email" name="email" class="p-2 border">
 
-<script src="{{ 'assets/js/scroll_anim.js' | url }}"></script>
+      <label for="message">Your Message</label>
+      <textarea id="message" name="message" class="p-2 border"></textarea>
+
+      <button type="submit" class="bg-black text-white py-2 px-4 mt-4">Send Message</button>
+    </form>
+  </section>
+
+  <footer class="bg-obsidian text-cream pt-12 lg:px-16">
+    <section aria-labelledby="footer-nav">
+      <h4 id="footer-nav">Sections</h4>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Work</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </section>
+
+    <section aria-labelledby="footer-services">
+      <h4 id="footer-services">Services</h4>
+      <ul>
+        <li>Direction &amp; Strategy Consultation</li>
+        <li>Product Design &amp; Prototyping</li>
+        <li>Workshops</li>
+        <li>UX for Game Dev</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="footer-contact">
+      <h4 id="footer-contact">Contact</h4>
+      <ul>
+        <li><a href="#">LinkedIn</a></li>
+        <li><a href="#">Email</a></li>
+      </ul>
+    </section>
+
+    <p>2024 &copy; Nando Rossi, All Rights Reserved.</p>
+  </footer>
+
+  <script src="{{ 'assets/js/scroll_anim.js' | url }}"></script>
