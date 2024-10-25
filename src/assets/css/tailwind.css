@@ -34,7 +34,11 @@
     }
 
     p {
-        @apply text-lg;
+        @apply text-lg mb-4;
+    }
+
+    strong {
+        @apply font-bold;
     }
 
     .section {
@@ -58,10 +62,19 @@
     .button.small {
         @apply text-sm px-4 py-2;
     }
+
+    .window-rounded {
+        @apply rounded-xl border-6 border-obsidian overflow-hidden;
+        box-shadow: 8px 8px 0;
+    }
 }
 
 @layer utilities {
-    .two-col {
-        @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1fr_2fr] gap-8;
+    .columns {
+        @apply grid grid-cols-1 sm:grid-cols-2 gap-12;
+    }
+
+    .columns.columns-third {
+        @apply lg:grid-cols-[1fr_2fr];
     }
 }
