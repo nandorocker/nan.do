@@ -16,33 +16,8 @@
 <body>
     <main class="relative min-h-screen bg-lavender text-obsidian transition-colors duration-700 overflow-hidden"
         data-bg-scroll>
-        {# Navigation Starts #}
-        <header class="px-6 lg:px-8">
-            <nav class="flex items-center justify-between lowercase py-6 text-obsidian text-xl leading-6 border-b border-obsidian"
-                aria-label="Global">
-                <div class="flex lg:flex-1">
-                    <a href="#" class="-m-1.5 p-1.5 font-semibold">
-                        <span>nan.do</span>
-                    </a>
-                </div>
-                <div class="flex lg:hidden">
-                    <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5">
-                        <span class="sr-only">Open main menu</span>
-                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                            aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                        </svg>
-                    </button>
-                </div>
-                <div class="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-x-4">
-                    <a href="#" class="py-1 px-4">About Me</a>
-                    <a href="#" class="py-1 px-4">Blog</a>
-                    <a href="#" class="border-2 py-1 px-4 rounded-md border-obsidian shadow-small">Contact</a>
-                </div>
-            </nav>
-        </header>
-        {# Navigation Ends #}
+        {% include 'nav.njk' %}
+
         {{ content | safe }}
 
     </main>
