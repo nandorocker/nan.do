@@ -80,6 +80,7 @@
 
   main > section.standard {
     @apply py-20 md:py-40 xl:max-w-screen-2xl;
+    @apply border-b border-obsidian sm:border-none;
   }
 
   /* Work Cards Begin */
@@ -107,6 +108,12 @@
     @apply self-start mt-4 md:mt-12;
   }
   /* Work Cards End */
+
+  /* Footer Begins */
+  footer.footer-global {
+    @apply bg-obsidian text-cream pt-12 pb-0 sm:py-12 grid grid-cols-1 sm:grid-cols-3;
+  }
+  /* Footer Ends */
 }
 
 @layer utilities {
