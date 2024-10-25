@@ -4,39 +4,39 @@ layout: "base.njk"
 ---
 
 {# Section: Intro #}
-<section class="section hero relative flex items-end min-h-screen" data-bg-class="bg-lavender" aria-labelledby="intro">
-  <div class="lg:max-w-5xl xl:max-w-7xl py-24 text-left z-10">
-    <h3 class="text-obsidian">
+<section class="hero relative flex items-end min-h-screen" data-bg-class="bg-lavender" aria-labelledby="intro">
+  <div class="lg:max-w-5xl xl:max-w-7xl py-24 text-left">
+    <h4>
       👋 Hi, I'm nando rossi — available for freelance work
-    </h3>
-    <h1 class="text-obsidian font-black" id="intro">
+    </h4>
+    <h1 id="intro">
       I make soulful software that people love to use.
     </h1>
     <p class="mb-12">
       With almost 20 years of experience, I’ve helped brands like TestFlight, the Berlin Philharmonic, and Disney to
       create and evolve beloved products, through strategy, function with delight.
     </p>
-    <a href="" class="button large">Need a designer? Let's talk!</a>
+    <a href="" class="button button-large">Need a designer? Let's talk!</a>
   </div>
 </section>
 
 {# Section: Creativity #}
-<section class="section standard columns" data-bg-class="bg-cherry" aria-labelledby="creativity">
-  <article>
-    <header>
-      <h2>Turning ideas into beloved products with design, process, and creativity.</h2>
-    </header>
+<section class="standard columns" data-bg-class="bg-cherry" aria-labelledby="creativity">
 
-    <figure class="mt-16 w-3/12 min-w-80 max-w-96 window-rounded">
-      <img src="assets/images/nando-stairs.jpg" alt="Profile Image" class="w-full">
+  <header>
+    <h2 class="mt-0">Turning ideas into beloved products with design, process, and creativity.
+    </h2>
+    <figure
+      class="md:mt-16 w-full h-64 sm:h-96 md:w-3/12 md:min-w-80 md:max-w-96 window-rounded bg-[url('assets/images/nando-stairs.jpg')] bg-no-repeat bg-cover">
     </figure>
-  </article>
+  </header>
+
   <div>
     <p>
       As a product designer with nearly <strong>20 years of experience</strong>—15 of those as an independent,
       remote-first professional, I've had the opportunity to work with brands like <strong>Lego, Nissan,
         Walgreens,</strong> and <strong>Mattel</strong>, and play key roles in projects such as <strong
-        class="text-cream">TestFlight</strong>,
+        class=" text-cream">TestFlight</strong>,
       <strong class="text-cream"> Philharmonic,</strong> and <strong class="text-cream">Disney SpellStruck</strong>.
     </p>
     <p>
@@ -51,45 +51,80 @@ layout: "base.njk"
 </section>
 
 {# Section: Work #}
-<section class="section standard" data-bg-class="bg-lime" aria-labelledby="selected-works">
-  <h1 id="selected-works">Selected Works</h1>
-  <article>
-    <header>
-      <h3>Disney SpellStruck</h3>
-    </header>
-    <p>A twist on a classic—with your favorite characters.</p>
-    <button>Read the full story</button>
-  </article>
+<section class="standard" data-bg-class="bg-lime" aria-labelledby="selected-works">
+  <header>
+    <h1 id="selected-works" class="mb-24">Selected Works</h1>
+  </header>
+  <!-- Grid for work cards -->
+  <div class="grid grid-cols-12 gap-y-16 md:gap-y-24">
 
-  <article>
-    <header>
-      <h3>TestFlight</h3>
-    </header>
-    <p>Supporting the early mobile ecosystem, a story of product longevity.</p>
-    <button>See full project</button>
-  </article>
+    <!-- card 1 -->
+    <article class="card window-rounded lg:col-span-10">
+      <div class="card-illustration"></div>
+      <div class="card-contents">
+        <header>
+          <span class="category">Game Dev</span>
+          <h4>Disney SpellStruck, a twist on a classic—with your favorite
+            characters.
+          </h4>
+        </header>
+        <small>Working with indie Artist Arcade and the lead developer
+          of
+          <strong>Words
+            With Friends</strong>, I helped create
+          and launch this exciting word puzzle for Disney. I brought focus on usability and modularity, setting things
+          up for continuous expansion through the years.</small>
+        <a href="#" class="button button-small">Read the whole
+          story</a>
+      </div>
+    </article>
 
-  <article>
-    <header>
-      <h3>Berlin Philharmonic</h3>
-    </header>
-    <p>Redefining the digital viewing landscape of the Berlin Philharmonic.</p>
-    <button>Read the story</button>
-  </article>
+    <!-- card 2 -->
+    <article class="card window-rounded lg:col-start-5 lg:col-span-8">
+      <div class="card-illustration"></div>
+      <div class="card-contents">
+        <header>
+          <span class="category">Game Dev</span>
+          <h4>Disney SpellStruck, a twist on a classic—with your favorite
+            characters.
+          </h4>
+        </header>
+        <small>Working with indie Artist Arcade and the lead developer
+          of
+          <strong>Words
+            With Friends</strong>, I helped create
+          and launch this exciting word puzzle for Disney. I brought focus on usability and modularity, setting things
+          up for continuous expansion through the years.</small>
+        <a href="#" class="button button-small">Read the whole
+          story</a>
+      </div>
+    </article>
 
-  <section aria-labelledby="other-projects">
-    <h3>Other Projects</h3>
-    <ul>
-      <li>Klang SEED - Game Dev</li>
-      <li>Cabits App - Prototype</li>
-      <li>HowStuffWorks - App Design</li>
-      <li>Pink Friday by Nicki Minaj - App Design</li>
-    </ul>
-  </section>
+    <!-- card 3 -->
+    <article class="card window-rounded lg:col-start-2 lg:col-span-10">
+      <div class="card-illustration"></div>
+      <div class="card-contents">
+        <header>
+          <span class="category">Game Dev</span>
+          <h4>Disney SpellStruck, a twist on a classic—with your favorite
+            characters.
+          </h4>
+        </header>
+        <small>Working with indie Artist Arcade and the lead developer
+          of
+          <strong>Words
+            With Friends</strong>, I helped create
+          and launch this exciting word puzzle for Disney. I brought focus on usability and modularity, setting things
+          up for continuous expansion through the years.</small>
+        <a href="#" class="button button-small">Read the whole
+          story</a>
+      </div>
+    </article>
+  </div>
 </section>
 
 {# Section: My Services #}
-<section class="section standard grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-16" data-bg-class="bg-lavender"
+<section class="standard grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-16" data-bg-class="bg-lavender"
   aria-labelledby="services">
   <h2 id="services">Services</h2>
   <div>
@@ -141,7 +176,7 @@ layout: "base.njk"
 </section>
 
 {# Section: Testimonials #}
-<section class="section standard" data-bg-class="bg-cream" aria-labelledby="testimonials">
+<section class="standard" data-bg-class="bg-cream" aria-labelledby="testimonials">
   <h2 id="testimonials">What People Are Saying</h2>
   <blockquote>
     <p>Nando is an incredibly insightful designer who takes a user-centered approach, ensuring product success.</p>
@@ -165,7 +200,7 @@ layout: "base.njk"
 </section>
 
 {# Section: Contact #}
-<section aria-labelledby="contact" class="section standard columns columns-third" data-bg-class="bg-lime">
+<section aria-labelledby="contact" class="standard columns columns-third" data-bg-class="bg-lime">
   <div>
     <h2 id="contact">Reach Out</h2>
     <p>Please feel free to ask questions and make quote requests through the form on this page. I will contact you as

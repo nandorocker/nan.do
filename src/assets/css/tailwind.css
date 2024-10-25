@@ -3,78 +3,118 @@
 @tailwind utilities;
 
 @layer base {
-    h1 {
-        @apply text-6xl font-bold tracking-tight sm:text-8xl lg:mb-8 lg:mt-10;
-    }
+  body {
+    @apply text-lg leading-relaxed text-obsidian;
+  }
 
-    .hero h1 {
-        /* -webkit-text-stroke: 8px white;
-        paint-order: stroke fill;
-        text-shadow: 10px 10px 0 #000; */
-    }
+  /* Headings */
+  h1 {
+    @apply text-5xl font-bold leading-tight mb-6 md:text-6xl lg:text-7xl;
+  }
 
-    .hero p {
-        @apply text-xl;
-    }
+  h2 {
+    @apply text-4xl font-semibold leading-snug mt-8 mb-5 md:text-5xl lg:text-6xl;
+  }
 
-    .hero .photo {
-        
-    }
+  h3 {
+    @apply text-3xl font-bold leading-snug mt-6 mb-4 md:text-4xl lg:text-5xl;
+  }
 
-    h2 {
-        @apply text-6xl font-bold;
-    }
+  h4 {
+    @apply text-2xl font-bold leading-snug lg:leading-tight mt-6 mb-4 md:text-3xl lg:text-4xl;
+  }
+  h5 {
+    @apply text-xl font-bold leading-relaxed mt-5 mb-3 md:text-2xl lg:text-3xl;
+  }
 
-    h3 {
-        @apply text-4xl font-bold tracking-tight mb-4;
-    }
+  h6 {
+    @apply text-lg font-bold leading-relaxed mt-5 mb-3 md:text-xl lg:text-2xl;
+  }
 
-    h4 {
-        @apply text-2xl mb-4;
-    }
+  p {
+    @apply text-lg lg:text-xl leading-relaxed mb-5;
+  }
 
-    p {
-        @apply text-lg mb-4;
-    }
+  small {
+    @apply text-base leading-normal mb-4;
+  }
 
-    strong {
-        @apply font-bold;
-    }
+  em {
+    @apply italic;
+  }
 
-    .section {
-        @apply px-8 lg:px-16;
-    }
-
-    .section.standard {
-        @apply py-40 xl:max-w-screen-2xl;
-    }
+  strong {
+    @apply font-bold;
+  }
 }
 
 @layer components {
-    .button {
-        @apply bg-obsidian hover:bg-slate-800 text-cream rounded-full;
-    }
+  .button {
+    @apply bg-obsidian hover:bg-slate-800 text-cream rounded-full box-border w-full sm:w-auto text-center sm:text-left;
+  }
 
-    .button.large {
-        @apply text-lg font-bold px-10 py-4;
-    }
+  .button.button-large {
+    @apply text-lg font-medium px-10 py-4;
+  }
 
-    .button.small {
-        @apply text-sm px-4 py-2;
-    }
+  .button.button-small {
+    @apply text-sm font-medium px-8 py-3;
+  }
 
-    .window-rounded {
-        @apply rounded-xl border-6 border-obsidian overflow-hidden;
-        box-shadow: 8px 8px 0;
-    }
+  .window-rounded {
+    @apply rounded-xl border-6 border-obsidian overflow-hidden;
+    box-shadow: 8px 8px 0;
+  }
+
+  .hero h1 {
+    @apply font-black;
+  }
+
+  .hero p {
+    @apply text-xl;
+  }
+
+  main > section {
+    @apply px-8 lg:px-16 border-b border-obsidian sm:border-none;
+  }
+
+  main > section.standard {
+    @apply py-20 md:py-40 xl:max-w-screen-2xl;
+  }
+
+  /* Work Cards Begin */
+  .card {
+    @apply bg-cream col-span-12 grid grid-cols-12 gap-x-6 p-3 sm:p-4 lg:p-6;
+  }
+
+  .card > .card-illustration {
+    @apply bg-purple-300 col-span-12 sm:col-span-4 lg:col-span-5 min-h-40;
+  }
+
+  .card > .card-contents {
+    @apply col-span-12 sm:col-span-8 lg:col-span-7 min-h-80 pt-4 sm:pt-0 flex flex-col items-start;
+  }
+
+  .card > .card-contents .category {
+    @apply text-sm uppercase font-bold;
+  }
+
+  .card > .card-contents h4 {
+    @apply mt-0;
+  }
+
+  .card > .card-contents .button {
+    @apply self-start mt-4 md:mt-12;
+  }
+  /* Work Cards End */
 }
 
 @layer utilities {
-    .columns {
-        @apply grid grid-cols-1 sm:grid-cols-2 gap-12;
-    }
+  .columns {
+    @apply grid grid-cols-1 sm:grid-cols-2 gap-12;
+  }
 
-    .columns.columns-third {
-        @apply lg:grid-cols-[1fr_2fr];
-    }
+  .columns.columns-third {
+    @apply lg:grid-cols-[1fr_2fr];
+  }
 }
