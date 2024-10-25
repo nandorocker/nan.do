@@ -4,8 +4,8 @@ layout: "base.njk"
 ---
 
 {# Section: Intro #}
-<section class="hero relative flex items-end min-h-screen" data-bg-class="bg-lavender" aria-labelledby="intro">
-  <div class="lg:max-w-5xl xl:max-w-7xl py-24 text-left">
+<section class="hero relative flex items-end min-h-80vh" data-bg-class="bg-lavender" aria-labelledby="intro">
+  <div class="global-margins lg:max-w-5xl xl:max-w-7xl text-left flex flex-col items-start pb-20 md:pb-0">
     <h4>
       👋 Hi, I'm nando rossi — available for freelance work
     </h4>
@@ -21,7 +21,7 @@ layout: "base.njk"
 </section>
 
 {# Section: Creativity #}
-<section class="standard columns" data-bg-class="bg-cherry" aria-labelledby="creativity">
+<section class="global-margins global-margins-y columns" data-bg-class="bg-cherry" aria-labelledby="creativity">
 
   <header>
     <h2 class="mt-0">Turning ideas into beloved products with design, process, and creativity.
@@ -51,7 +51,7 @@ layout: "base.njk"
 </section>
 
 {# Section: Work #}
-<section class="standard" data-bg-class="bg-lime" aria-labelledby="selected-works">
+<section class="global-margins" data-bg-class="bg-lime" aria-labelledby="selected-works">
   <header>
     <h1 id="selected-works" class="mb-24">Selected Works</h1>
   </header>
@@ -59,7 +59,7 @@ layout: "base.njk"
   <div class="grid grid-cols-12 gap-y-16 md:gap-y-24">
 
     <!-- card 1 -->
-    <article class="card window-rounded lg:col-span-10">
+    <article class="card window-rounded md:col-span-10">
       <div class="card-illustration"></div>
       <div class="card-contents">
         <header>
@@ -80,42 +80,35 @@ layout: "base.njk"
     </article>
 
     <!-- card 2 -->
-    <article class="card window-rounded lg:col-start-5 lg:col-span-8">
+    <article class="card window-rounded md:col-start-2 lg:col-start-5 md:col-span-10 lg:col-span-8">
       <div class="card-illustration"></div>
       <div class="card-contents">
         <header>
-          <span class="category">Game Dev</span>
-          <h4>Disney SpellStruck, a twist on a classic—with your favorite
-            characters.
+          <span class="category">App Testing Platform</span>
+          <h4>TestFlight: supporting the early mobile ecosystem, a story of product longevity.
           </h4>
         </header>
-        <small>Working with indie Artist Arcade and the lead developer
-          of
-          <strong>Words
-            With Friends</strong>, I helped create
-          and launch this exciting word puzzle for Disney. I brought focus on usability and modularity, setting things
-          up for continuous expansion through the years.</small>
+        <small>Now a standard Apple developer tool, TestFlight started with a small team of engineers and designers with
+          a vision: to turn a hack into a free, accessible tool to empower coders. Our designers were there from
+          inception to acquisition, helping turn the platform into a full suite to support app creators through testing,
+          monetization and analytics.</small>
         <a href="#" class="button button-small">Read the whole
           story</a>
       </div>
     </article>
 
     <!-- card 3 -->
-    <article class="card window-rounded lg:col-start-2 lg:col-span-10">
+    <article class="card window-rounded lg:col-start-2 md:col-span-10">
       <div class="card-illustration"></div>
       <div class="card-contents">
         <header>
-          <span class="category">Game Dev</span>
-          <h4>Disney SpellStruck, a twist on a classic—with your favorite
-            characters.
+          <span class="category">App Design</span>
+          <h4>Redefining the digital viewing landscape of the Berlin Philharmonic.
           </h4>
         </header>
-        <small>Working with indie Artist Arcade and the lead developer
-          of
-          <strong>Words
-            With Friends</strong>, I helped create
-          and launch this exciting word puzzle for Disney. I brought focus on usability and modularity, setting things
-          up for continuous expansion through the years.</small>
+        <small>A pioneer in its category, the Berlin Philharmonic's subscription service is available on most platforms.
+          In a highly fragmented environment, I helped solve the difficult problems of user experience consistency,
+          maintainability and team inclusion leading to increased user satisfaction and subscriptions.</small>
         <a href="#" class="button button-small">Read the whole
           story</a>
       </div>
@@ -124,7 +117,7 @@ layout: "base.njk"
 </section>
 
 {# Section: My Services #}
-<section class="standard grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-16" data-bg-class="bg-lavender"
+<section class="global-margins grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-16" data-bg-class="bg-lavender"
   aria-labelledby="services">
   <h2 id="services">Services</h2>
   <div>
@@ -176,7 +169,7 @@ layout: "base.njk"
 </section>
 
 {# Section: Testimonials #}
-<section class="standard" data-bg-class="bg-cream" aria-labelledby="testimonials">
+<section class="global-margins" data-bg-class="bg-cream" aria-labelledby="testimonials">
   <h2 id="testimonials">What People Are Saying</h2>
   <blockquote>
     <p>Nando is an incredibly insightful designer who takes a user-centered approach, ensuring product success.</p>
@@ -200,7 +193,7 @@ layout: "base.njk"
 </section>
 
 {# Section: Contact #}
-<section aria-labelledby="contact" class="standard columns columns-third" data-bg-class="bg-lime">
+<section aria-labelledby="contact" class="global-margins columns columns-third" data-bg-class="bg-lime">
   <div>
     <h2 id="contact">Reach Out</h2>
     <p>Please feel free to ask questions and make quote requests through the form on this page. I will contact you as

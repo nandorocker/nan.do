@@ -13,7 +13,7 @@
   }
 
   h2 {
-    @apply text-4xl font-semibold leading-snug mt-8 mb-5 md:text-5xl lg:text-6xl;
+    @apply text-4xl font-bold leading-snug mt-8 mb-5 md:text-5xl lg:text-6xl;
   }
 
   h3 {
@@ -32,7 +32,7 @@
   }
 
   p {
-    @apply text-lg lg:text-xl leading-relaxed mb-5;
+    @apply text-lg leading-relaxed mb-5;
   }
 
   small {
@@ -106,7 +106,7 @@
 
   /* Footer Begins */
   footer.footer-global {
-    @apply bg-obsidian text-cream pt-12 pb-0 sm:py-12 grid grid-cols-1 sm:grid-cols-3;
+    @apply bg-obsidian text-cream pt-12 pb-0 sm:py-12 grid grid-cols-1 sm:grid-cols-3 md:grid-cols-5 text-sm leading-loose;
   }
   /* Footer Ends */
 }
