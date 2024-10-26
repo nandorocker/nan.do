@@ -237,21 +237,23 @@ layout: "base.njk"
 
 {# Section: Contact #}
 <section aria-labelledby="contact" class="global-margins" data-bg-class="bg-lime">
-  <div class="grid grid-cols-8">
-    <div class="col-span-4">
-      <h2 class="mt-0 col-span-4" id="contact">Let's Collaborate! Reach Out for a Quote or Project Discussion.</h2>
+  <div class="grid grid-cols-1 md:grid-cols-8">
+    <div class="md:col-span-4">
+      <h2 class="mt-0" id="contact">Let's Collaborate! Reach Out for a Quote or Project Discussion.</h2>
       <p>I'm available for freelance design projects, consulting, and workshops. <br>I also love giving talks and
         offering
         mentorships, let’s chat!</p>
     </div>
-    <div class="col-start-6 col-span-3 flex flex-col items-start gap-12">
-      <h4 class="m-0">Contact Me</h4>
+    <div class="md:col-start-6 md:col-span-3 flex flex-col items-start md:gap-y-12">
+      <h4 class="md:m-0 max-sm:text-3xl">Contact Me</h4>
 
-      <a href="#" class="contact-button inline-flex">
-        <h5>talk@nan.do</h5> <img src="assets/images/icon-copy.svg" class="w-8 ml-4" alt="Copy My Email">
+      <a href="#" class="contact-button max-sm:w-full flex">
+        <div class="flex items-center mx-auto">
+          <h5>talk@nan.do</h5> <img src="assets/images/icon-copy.svg" class="w-8 ml-4" alt="Copy My Email">
+        </div>
       </a>
 
-      <ul class="flex flex-row items-start gap-8">
+      <ul class="flex flex-row items-start gap-8 max-sm:mt-20">
         <li><img src="assets/images/social-linkedin.svg" class="w-12" alt="linkedin"></li>
         <li><img src="assets/images/social-threads.svg" class="w-12" alt="threads"></li>
         <li><img src="assets/images/social-dribbble.svg" class="w-12" alt="dribbble"></li>

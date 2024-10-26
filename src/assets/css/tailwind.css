@@ -71,11 +71,11 @@
   }
 
   .contact-button {
-    @apply rounded-xl border-6 px-6 py-4 border-cream shadow-cream overflow-hidden;
+    @apply rounded-xl border-6 px-6 py-4 border-cream shadow-cream;
     box-shadow: 8px 8px 0 #fff6ee;
   }
 
-  .contact-button > h5 {
+  .contact-button h5 {
     @apply m-0;
   }
 
@@ -92,7 +92,7 @@
   }
 
   main > section {
-    @apply border-b border-obsidian sm:border-none;
+    /* @apply border-b border-obsidian sm:border-none; */
   }
 
   /* Work Cards Begin */
