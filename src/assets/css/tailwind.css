@@ -9,7 +9,7 @@
 
   /* Headings */
   h1 {
-    @apply text-5xl font-bold leading-tight mb-6 md:text-6xl lg:text-7xl;
+    @apply text-5xl font-bold leading-none md:leading-tight mb-6 md:text-6xl lg:text-7xl;
   }
 
   h2 {
@@ -62,8 +62,17 @@
   }
 
   .window-rounded {
-    @apply rounded-xl border-6 border-obsidian overflow-hidden;
+    @apply rounded-xl border-6 border-obsidian shadow-obsidian overflow-hidden;
     box-shadow: 8px 8px 0;
+  }
+
+  .contact-button {
+    @apply rounded-xl border-6 px-6 py-4 border-cream shadow-cream overflow-hidden;
+    box-shadow: 8px 8px 0 #fff6ee;
+  }
+
+  .contact-button > h5 {
+    @apply m-0;
   }
 
   .hero h1 {
@@ -71,7 +80,7 @@
   }
 
   .hero p {
-    @apply text-xl;
+    @apply sm:text-xl;
   }
 
   main > section {
@@ -106,7 +115,7 @@
 
   /* Footer Begins */
   footer.footer-global {
-    @apply bg-obsidian text-cream pt-12 pb-0 sm:py-12 grid grid-cols-1 sm:grid-cols-3 md:grid-cols-5 text-sm leading-loose;
+    @apply py-0 pb-0 grid grid-cols-1 sm:grid-cols-3 md:grid-cols-5 text-sm leading-loose;
   }
   /* Footer Ends */
 }
@@ -120,7 +129,8 @@
     @apply lg:grid-cols-[1fr_2fr];
   }
 
+  /* Sets default margins for site sections/footers/etc */
   .global-margins {
-    @apply px-5 lg:px-16 py-20 md:py-40 xl:max-w-screen-2xl;
+    @apply px-5 md:px-16 pt-10 md:pt-20 pb-20 md:pb-40 xl:max-w-screen-2xl;
   }
 }

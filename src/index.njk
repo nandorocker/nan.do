@@ -7,10 +7,10 @@ layout: "base.njk"
 <section class="hero relative flex items-end min-h-80vh" data-bg-class="bg-lavender" aria-labelledby="intro">
   <div class="global-margins lg:max-w-6xl xl:max-w-7xl text-left flex flex-col items-start pb-20 md:pb-0">
     <h4>
-      👋 Hi, I'm nando rossi — available for freelance work
+      👋 Hi, I'm nando rossi <wbr>— available for freelance work
     </h4>
     <h1 id="intro">
-      I make soulful software that people love to use.
+      I make soulful software <wbr>that people love to use.
     </h1>
     <p class="mb-12">
       With almost 20 years of experience, I’ve helped brands like TestFlight, the Berlin Philharmonic, and Disney to
@@ -59,7 +59,7 @@ layout: "base.njk"
   <div class="grid grid-cols-12 gap-y-16 md:gap-y-24">
 
     <!-- card 1 -->
-    <article class="card window-rounded md:col-span-10">
+    <article class="card window-rounded md:col-span-11 lg:col-span-10">
       <div class="card-illustration"></div>
       <div class="card-contents">
         <header>
@@ -80,7 +80,7 @@ layout: "base.njk"
     </article>
 
     <!-- card 2 -->
-    <article class="card window-rounded md:col-start-2 lg:col-start-5 md:col-span-10 lg:col-span-8">
+    <article class="card window-rounded md:col-start-2 lg:col-start-5 md:col-span-11 lg:col-span-8">
       <div class="card-illustration"></div>
       <div class="card-contents">
         <header>
@@ -98,7 +98,7 @@ layout: "base.njk"
     </article>
 
     <!-- card 3 -->
-    <article class="card window-rounded lg:col-start-2 md:col-span-10">
+    <article class="card window-rounded lg:col-start-2 md:col-span-11 lg:col-span-10">
       <div class="card-illustration"></div>
       <div class="card-contents">
         <header>
@@ -117,9 +117,9 @@ layout: "base.njk"
 </section>
 
 {# Section: My Services #}
-<section class="global-margins grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-16" data-bg-class="bg-lavender"
+<section class="global-margins grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-5 md:gap-16" data-bg-class="bg-lavender"
   aria-labelledby="services">
-  <h2 id="services">Services</h2>
+  <h1 id="services">Services</h1>
   <div>
     <article>
       <header>
@@ -170,7 +170,7 @@ layout: "base.njk"
 
 {# Section: Testimonials #}
 <section class="global-margins" data-bg-class="bg-cream" aria-labelledby="testimonials">
-  <h2 id="testimonials">What People Are Saying</h2>
+  <h1 class="mb-24" id="testimonials">People Talking</h1>
   <blockquote>
     <p>Nando is an incredibly insightful designer who takes a user-centered approach, ensuring product success.</p>
     <footer>
@@ -193,33 +193,29 @@ layout: "base.njk"
 </section>
 
 {# Section: Contact #}
-<section aria-labelledby="contact" class="global-margins columns columns-third" data-bg-class="bg-lime">
-  <div>
-    <h2 id="contact">Reach Out</h2>
-    <p>Please feel free to ask questions and make quote requests through the form on this page. I will contact you as
-      soon as possible to continue our talk.</p>
-    <div>
-      <a href="#" class="bg-black text-white rounded-full w-12 h-12 flex items-center justify-center">git</a>
-      <a href="#" class="bg-black text-white rounded-full w-12 h-12 flex items-center justify-center">drib</a>
-      <a href="#" class="bg-black text-white rounded-full w-12 h-12 flex items-center justify-center">linked</a>
+<section aria-labelledby="contact" class="global-margins" data-bg-class="bg-lime">
+  <div class="grid grid-cols-8">
+    <div class="col-span-4">
+      <h2 class="mt-0 col-span-4" id="contact">Let's Collaborate! Reach Out for a Quote or Project Discussion.</h2>
+      <p>I'm available for freelance design projects, consulting, and workshops. <br>I also love giving talks and
+        offering
+        mentorships, let’s chat!</p>
+    </div>
+    <div class="col-start-6 col-span-3 flex flex-col items-start gap-12">
+      <h4 class="m-0">Contact Me</h4>
+
+      <a href="#" class="contact-button inline-flex">
+        <h5>talk@nan.do</h5> <img src="assets/images/icon-copy.svg" class="w-8 ml-4" alt="Copy My Email">
+      </a>
+
+      <ul class="flex flex-row items-start gap-8">
+        <li><img src="assets/images/social-linkedin.svg" class="w-12" alt="linkedin"></li>
+        <li><img src="assets/images/social-threads.svg" class="w-12" alt="threads"></li>
+        <li><img src="assets/images/social-dribbble.svg" class="w-12" alt="dribbble"></li>
+      </ul>
     </div>
   </div>
-  <form>
-    <label for="topic">Topic</label>
-    <select id="topic" class="p-2 border">
-      <option value="consultation">Consultation</option>
-      <option value="freelance">Freelance</option>
-      <option value="full-time">Full-Time</option>
-    </select>
 
-    <label for="email">Your Email</label>
-    <input type="email" id="email" name="email" class="p-2 border">
-
-    <label for="message">Your Message</label>
-    <textarea id="message" name="message" class="p-2 border"></textarea>
-
-    <button type="submit" class="bg-black text-white py-2 px-4 mt-4">Send Message</button>
-  </form>
 </section>
 
 <script src="{{ 'assets/js/scroll_anim.js' | url }}"></script>
