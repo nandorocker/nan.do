@@ -4,8 +4,9 @@ layout: "base.njk"
 ---
 
 {# Section: Intro #}
-<section class="hero relative flex items-end min-h-80vh" data-bg-class="bg-lavender" aria-labelledby="intro">
-  <div class="global-margins lg:max-w-6xl xl:max-w-7xl text-left flex flex-col items-start pb-20 md:pb-0">
+<section class="hero px-5 md:px-16 relative flex items-end min-h-90vh xl:max-w-screen-2xl mx-auto"
+  data-bg-class="bg-lavender" aria-labelledby="intro">
+  <div class="lg:max-w-6xl xl:max-w-7xl text-left flex flex-col items-start pb-20 md:pb-0">
     <h4>
       👋 Hi, I'm nando rossi <wbr>— available for freelance work
     </h4>
@@ -51,7 +52,7 @@ layout: "base.njk"
 </section>
 
 {# Section: Work #}
-<section class="global-margins" data-bg-class="bg-lime" aria-labelledby="selected-works">
+<section class="global-margins" data-bg-class="bg-cherry" aria-labelledby="selected-works">
   <header>
     <h1 id="selected-works" class="mb-24">Selected Works</h1>
   </header>
@@ -59,7 +60,7 @@ layout: "base.njk"
   <div class="grid grid-cols-12 gap-y-16 md:gap-y-24">
 
     <!-- card 1 -->
-    <article class="card window-rounded md:col-span-11 lg:col-span-10">
+    <article class="card window-rounded window-rounded-margins md:col-span-11 lg:col-span-10">
       <div class="card-illustration"></div>
       <div class="card-contents">
         <header>
@@ -80,7 +81,8 @@ layout: "base.njk"
     </article>
 
     <!-- card 2 -->
-    <article class="card window-rounded md:col-start-2 lg:col-start-5 md:col-span-11 lg:col-span-8">
+    <article
+      class="card window-rounded window-rounded-margins md:col-start-2 lg:col-start-5 md:col-span-11 lg:col-span-8">
       <div class="card-illustration"></div>
       <div class="card-contents">
         <header>
@@ -98,7 +100,7 @@ layout: "base.njk"
     </article>
 
     <!-- card 3 -->
-    <article class="card window-rounded lg:col-start-2 md:col-span-11 lg:col-span-10">
+    <article class="card window-rounded window-rounded-margins lg:col-start-2 md:col-span-11 lg:col-span-10">
       <div class="card-illustration"></div>
       <div class="card-contents">
         <header>
@@ -117,7 +119,7 @@ layout: "base.njk"
 </section>
 
 {# Section: My Services #}
-<section class="global-margins grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-5 md:gap-16" data-bg-class="bg-lavender"
+<section class="global-margins grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-5 md:gap-16" data-bg-class="bg-cream"
   aria-labelledby="services">
   <h1 id="services">Services</h1>
   <div>
@@ -168,28 +170,69 @@ layout: "base.njk"
   </div>
 </section>
 
+{# Section: Logos #}
+
 {# Section: Testimonials #}
-<section class="global-margins" data-bg-class="bg-cream" aria-labelledby="testimonials">
+<section class="global-margins min-h-80vh" data-bg-class="bg-lavender" aria-labelledby="testimonials">
   <h1 class="mb-24" id="testimonials">People Talking</h1>
-  <blockquote>
-    <p>Nando is an incredibly insightful designer who takes a user-centered approach, ensuring product success.</p>
-    <footer>
-      <cite>Jane Doe, Project Manager</cite>
-    </footer>
-  </blockquote>
-  <blockquote>
-    <p>He was instrumental in designing experiences that not only worked but also brought joy to users.</p>
-    <footer>
-      <cite>John Smith, Developer</cite>
-    </footer>
-  </blockquote>
-  <blockquote>
-    <p>Working with Nando brought out the best in our project—his focus on empathy is truly what makes a difference.
-    </p>
-    <footer>
-      <cite>Sarah Lee, UX Researcher</cite>
-    </footer>
-  </blockquote>
+
+  <div
+    class="grid grid-cols-1 max-sm:window-rounded max-sm:p-4 max-sm:bg-cream sm:grid-cols-2 w-full lg:w-9/12 gap-12 m-auto">
+    <blockquote
+      class="sm:bg-cream sm:window-rounded window-rounded-margins w-full max-sm:pb-12 max-sm:border-b border-obsidian">
+      <p class="leading-snug text-center">"Nando is an incredibly insightful designer who takes a user-centered
+        approach, ensuring
+        product success."</p>
+      <footer class="w-10/12 sm:w-4/6 flex flex-row items-start gap-x-6 items-stretch z-10 mx-auto">
+        <div class="bg-lime border-obsidian border-2 w-16 h-16 rounded-full"></div>
+        <cite class="grow not-italic text-left">
+          <strong>– Jane Doe</strong><br>
+          <em>Project Manager</em>
+        </cite>
+      </footer>
+    </blockquote>
+
+    <blockquote
+      class="sm:bg-cream sm:window-rounded window-rounded-margins w-full max-sm:pb-12 max-sm:border-b border-obsidian z-20">
+      <p class="leading-snug text-center">"He was instrumental in designing experiences that not only worked but also
+        brought joy to
+        users."</p>
+      <footer class="w-10/12 sm:w-4/6 flex flex-row items-start gap-x-6 items-stretch z-10 mx-auto">
+        <div class="bg-lime border-obsidian border-2 w-16 h-16 rounded-full"></div>
+        <cite class="grow not-italic text-left">
+          <strong>– John Smith</strong><br>
+          <em>Developer</em>
+        </cite>
+      </footer>
+    </blockquote>
+
+    <blockquote
+      class="sm:bg-cream sm:window-rounded window-rounded-margins w-full max-sm:pb-12 max-sm:border-b border-obsidian z-30">
+      <p class="leading-snug text-center">"Working with Nando brought out the best in our project—his focus on empathy
+        is truly what
+        makes a difference."</p>
+      <footer class="w-10/12 sm:w-4/6 flex flex-row items-start gap-x-6 items-stretch z-10 mx-auto">
+        <div class="bg-lime border-obsidian border-2 w-16 h-16 rounded-full"></div>
+        <cite class="grow not-italic text-left">
+          <strong>– Sarah Lee</strong><br>
+          <em>UX Researcher</em>
+        </cite>
+      </footer>
+    </blockquote>
+
+    <blockquote class="sm:bg-cream sm:window-rounded window-rounded-margins w-full max-sm:pb-12 z-40">
+      <p class="leading-snug text-center">"Nando is an incredibly insightful designer who takes a user-centered
+        approach, ensuring
+        product success."</p>
+      <footer class="w-10/12 sm:w-4/6 flex flex-row items-start gap-x-6 items-stretch z-10 mx-auto">
+        <div class="bg-lime border-obsidian border-2 w-16 h-16 rounded-full"></div>
+        <cite class="grow not-italic text-left">
+          <strong>– Jane Doe</strong><br>
+          <em>Project Manager</em>
+        </cite>
+      </footer>
+    </blockquote>
+  </div>
 </section>
 
 {# Section: Contact #}

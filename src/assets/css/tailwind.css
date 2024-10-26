@@ -66,6 +66,10 @@
     box-shadow: 8px 8px 0;
   }
 
+  .window-rounded.window-rounded-margins {
+    @apply p-4 lg:p-6;
+  }
+
   .contact-button {
     @apply rounded-xl border-6 px-6 py-4 border-cream shadow-cream overflow-hidden;
     box-shadow: 8px 8px 0 #fff6ee;
@@ -75,8 +79,12 @@
     @apply m-0;
   }
 
+  .hero {
+    @apply md:mb-40 xl:mb-60;
+  }
+
   .hero h1 {
-    @apply font-black;
+    @apply font-black xl:text-9xl;
   }
 
   .hero p {
@@ -89,7 +97,7 @@
 
   /* Work Cards Begin */
   .card {
-    @apply bg-cream col-span-12 grid grid-cols-12 gap-x-6 p-4 sm:p-4 lg:p-6;
+    @apply bg-cream col-span-12 grid grid-cols-12 gap-x-6;
   }
 
   .card > .card-illustration {
@@ -131,6 +139,6 @@
 
   /* Sets default margins for site sections/footers/etc */
   .global-margins {
-    @apply px-5 md:px-16 pt-10 md:pt-20 pb-20 md:pb-40 xl:max-w-screen-2xl;
+    @apply px-5 md:px-16 pt-10 md:pt-20 pb-20 md:pb-40 xl:max-w-screen-2xl mx-auto;
   }
 }
