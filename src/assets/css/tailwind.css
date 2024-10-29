@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply text-lg leading-relaxed text-obsidian;
+    @apply text-xl leading-relaxed text-obsidian;
   }
 
   /* Headings */
@@ -28,11 +28,11 @@
   }
 
   h6 {
-    @apply text-lg font-bold leading-relaxed mt-5 mb-3 md:text-xl lg:text-2xl;
+    @apply text-lg font-bold leading-snug mt-5 mb-3 md:text-xl lg:text-2xl;
   }
 
   p {
-    @apply text-lg leading-relaxed mb-5;
+    @apply lg:text-2xl leading-relaxed mb-5;
   }
 
   small {
@@ -71,12 +71,12 @@
   }
 
   .contact-button {
-    @apply rounded-xl border-6 px-6 py-4 border-cream shadow-cream;
+    @apply rounded-xl border-6 px-6 py-4 mb-8 border-cream shadow-cream;
     box-shadow: 8px 8px 0 #fff6ee;
   }
 
   .contact-button h5 {
-    @apply m-0;
+    @apply m-0 max-sm:text-2xl;
   }
 
   .hero {
@@ -84,11 +84,12 @@
   }
 
   .hero h1 {
-    @apply font-black xl:text-9xl;
+    @apply font-black leading-none;
+    font-size: clamp(4rem, 7vw + 1rem, 8.5rem);
   }
 
   .hero p {
-    @apply sm:text-xl;
+    @apply mb-12;
   }
 
   main > section {
@@ -101,7 +102,7 @@
   }
 
   .card > .card-illustration {
-    @apply bg-purple-300 col-span-12 sm:col-span-4 lg:col-span-5 min-h-40;
+    @apply bg-purple-300 col-span-12 sm:col-span-4 lg:col-span-5 min-h-40 bg-center bg-no-repeat bg-cover;
   }
 
   .card > .card-contents {
@@ -112,12 +113,12 @@
     @apply text-sm uppercase font-bold;
   }
 
-  .card > .card-contents h4 {
+  .card > .card-contents h6 {
     @apply mt-0;
   }
 
   .card > .card-contents .button {
-    @apply self-start mt-4 md:mt-12;
+    @apply self-start mt-4 md:mt-6;
   }
   /* Work Cards End */
 
@@ -139,6 +140,6 @@
 
   /* Sets default margins for site sections/footers/etc */
   .global-margins {
-    @apply px-5 md:px-16 pt-10 md:pt-20 pb-20 md:pb-40 xl:max-w-screen-2xl mx-auto;
+    @apply px-5 md:px-16 pt-28 sm:pt-40 pb-20 md:pb-36 xl:max-w-screen-2xl mx-auto;
   }
 }
