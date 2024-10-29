@@ -22,17 +22,25 @@ layout: "base.njk"
 </section>
 
 {# Section: Creativity #}
-<section class="global-margins global-margins-y columns" data-bg-class="bg-cherry" aria-labelledby="creativity">
+<section class="global-margins grid grid-cols-1 sm:grid-cols-2 gap-12" data-bg-class="bg-cherry"
+  aria-labelledby="creativity">
 
-  <header>
-    <h2 class="mt-0">Turning ideas into beloved products with design, process, and creativity.
+  <header class="sm:col-span-2 lg:col-span-1">
+    <h2 class="m-0 md:text-5xl">Turning ideas into beloved products with design, process, and creativity.
     </h2>
-    <figure
-      class="md:mt-16 w-full h-64 sm:h-96 md:w-3/12 md:min-w-80 md:max-w-96 window-rounded bg-[url('assets/images/nando-stairs.jpg')] bg-no-repeat bg-cover">
-    </figure>
   </header>
 
-  <div>
+  <figure class="sm:col-start-1 row-start-3 sm:row-start-2
+    lg:-mt-80 xl:-mt-60 
+    h-80
+    sm:h-3/6 
+    md:w-10/12 md:h-40vh md:min-h-96
+    lg:w-10/12 lg:h-50vh
+    xl:w-8/12
+    window-rounded bg-[url('assets/images/nando-stairs.jpg')] bg-no-repeat bg-cover sm:bg-center">
+  </figure>
+
+  <div class="sm:col-span-2 sm:col-start-2 row-start-2 md:row-start-2 lg:row-start-1">
     <p>
       As a product designer with nearly <strong>20 years of experience</strong>—15 of those as an independent,
       remote-first professional, I've had the opportunity to work with brands like <strong>Lego, Nissan,
@@ -117,6 +125,20 @@ layout: "base.njk"
       </div>
     </article>
   </div>
+
+  {# Other projects
+
+  Klang Seed
+  Game Dev
+
+  Calvis App
+  Prototype
+
+  HowStuffWorks
+  App Design
+
+  My Pink Friday by Nicki Minaj
+  App Design #}
 </section>
 
 {# Section: My Services #}
