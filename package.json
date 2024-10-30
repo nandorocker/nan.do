@@ -3,14 +3,17 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "npm-run-all clean --parallel dev:*",
+    "start": "run-s start:local",
+    "start:local": "npm-run-all clean --parallel dev:*",
+    "start:tunnel": "npm-run-all --parallel start:local tunnel",
     "build": "run-s clean build:*",
     "dev:11ty-watch": "eleventy --watch",
     "dev:11ty-server": "eleventy-dev-server --dir=public",
     "dev:css": "tailwindcss --input ./src/assets/css/tailwind.css --output ./public/tailwind.css --watch --postcss",
     "build:11ty": "eleventy",
     "build:css": "tailwindcss --input ./src/assets/css/tailwind.css --output ./public/tailwind.css --postcss",
-    "clean": "rimraf public"
+    "clean": "rimraf public",
+    "tunnel": "wait-on http://localhost:8080 && cloudflared tunnel --url http://localhost:8080"
   },
   "keywords": [],
   "author": "nandorocker",
@@ -25,6 +28,7 @@
   "devDependencies": {
     "autoprefixer": "^10.4.20",
     "postcss": "^8.4.47",
-    "tailwindcss": "^3.4.13"
+    "tailwindcss": "^3.4.13",
+    "wait-on": "^8.0.1"
   }
 }
