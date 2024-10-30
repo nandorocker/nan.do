@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply text-xl leading-relaxed text-obsidian;
+    @apply text-base md:text-xl lg:text-2xl leading-relaxed text-obsidian;
   }
 
   /* Headings */
@@ -13,7 +13,7 @@
   }
 
   h2 {
-    @apply text-4xl font-bold leading-snug mt-8 mb-5 md:text-5xl lg:text-6xl;
+    @apply text-4xl font-bold leading-tight mt-8 mb-5 md:text-5xl lg:text-6xl;
   }
 
   h3 {
@@ -21,7 +21,7 @@
   }
 
   h4 {
-    @apply text-2xl font-bold leading-snug lg:leading-tight mt-6 mb-4 md:text-3xl lg:text-4xl;
+    @apply text-2xl md:text-3xl lg:text-4xl font-bold leading-snug lg:leading-tight mt-6 mb-4;
   }
   h5 {
     @apply text-xl font-bold leading-relaxed mt-5 mb-3 md:text-2xl lg:text-3xl;
@@ -32,7 +32,7 @@
   }
 
   p {
-    @apply lg:text-2xl leading-relaxed mb-5;
+    @apply mb-5;
   }
 
   small {
@@ -80,20 +80,24 @@
   }
 
   .hero {
-    @apply md:mb-40 xl:mb-60;
+    @apply px-5 md:px-16
+      mx-auto
+      min-h-90vh
+      xl:max-w-screen-2xl
+      md:mb-40 xl:mb-60;
   }
 
   .hero h1 {
     @apply font-black leading-none;
-    font-size: clamp(4rem, 7vw + 1rem, 8.5rem);
+    font-size: clamp(3.2rem, 7vw + 1rem, 8.5rem);
+  }
+
+  .hero h4 {
+    @apply max-sm:text-xl;
   }
 
   .hero p {
     @apply mb-12;
-  }
-
-  main > section {
-    /* @apply border-b border-obsidian sm:border-none; */
   }
 
   /* Work Cards Begin */

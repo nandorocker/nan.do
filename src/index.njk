@@ -4,14 +4,13 @@ layout: "base.njk"
 ---
 
 {# Section: Intro #}
-<section class="hero px-5 md:px-16 relative flex items-end min-h-90vh xl:max-w-screen-2xl mx-auto"
-  data-bg-class="bg-lavender" aria-labelledby="intro">
+<section class="hero relative flex items-end" data-bg-class="bg-lavender" aria-labelledby="intro">
   <div class="lg:max-w-6xl xl:max-w-7xl text-left flex flex-col items-start pb-5 md:pb-0">
     <h4>
-      👋 Hi, I'm nando rossi <wbr>— available for freelance work
+      👋 Hi, I'm nando rossi <br class="sm:hidden"><wbr>— available for freelance work
     </h4>
     <h1 id="intro">
-      I make soulful software <wbr>that people love to use.
+      I make soulful software <br class="sm:hidden"><wbr>that people love to use.
     </h1>
     <p>
       With almost 20 years of experience, I’ve helped brands like TestFlight, the Berlin Philharmonic, and Disney to
@@ -22,22 +21,20 @@ layout: "base.njk"
 </section>
 
 {# Section: Creativity #}
-<section class="global-margins grid grid-cols-1 sm:grid-cols-2 gap-12" data-bg-class="bg-cherry"
+<section class="global-margins grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-12" data-bg-class="bg-cherry"
   aria-labelledby="creativity">
 
   <header class="sm:col-span-2 lg:col-span-1">
-    <h2 class="m-0 md:text-5xl">Turning ideas into beloved products with design, process, and creativity.
-    </h2>
+    <h3 class="m-0 max-sm:text-2xl">Turning ideas into beloved products with design, process, and creativity.
+    </h3>
   </header>
 
   <figure class="sm:col-start-1 row-start-3 sm:row-start-2
     lg:-mt-80 xl:-mt-60 
     h-80
-    sm:h-3/6 
-    md:w-10/12 md:h-40vh md:min-h-96
-    lg:w-10/12 lg:h-50vh
-    xl:w-8/12
-    window-rounded bg-[url('assets/images/nando-stairs.jpg')] bg-no-repeat bg-cover sm:bg-center">
+    sm:h-3/6 md:h-40vh md:min-h-96 lg:h-50vh
+    md:w-10/12 lg:w-10/12 xl:w-8/12
+    window-rounded bg-[url('assets/images/nando-stairs.jpg')] bg-no-repeat bg-cover bg-left-top md:bg-center">
   </figure>
 
   <div class="sm:col-span-2 sm:col-start-2 row-start-2 md:row-start-2 lg:row-start-1">
