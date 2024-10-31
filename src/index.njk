@@ -58,7 +58,7 @@ layout: "base.njk"
 {# Section: Work #}
 <section class="global-margins" data-bg-class="bg-lime" aria-labelledby="selected-works">
   <header>
-    <h1 id="selected-works">Selected Works</h1>
+    <h1 id="work">Selected Works</h1>
   </header>
   <!-- Grid for work cards -->
   <div class="max-sm:mt-12 grid grid-cols-12 gap-y-16 md:gap-y-24">
@@ -283,11 +283,21 @@ layout: "base.njk"
     <div class="md:col-start-6 md:col-span-3 flex flex-col items-start sm:gap-y-4 lg:gap-y-6">
       <h4 class="mt-8 md:m-0 max-sm:text-3xl">Contact Me</h4>
 
-      <a href="#" class="contact-button max-sm:w-full flex">
+      <button onclick="copyEmail()" aria-label="Copy email to clipboard"
+        class="contact-button max-sm:w-full flex relative">
         <div class="flex items-center mx-auto">
-          <h5>talk@nan.do</h5> <img src="assets/images/icon-copy.svg" class="w-8 ml-4" alt="Copy My Email">
+          <h5 id="email">talk@nan.do</h5>
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="41" viewBox="0 0 40 41" fill="currentcolor"
+            class="w-8 ml-4 icon-copy">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M13.5001 9C13.3383 9 13.1778 9.00549 13.0187 9.01629C13.265 5.92877 15.8486 3.5 18.9995 3.5H28.9995C32.3132 3.5 34.9995 6.18629 34.9995 9.5V25.5C34.9995 28.8137 32.3132 31.5 28.9995 31.5H28.339C28.4445 31.0168 28.5001 30.5149 28.5001 30V16C28.5001 12.134 25.366 9 21.5001 9H13.5001ZM11 10.5C7.68629 10.5 5 13.1863 5 16.5V32.5C5 35.8137 7.68629 38.5 11 38.5H21C24.3137 38.5 27 35.8137 27 32.5V16.5C27 13.1863 24.3137 10.5 21 10.5H11Z" />
+          </svg>
         </div>
-      </a>
+        <span id="copied-message"
+          class="text-xl font-bold absolute capitalize opacity-0 inset-0 bg-obsidian text-cream rounded-xl flex items-center justify-center transition-opacity duration-300">
+          Copied to clipboard!
+        </span>
+      </button>
 
       <ul class="flex flex-row items-start gap-8 max-sm:mt-8">
         <li><img src="assets/images/social-linkedin.svg" class="w-12" alt="linkedin"></li>
