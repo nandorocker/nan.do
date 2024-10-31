@@ -9,7 +9,7 @@
 
   /* Headings */
   h1 {
-    @apply text-5xl font-bold leading-none md:leading-tight mb-6 md:mb-16 xl:mb-24 md:text-6xl lg:text-7xl;
+    @apply text-5xl font-bold leading-none md:leading-tight mb-6 md:mb-12 xl:mb-14 2xl:mb-16 md:text-6xl lg:text-7xl;
   }
 
   h2 {
@@ -49,6 +49,29 @@
 }
 
 @layer components {
+  /* Hero Area Begins */
+  .hero {
+    @apply px-5 md:px-16 lg:pr-40
+      mx-auto
+      min-h-80vh
+      xl:max-w-screen-2xl
+      md:mb-40 xl:mb-60;
+  }
+
+  .hero h1 {
+    @apply font-black leading-none;
+    font-size: clamp(3rem, 7vw + 1rem, 7rem);
+  }
+
+  .hero .top-line {
+    @apply text-xl sm:text-2xl lg:text-3xl xl:text-4xl;
+  }
+
+  .hero p {
+    @apply mb-12;
+  }
+  /* Hero Area Ends */
+
   .button {
     @apply bg-obsidian hover:bg-slate-800 text-cream rounded-full box-border w-full sm:w-auto text-center sm:text-left;
   }
@@ -61,6 +84,7 @@
     @apply text-sm font-medium px-8 py-3;
   }
 
+  /* Windows Begin */
   .window-rounded {
     @apply rounded-xl border-6 border-obsidian shadow-obsidian overflow-hidden;
     box-shadow: 8px 8px 0;
@@ -69,7 +93,9 @@
   .window-rounded.window-rounded-margins {
     @apply p-4 lg:p-6;
   }
+  /* Windows End */
 
+  /* Contact Begins */
   .contact-button {
     @apply rounded-xl border-6 px-6 py-4 mb-8 border-cream shadow-cream;
     box-shadow: 8px 8px 0 #fff6ee;
@@ -78,27 +104,7 @@
   .contact-button h5 {
     @apply m-0 max-sm:text-2xl;
   }
-
-  .hero {
-    @apply px-5 md:px-16
-      mx-auto
-      min-h-90vh
-      xl:max-w-screen-2xl
-      md:mb-40 xl:mb-60;
-  }
-
-  .hero h1 {
-    @apply font-black leading-none;
-    font-size: clamp(3.2rem, 7vw + 1rem, 8.5rem);
-  }
-
-  .hero h4 {
-    @apply max-sm:text-xl;
-  }
-
-  .hero p {
-    @apply mb-12;
-  }
+  /* Contact Ends */
 
   /* Work Cards Begin */
   .card {
@@ -137,7 +143,7 @@
 
   /* Footer Begins */
   footer.footer-global {
-    @apply py-0 pb-0 grid grid-cols-1 sm:grid-cols-3 md:grid-cols-5 text-sm leading-loose;
+    @apply mt-8 lg:pt-16 py-0 pb-0 grid grid-cols-1 sm:grid-cols-3 md:grid-cols-5 text-sm leading-loose;
   }
   /* Footer Ends */
 }
@@ -153,10 +159,12 @@
 
   /* Sets default margins for site sections/footers/etc */
   .global-margins {
-    @apply pt-28
-      sm:pt-40
-      pb-20
-      md:pb-36
+    @apply pt-16
+      lg:pt-36
+      2xl:pt-48
+      pb-8
+      lg:pb-10
+      2xl:pb-24
       px-5
       md:px-16
       xl:max-w-screen-2xl
@@ -168,8 +176,16 @@
     @apply mb-6 md:mb-16 xl:mb-24;
   }
 
+  .pic-tall {
+    @apply mt-10 lg:-mt-80 xl:-mt-60 w-full md:w-11/12 lg:w-10/12 xl:w-5/6 h-fit;
+  }
+
+  .pic-tall img {
+    @apply w-full h-auto;
+  }
+
   .p-bigger {
-    @apply md:text-xl lg:text-2xl;
+    @apply text-lg md:text-xl lg:text-2xl;
   }
 
   .p-smaller {
