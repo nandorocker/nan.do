@@ -46,12 +46,16 @@
   strong {
     @apply font-bold;
   }
+
+  a:hover {
+    @apply transition-colors text-cream;
+  }
 }
 
 @layer components {
   /* Hero Area Begins */
   .hero {
-    @apply px-5 md:px-16 lg:pr-40
+    @apply px-5 md:px-16
       mx-auto
       min-h-80vh
       xl:max-w-screen-2xl
@@ -60,7 +64,7 @@
 
   .hero h1 {
     @apply font-black leading-none;
-    font-size: clamp(3rem, 7vw + 1rem, 7rem);
+    font-size: clamp(2.8rem, 6.5vw + 1rem, 7rem);
   }
 
   .hero .top-line {
@@ -177,7 +181,7 @@
   }
 
   .pic-tall {
-    @apply mt-10 lg:-mt-80 xl:-mt-60 w-full md:w-11/12 lg:w-10/12 xl:w-5/6 h-fit;
+    @apply mt-10 md:mt-0 lg:-mt-80 xl:-mt-60 w-full md:w-10/12 lg:w-9/12 xl:w-3/5 h-fit;
   }
 
   .pic-tall img {

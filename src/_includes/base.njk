@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="scroll-smooth" lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -17,12 +17,15 @@
     <main class="relative min-h-screen bg-lavender text-obsidian transition-colors duration-700 overflow-hidden"
         data-bg-scroll>
         {% include 'nav.njk' %}
+        {% include 'scroll_to_top.njk' %}
 
         {{ content | safe }}
 
         {% include 'footer.njk' %}
-
     </main>
+
+    <script src="{{ 'assets/js/bg_scroll.js' | url }}"></script>
+    <script src="{{ 'assets/js/scroll_to_top.js' | url }}"></script>
 </body>
 
 </html>
