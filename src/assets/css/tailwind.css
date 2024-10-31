@@ -4,12 +4,12 @@
 
 @layer base {
   body {
-    @apply text-base md:text-xl lg:text-2xl leading-relaxed text-obsidian;
+    @apply text-base leading-relaxed text-obsidian bg-slate-700;
   }
 
   /* Headings */
   h1 {
-    @apply text-5xl font-bold leading-none md:leading-tight mb-6 md:text-6xl lg:text-7xl;
+    @apply text-5xl font-bold leading-none md:leading-tight mb-6 md:mb-16 xl:mb-24 md:text-6xl lg:text-7xl;
   }
 
   h2 {
@@ -24,19 +24,19 @@
     @apply text-2xl md:text-3xl lg:text-4xl font-bold leading-snug lg:leading-tight mt-6 mb-4;
   }
   h5 {
-    @apply text-xl font-bold leading-relaxed mt-5 mb-3 md:text-2xl lg:text-3xl;
+    @apply text-xl md:text-2xl lg:text-3xl font-bold leading-relaxed mt-5 mb-3;
   }
 
   h6 {
-    @apply text-lg font-bold leading-snug mt-5 mb-3 md:text-xl lg:text-2xl;
+    @apply text-lg md:text-xl lg:text-2xl font-bold leading-snug mt-5 mb-3;
   }
 
   p {
-    @apply mb-5;
+    @apply [&:not(:last-child)]:mb-5;
   }
 
   small {
-    @apply text-base leading-normal mb-4;
+    @apply text-sm mb-4;
   }
 
   em {
@@ -106,25 +106,34 @@
   }
 
   .card > .card-illustration {
-    @apply bg-purple-300 col-span-12 sm:col-span-4 lg:col-span-5 min-h-40 bg-center bg-no-repeat bg-cover;
+    @apply bg-purple-300 col-span-12 sm:col-span-4 lg:col-span-5 min-h-40 bg-top lg:bg-center bg-no-repeat bg-cover;
   }
 
   .card > .card-contents {
-    @apply col-span-12 sm:col-span-8 lg:col-span-7 min-h-80 pt-4 sm:pt-0 flex flex-col items-start;
+    @apply max-sm:ml-4 mr-4 lg:mr-6 my-4 lg:my-6 col-span-12 sm:col-span-8 lg:col-span-7 sm:pt-0 flex flex-col items-start;
   }
 
   .card > .card-contents .category {
     @apply text-sm uppercase font-bold;
   }
 
-  .card > .card-contents h6 {
-    @apply mt-0;
+  .card > .card-contents h5 {
+    @apply mt-0 max-sm:text-lg max-sm:leading-tight;
+  }
+
+  .card p {
+    @apply text-sm leading-normal lg:text-base mb-4;
   }
 
   .card > .card-contents .button {
     @apply self-start mt-4 md:mt-6;
   }
   /* Work Cards End */
+
+  /* Services Begins */
+  .services h5 {
+    @apply max-md:text-2xl;
+  }
 
   /* Footer Begins */
   footer.footer-global {
@@ -144,6 +153,26 @@
 
   /* Sets default margins for site sections/footers/etc */
   .global-margins {
-    @apply px-5 md:px-16 pt-28 sm:pt-40 pb-20 md:pb-36 xl:max-w-screen-2xl mx-auto;
+    @apply pt-28
+      sm:pt-40
+      pb-20
+      md:pb-36
+      px-5
+      md:px-16
+      xl:max-w-screen-2xl
+      mx-auto;
+  }
+
+  /* Standardizes section header spacing */
+  .section-headline {
+    @apply mb-6 md:mb-16 xl:mb-24;
+  }
+
+  .p-bigger {
+    @apply md:text-xl lg:text-2xl;
+  }
+
+  .p-smaller {
+    @apply text-sm lg:text-base mb-4;
   }
 }
