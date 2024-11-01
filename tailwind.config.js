@@ -12,6 +12,22 @@ module.exports = {
       sans: ["Work Sans", "regular"],
     },
     extend: {
+      boxShadow: {
+        "sm-flat-r": "2px 2px 0 rgb(0 0 0 / 1)",
+        "sm-flat-l": "-2px -2px 0 rgb(0 0 0 / 1)",
+        "flat-r": "4px 4px 0 rgb(0 0 0 / 1)",
+        "flat-l": "-4px -4px 0 rgb(0 0 0 / 1)",
+        "md-flat-r": "6px 6px 0 rgb(0 0 0 / 1)",
+        "md-flat-l": "-6px -6px 0 rgb(0 0 0 / 1)",
+        "lg-flat-r": "8px 8px 0 rgb(0 0 0 / 1)",
+        "lg-flat-l": "-8px -8px 0 rgb(0 0 0 / 1)",
+        "xl-flat-r": "10px 10px 0 rgb(0 0 0 / 1)",
+        "xl-flat-l": "-10px -10px 0 rgb(0 0 0 / 1)",
+        "2xl-flat-r": "12px 12px 0 rgb(0 0 0 / 1)",
+        "2xl-flat-l": "-12px -12px 0 rgb(0 0 0 / 1)",
+        "inner-flat-r": "inset 4px 4px 0 rgb(0 0 0 / 1)",
+        "inner-flat-l": "inset -4px -4px 0 rgb(0 0 0 / 1)",
+      },
       colors: {
         lavender: {
           DEFAULT: "#c6c2f2",
