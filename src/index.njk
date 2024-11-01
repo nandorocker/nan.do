@@ -6,17 +6,21 @@ layout: "base.njk"
 <section id="hero" class="hero relative flex items-end" data-bg-class="bg-lavender" aria-labelledby="intro">
   <div class="lg:max-w-6xl xl:max-w-7xl text-left flex flex-col items-start max-sm:pt-40 lg:pt-20 pb-5 md:pb-0">
     <h4 class="top-line">
-      👋 Hi, I'm nando rossi <br class="sm:hidden"><wbr>— available for freelance work
+      <span class="duration-[600ms] taos:opacity-0 ease-out">👋 Hi, I'm nando rossi</span> <br
+        class="sm:hidden"><wbr><span class="delay-[500ms] duration-[600ms] taos:opacity-0 ease-out">— available for
+        freelance work</span>
     </h4>
-    <h1 id="intro">
+    <h1 id="intro" class="delay-[900ms] duration-[1200ms] taos:opacity-0 ease-in-out">
       I make soulful software <br class="sm:hidden"><wbr>that people love to use.
     </h1>
     <p class="p-bigger">
-      With almost 20 years of experience, I’ve helped brands like <strong>TestFlight</strong>, the <strong>Berlin
-        Philharmonic</strong>, and <strong>Disney</strong> to
-      create and evolve beloved products, through strategy, function with delight.
+      <span class="delay-[1200ms] duration-[600ms] taos:opacity-0 ease-in-out">With almost 20 years of experience, I’ve
+        helped brands like <strong>TestFlight</strong>, the <strong>Berlin
+          Philharmonic</strong>, and <strong>Disney</strong> to
+        create and evolve beloved products, through strategy, function with delight.</span>
     </p>
-    <a href="#contact" class="button button-large">Need a designer? Let's talk!</a>
+    <a href="#contact" class="button button-large delay-[1400ms] duration-[600ms] taos:opacity-0 ease-in-out">Need a
+      designer? Let's talk!</a>
   </div>
 </section>
 
@@ -25,19 +29,27 @@ layout: "base.njk"
   aria-labelledby="about-label">
 
   <header class="sm:col-span-2 lg:col-span-1">
-    <h3 id="about-label" class="m-0 max-sm:text-3xl">Turning ideas into beloved products with design, process, and
+    <h3 id="about-label"
+      class="m-0 max-sm:text-3xl duration-[1200ms] taos:translate-y-[-200px] taos:opacity-0 ease-in-out"
+      data-taos-offset="400">
+      Turning ideas into beloved
+      products with design, process, and
       creativity.
     </h3>
   </header>
 
-  <picture class="window-rounded border pic-tall sm:col-start-1 row-start-3 sm:row-start-2">
+  <picture
+    class="window-rounded border pic-tall sm:col-start-1 row-start-3 sm:row-start-2 delay-[400ms] duration-[800ms] taos:translate-x-[-200px] taos:opacity-0 ease-out"
+    data-taos-offset="300">
     <source media="(max-width:640px)" srcset="assets/images/nando-stairs-crop1.jpg">
     <img src="assets/images/nando-stairs.jpg"
-      alt="Nando, a man in his 40s with curly hair, glasses and a mustache, sitting on a staircase wearing a gray suit, smiling"
+      alt="Nando, a man with light skin, dark curly hair, glasses and a mustache, sitting on a staircase wearing a gray suit, smiling"
       class="w-full h-auto">
   </picture>
 
-  <div class="sm:col-span-2 sm:col-start-2 row-start-2 md:row-start-2 lg:row-start-1">
+  <div
+    class="sm:col-span-2 sm:col-start-2 row-start-2 md:row-start-2 lg:row-start-1 delay-[700ms] taos:translate-y-[200px] duration-[1200ms] taos:opacity-0 ease-in-out"
+    taos-data-offset="700">
     <p class="p-bigger">
       As a product designer with nearly <strong>20 years of experience</strong>—15 of those as an independent,
       remote-first professional, I've had the opportunity to work with brands like <strong>Lego, Nissan,
@@ -50,7 +62,7 @@ layout: "base.njk"
       <strong>foster creativity</strong>, open communication, and collaboration, you get surprising outcomes—and
       <strong>products people love</strong>.
     </p>
-    <p class="p-bigger">
+    <p class=" p-bigger">
       Let’s bring your vision to life and create the next success story together.
     </p>
   </div>
@@ -59,14 +71,17 @@ layout: "base.njk"
 {# Section: Work #}
 <section id="work" class="global-margins max-sm:px-0" data-bg-class="bg-lime" aria-labelledby="works-label">
   <header>
-    <h1 class="mx-5" id="works-label">Selected Works</h1>
+    <h1 class="mx-5 duration-[1200ms] taos:opacity-0 ease-out" id="works-label" data-taos-offset="300">Selected Works
+    </h1>
   </header>
   <!-- Grid for work cards -->
   <div
     class="max-sm:pb-3 max-sm:mt-12 max-sm:flex max-sm:overflow-x-scroll grid grid-cols-12 gap-x-8 gap-y-16 md:gap-y-24">
 
     <!-- card 1 -->
-    <article class="card window-rounded md:col-span-10 lg:col-span-10">
+    <article
+      class="card window-rounded md:col-span-10 lg:col-span-10 delay-[100ms] duration-[1200ms] taos:[transform:perspective(2500px)_rotateX(-100deg)] taos:invisible taos:[backface-visibility:hidden] ease-in-out"
+      data-taos-offset="100">
       <div class="card-illustration bg-[url('assets/images/works-spellstruck-keyart.png')]">
       </div>
       <div class="card-contents">
@@ -89,7 +104,9 @@ layout: "base.njk"
     </article>
 
     <!-- card 2 -->
-    <article class="card window-rounded md:col-start-3 lg:col-start-4 md:col-span-10 lg:col-span-10">
+    <article
+      class="card window-rounded md:col-start-3 lg:col-start-4 md:col-span-10 lg:col-span-10 duration-[1200ms] taos:[transform:perspective(2500px)_rotateX(100deg)] taos:invisible taos:[backface-visibility:hidden] ease-in-out"
+      data-taos-offset="200">
       <div class="card-illustration bg-[url('assets/images/works-testflight-thumb.png')]"></div>
       <div class="card-contents">
         <header>
@@ -107,7 +124,9 @@ layout: "base.njk"
     </article>
 
     <!-- card 3 -->
-    <article class="card window-rounded md:col-span-10 lg:col-span-10">
+    <article
+      class="card window-rounded md:col-span-10 lg:col-span-10 duration-[1200ms] taos:[transform:perspective(2500px)_rotateX(100deg)] taos:invisible taos:[backface-visibility:hidden] ease-in-out"
+      data-taos-offset="200">
       <div class="card-illustration bg-[url('assets/images/works-dch-thumb.png')]"></div>
       <div class="card-contents">
         <header>
@@ -142,9 +161,10 @@ layout: "base.njk"
 {# Section: My Services #}
 <section id="services" class="global-margins services" data-bg-class="bg-amber-300" aria-labelledby="services-label">
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-5 md:gap-x-16">
-    <h1 id="services-label">Services</h1>
+    <h1 class="duration-[1200ms] taos:opacity-0 ease-in-out" id="services-label" data-taos-offset="100">Services</h1>
 
-    <div class="lg:col-span-2 grid grid-cols-1 lg:grid-cols-2 gap-x-8">
+    <div
+      class="lg:col-span-2 grid grid-cols-1 lg:grid-cols-2 gap-x-8 delay-[200ms] duration-[1200ms] taos:opacity-0 ease-in-out">
       <article>
         <header>
           <h5>Strategic Direction &amp; Consultation</h5>
@@ -202,19 +222,32 @@ layout: "base.njk"
 
 {# Section: Logos #}
 <section id="brands" class="global-margins" data-bg-class="bg-lavender" aria-labelledby="brands-label">
-  <h4 id="brands-label" class="mb-6 md:mb-10 lg:text-4xl text-center capitalize">Leading Brands I've Collaborated With
+  <h4 id="brands-label"
+    class="mb-6 md:mb-10 lg:text-4xl text-center capitalize duration-[1200ms] taos:opacity-0 ease-in-out"
+    data-taos-offset="200">Leading Brands I've Worked With
   </h4>
   <article class="window-rounded border bg-cream brands">
-    <img src="assets/images/logo-artist-arcade.png" class="brands-logo" alt="Artist Arcade" srcset="">
-    <img src="assets/images/logo-disney.png" class="brands-logo" alt="Disney" srcset="">
-    <img src="assets/images/logo-bph.png" class="brands-logo" alt="Berliner Philharmonic" srcset="">
-    <img src="assets/images/logo-nissan.png" class="brands-logo" alt="Nissan" srcset="">
-    <img src="assets/images/logo-discovery.png" class="brands-logo" alt="Discovery Channel" srcset="">
-    <img src="assets/images/logo-evenly.png" class="brands-logo" alt="Evenly" srcset="">
-    <img src="assets/images/logo-walgreens.png" class="brands-logo" alt="Walgreens" srcset="">
-    <img src="assets/images/logo-beam-suntory.png" class="brands-logo" alt="Beam Suntory" srcset="">
-    <img src="assets/images/logo-lego.png" class="brands-logo" alt="Lego" srcset="">
-    <img src="assets/images/logo-mattel.png" class="brands-logo sm:max-md:col-start-2" alt="Mattel" srcset="">
+    <img src="assets/images/logo-artist-arcade.png" class="brands-logo duration-[600ms] taos:opacity-0 ease-out"
+      alt="Artist Arcade" srcset="" data-taos-offset="0">
+    <img src="assets/images/logo-disney.png" class="brands-logo delay-[100ms] duration-[600ms] taos:opacity-0 ease-out"
+      alt="Disney" srcset="">
+    <img src="assets/images/logo-bph.png" class="brands-logo delay-[150ms] duration-[600ms] taos:opacity-0 ease-out"
+      alt="Berliner Philharmonic" srcset="">
+    <img src="assets/images/logo-nissan.png" class="brands-logo delay-[200ms] duration-[600ms] taos:opacity-0 ease-out"
+      alt="Nissan" srcset="">
+    <img src="assets/images/logo-discovery.png"
+      class="brands-logo delay-[250ms] duration-[600ms] taos:opacity-0 ease-out" alt="Discovery Channel" srcset="">
+    <img src="assets/images/logo-evenly.png" class="brands-logo delay-[300ms] duration-[600ms] taos:opacity-0 ease-out"
+      alt="Evenly" srcset="">
+    <img src="assets/images/logo-walgreens.png"
+      class="brands-logo delay-[350ms] duration-[600ms] taos:opacity-0 ease-out" alt="Walgreens" srcset="">
+    <img src="assets/images/logo-beam-suntory.png"
+      class="brands-logo delay-[400ms] duration-[600ms] taos:opacity-0 ease-out" alt="Beam Suntory" srcset="">
+    <img src="assets/images/logo-lego.png" class="brands-logo delay-[450ms] duration-[600ms] taos:opacity-0 ease-out"
+      alt="Lego" srcset="">
+    <img src="assets/images/logo-mattel.png"
+      class="brands-logo sm:max-md:col-start-2 delay-[500ms] duration-[600ms] taos:opacity-0 ease-out" alt="Mattel"
+      srcset="">
   </article>
 </section>
 
