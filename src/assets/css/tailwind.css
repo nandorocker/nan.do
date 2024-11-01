@@ -13,11 +13,11 @@
   }
 
   h2 {
-    @apply text-4xl font-bold leading-tight mt-8 mb-5 md:text-5xl lg:text-6xl;
+    @apply text-4xl font-bold mt-8 mb-5 md:text-5xl lg:text-6xl leading-tight;
   }
 
   h3 {
-    @apply text-3xl font-bold leading-snug mt-6 mb-4 md:text-4xl lg:text-5xl;
+    @apply text-3xl font-bold mt-6 mb-4 md:text-4xl lg:text-5xl lg:leading-tight;
   }
 
   h4 {
@@ -151,6 +151,16 @@
     @apply self-start mt-4 md:mt-6;
   }
   /* Work Cards End */
+
+  /* Brands Begins */
+  .brands {
+    @apply p-6 md:p-8 xl:p-12 grid gap-4 md:gap-6 grid-cols-2 sm:grid-cols-3 md:grid-cols-5 xl:grid-cols-5;
+  }
+
+  .brands-logo {
+    @apply h-14 md:h-16 lg:h-20 max-w-4/6 md:max-w-5/6 object-contain mx-auto;
+  }
+  /* Brands End */
 
   /* Services Begins */
   .services h5 {

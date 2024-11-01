@@ -3,7 +3,7 @@ title: "nan.do rossi, freelance product designer"
 layout: "base.njk"
 ---
 {# Section: Intro #}
-<section class="hero relative flex items-end" data-bg-class="bg-lavender" aria-labelledby="intro">
+<section id="hero" class="hero relative flex items-end" data-bg-class="bg-lavender" aria-labelledby="intro">
   <div class="lg:max-w-6xl xl:max-w-7xl text-left flex flex-col items-start max-sm:pt-40 lg:pt-20 pb-5 md:pb-0">
     <h4 class="top-line">
       👋 Hi, I'm nando rossi <br class="sm:hidden"><wbr>— available for freelance work
@@ -21,11 +21,12 @@ layout: "base.njk"
 </section>
 
 {# Section: Creativity #}
-<section class="global-margins grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-12" data-bg-class="bg-cherry"
-  aria-labelledby="creativity">
+<section id="about-me" class="global-margins grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-12" data-bg-class="bg-cherry"
+  aria-labelledby="about-label">
 
   <header class="sm:col-span-2 lg:col-span-1">
-    <h3 class="m-0 max-sm:text-3xl">Turning ideas into beloved products with design, process, and creativity.
+    <h3 id="about-label" class="m-0 max-sm:text-3xl">Turning ideas into beloved products with design, process, and
+      creativity.
     </h3>
   </header>
 
@@ -56,9 +57,9 @@ layout: "base.njk"
 </section>
 
 {# Section: Work #}
-<section class="global-margins" data-bg-class="bg-lime" aria-labelledby="selected-works">
+<section id="work" class="global-margins" data-bg-class="bg-lime" aria-labelledby="works-label">
   <header>
-    <h1 id="work">Selected Works</h1>
+    <h1 id="works-label">Selected Works</h1>
   </header>
   <!-- Grid for work cards -->
   <div class="max-sm:mt-12 grid grid-cols-12 gap-y-16 md:gap-y-24">
@@ -138,9 +139,9 @@ layout: "base.njk"
 </section>
 
 {# Section: My Services #}
-<section class="global-margins services" data-bg-class="bg-amber-300" aria-labelledby="services">
+<section id="services" class="global-margins services" data-bg-class="bg-amber-300" aria-labelledby="services-label">
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-5 md:gap-x-16">
-    <h1 class="" id="services">Services</h1>
+    <h1 id="services-label">Services</h1>
 
     <div class="lg:col-span-2 grid grid-cols-1 lg:grid-cols-2 gap-x-8">
       <article>
@@ -199,83 +200,28 @@ layout: "base.njk"
 </section>
 
 {# Section: Logos #}
-<section class="global-margins" data-bg-class="bg-lavender" aria-labelledby="logos">
-  <h3 class="section-headline">Leading Brands</h3>
-  <article class="window-rounded window-rounded-margins bg-cream">
-    <img src="assets/images/logo-grid.png"
-      alt="Artist Arcade, Disney, Berliner Philharmoniker, Nissan, Discovery Channel, evenly, Walgreens, Beam Suntory, LEGO, Mattel"
-      class="w-full" srcset="">
+<section id="brands" class="global-margins" data-bg-class="bg-lavender" aria-labelledby="brands-label">
+  <h4 id="brands-label" class="mb-6 md:mb-10 lg:text-4xl text-center capitalize">Leading Brands I've Collaborated With
+  </h4>
+  <article class="window-rounded bg-cream brands">
+    <img src="assets/images/logo-artist-arcade.png" class="brands-logo" alt="Artist Arcade" srcset="">
+    <img src="assets/images/logo-disney.png" class="brands-logo" alt="Disney" srcset="">
+    <img src="assets/images/logo-bph.png" class="brands-logo" alt="Berliner Philharmonic" srcset="">
+    <img src="assets/images/logo-nissan.png" class="brands-logo" alt="Nissan" srcset="">
+    <img src="assets/images/logo-discovery.png" class="brands-logo" alt="Discovery Channel" srcset="">
+    <img src="assets/images/logo-evenly.png" class="brands-logo" alt="Evenly" srcset="">
+    <img src="assets/images/logo-walgreens.png" class="brands-logo" alt="Walgreens" srcset="">
+    <img src="assets/images/logo-beam-suntory.png" class="brands-logo" alt="Beam Suntory" srcset="">
+    <img src="assets/images/logo-lego.png" class="brands-logo" alt="Lego" srcset="">
+    <img src="assets/images/logo-mattel.png" class="brands-logo sm:max-md:col-start-2" alt="Mattel" srcset="">
   </article>
 </section>
 
-{# Section: Testimonials #}
-{# <section class="global-margins min-h-80vh" data-bg-class="bg-lavender" aria-labelledby="testimonials">
-  <h1 class="mb-24" id="testimonials">People Talking</h1>
-
-  <div
-    class="grid grid-cols-1 max-sm:window-rounded max-sm:p-4 max-sm:bg-cream sm:grid-cols-2 w-full lg:w-9/12 gap-12 m-auto">
-    <blockquote
-      class="sm:bg-cream sm:window-rounded window-rounded-margins w-full max-sm:pb-12 max-sm:border-b border-obsidian">
-      <p class="leading-snug text-center">"Nando is an incredibly insightful designer who takes a user-centered
-        approach, ensuring
-        product success."</p>
-      <footer class="w-10/12 sm:w-4/6 flex flex-row items-start gap-x-6 items-stretch z-10 mx-auto">
-        <div class="bg-lime border-obsidian border-2 w-16 h-16 rounded-full"></div>
-        <cite class="grow not-italic text-left">
-          <strong>– Jane Doe</strong><br>
-          <em>Project Manager</em>
-        </cite>
-      </footer>
-    </blockquote>
-
-    <blockquote
-      class="sm:bg-cream sm:window-rounded window-rounded-margins w-full max-sm:pb-12 max-sm:border-b border-obsidian z-20">
-      <p class="leading-snug text-center">"He was instrumental in designing experiences that not only worked but also
-        brought joy to
-        users."</p>
-      <footer class="w-10/12 sm:w-4/6 flex flex-row items-start gap-x-6 items-stretch z-10 mx-auto">
-        <div class="bg-lime border-obsidian border-2 w-16 h-16 rounded-full"></div>
-        <cite class="grow not-italic text-left">
-          <strong>– John Smith</strong><br>
-          <em>Developer</em>
-        </cite>
-      </footer>
-    </blockquote>
-
-    <blockquote
-      class="sm:bg-cream sm:window-rounded window-rounded-margins w-full max-sm:pb-12 max-sm:border-b border-obsidian z-30">
-      <p class="leading-snug text-center">"Working with Nando brought out the best in our project—his focus on empathy
-        is truly what
-        makes a difference."</p>
-      <footer class="w-10/12 sm:w-4/6 flex flex-row items-start gap-x-6 items-stretch z-10 mx-auto">
-        <div class="bg-lime border-obsidian border-2 w-16 h-16 rounded-full"></div>
-        <cite class="grow not-italic text-left">
-          <strong>– Sarah Lee</strong><br>
-          <em>UX Researcher</em>
-        </cite>
-      </footer>
-    </blockquote>
-
-    <blockquote class="sm:bg-cream sm:window-rounded window-rounded-margins w-full max-sm:pb-12 z-40">
-      <p class="leading-snug text-center">"Nando is an incredibly insightful designer who takes a user-centered
-        approach, ensuring
-        product success."</p>
-      <footer class="w-10/12 sm:w-4/6 flex flex-row items-start gap-x-6 items-stretch z-10 mx-auto">
-        <div class="bg-lime border-obsidian border-2 w-16 h-16 rounded-full"></div>
-        <cite class="grow not-italic text-left">
-          <strong>– Jane Doe</strong><br>
-          <em>Project Manager</em>
-        </cite>
-      </footer>
-    </blockquote>
-  </div>
-</section> #}
-
 {# Section: Contact #}
-<section aria-labelledby="contact" class="global-margins" data-bg-class="bg-lime">
+<section id="contact" aria-labelledby="contact-label" class="global-margins" data-bg-class="bg-lime">
   <div class="grid grid-cols-1 md:grid-cols-8">
     <div class="md:col-span-4">
-      <h2 class="mt-0" id="contact">Let's Collaborate! Reach Out for a Quote or Project Discussion.</h2>
+      <h2 class="mt-0" id="contact-label">Let's Collaborate! Reach Out for a Quote or Project Discussion.</h2>
       <p>I'm available for freelance design projects, consulting, and workshops. <br class="max-xl:hidden"><wbr>I also love giving talks and
         offering
         mentorships, let’s chat!</p>
