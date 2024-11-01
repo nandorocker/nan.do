@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+  * {
+    @apply box-border;
+  }
+
   body {
     @apply text-base leading-relaxed text-obsidian bg-slate-300;
   }
@@ -189,11 +193,6 @@
       md:px-16
       xl:max-w-screen-2xl
       mx-auto;
-  }
-
-  /* Standardizes section header spacing */
-  .section-headline {
-    @apply mb-6 md:mb-16 xl:mb-24;
   }
 
   .pic-tall {
