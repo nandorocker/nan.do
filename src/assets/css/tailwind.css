@@ -90,8 +90,12 @@
 
   /* Windows Begin */
   .window-rounded {
-    @apply rounded-xl border-6 border-obsidian shadow-obsidian overflow-hidden;
-    box-shadow: 8px 8px 0;
+    @apply rounded-xl shadow-obsidian overflow-hidden;
+    box-shadow: 12px 12px 0;
+  }
+
+  .window-rounded.border {
+    @apply border-8 border-obsidian;
   }
 
   .window-rounded.window-rounded-margins {
@@ -124,15 +128,15 @@
 
   /* Work Cards Begin */
   .card {
-    @apply bg-cream col-span-12 grid grid-cols-12 gap-x-6;
+    @apply bg-cream first:max-sm:ml-5 last:max-sm:mr-5 max-sm:flex-shrink-0 max-sm:w-10/12 max-sm:max-w-md col-span-12 grid grid-cols-12 gap-x-6;
   }
 
   .card > .card-illustration {
-    @apply bg-purple-300 col-span-12 sm:col-span-4 lg:col-span-5 min-h-40 bg-top lg:bg-center bg-no-repeat bg-cover;
+    @apply bg-purple-300 col-span-12 sm:col-span-4 lg:col-span-5 min-h-40 max-sm:h-52 bg-top lg:bg-center bg-no-repeat bg-cover;
   }
 
   .card > .card-contents {
-    @apply max-sm:ml-4 mr-4 lg:mr-6 my-4 lg:my-6 col-span-12 sm:col-span-8 lg:col-span-7 sm:pt-0 flex flex-col items-start;
+    @apply max-sm:ml-4 mr-4 lg:mr-6 my-4 lg:my-6 col-span-12 sm:col-span-8 lg:col-span-7 sm:pt-0 flex flex-col items-start justify-start;
   }
 
   .card > .card-contents .category {

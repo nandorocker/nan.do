@@ -30,7 +30,7 @@ layout: "base.njk"
     </h3>
   </header>
 
-  <picture class="window-rounded pic-tall sm:col-start-1 row-start-3 sm:row-start-2">
+  <picture class="window-rounded border pic-tall sm:col-start-1 row-start-3 sm:row-start-2">
     <source media="(max-width:640px)" srcset="assets/images/nando-stairs-crop1.jpg">
     <img src="assets/images/nando-stairs.jpg"
       alt="Nando, a man in his 40s with curly hair, glasses and a mustache, sitting on a staircase wearing a gray suit, smiling"
@@ -57,12 +57,13 @@ layout: "base.njk"
 </section>
 
 {# Section: Work #}
-<section id="work" class="global-margins" data-bg-class="bg-lime" aria-labelledby="works-label">
+<section id="work" class="global-margins max-sm:px-0" data-bg-class="bg-lime" aria-labelledby="works-label">
   <header>
-    <h1 id="works-label">Selected Works</h1>
+    <h1 class="mx-5" id="works-label">Selected Works</h1>
   </header>
   <!-- Grid for work cards -->
-  <div class="max-sm:mt-12 grid grid-cols-12 gap-y-16 md:gap-y-24">
+  <div
+    class="max-sm:pb-3 max-sm:mt-12 max-sm:flex max-sm:overflow-x-scroll grid grid-cols-12 gap-x-8 gap-y-16 md:gap-y-24">
 
     <!-- card 1 -->
     <article class="card window-rounded md:col-span-10 lg:col-span-10">
@@ -203,7 +204,7 @@ layout: "base.njk"
 <section id="brands" class="global-margins" data-bg-class="bg-lavender" aria-labelledby="brands-label">
   <h4 id="brands-label" class="mb-6 md:mb-10 lg:text-4xl text-center capitalize">Leading Brands I've Collaborated With
   </h4>
-  <article class="window-rounded bg-cream brands">
+  <article class="window-rounded border bg-cream brands">
     <img src="assets/images/logo-artist-arcade.png" class="brands-logo" alt="Artist Arcade" srcset="">
     <img src="assets/images/logo-disney.png" class="brands-logo" alt="Disney" srcset="">
     <img src="assets/images/logo-bph.png" class="brands-logo" alt="Berliner Philharmonic" srcset="">
