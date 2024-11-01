@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply text-base leading-relaxed text-obsidian bg-slate-700;
+    @apply text-base leading-relaxed text-obsidian bg-slate-100;
   }
 
   /* Headings */
@@ -101,12 +101,12 @@
 
   /* Contact Begins */
   .contact-button {
-    @apply rounded-xl border-6 px-6 py-4 mb-8 border-cream shadow-cream transition-colors duration-300 hover:text-cream;
+    @apply rounded-xl border-6 px-6 py-4 mb-8 border-cream shadow-cream transition-colors duration-300 hover:text-cream overflow-hidden;
     box-shadow: 8px 8px 0 #fff6ee;
   }
 
   .contact-button h5 {
-    @apply m-0 max-sm:text-2xl overflow-hidden;
+    @apply m-0 max-sm:text-2xl;
   }
 
   .contact-button .icon-copy {
@@ -159,7 +159,7 @@
 
   /* Footer Begins */
   footer.footer-global {
-    @apply mt-8 lg:pt-16 py-0 pb-0 grid grid-cols-1 sm:grid-cols-3 md:grid-cols-5 text-sm leading-loose;
+    @apply mt-8 lg:pt-16 py-0 pb-0 grid grid-cols-1 sm:grid-cols-3 md:grid-cols-5 lg:text-lg leading-loose;
   }
   /* Footer Ends */
 }
