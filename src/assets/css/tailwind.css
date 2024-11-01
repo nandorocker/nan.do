@@ -117,7 +117,7 @@
 
   /* Work Cards Begin */
   .card {
-    @apply bg-cream first:max-sm:ml-5 last:max-sm:mr-5 max-sm:flex-shrink-0 max-sm:w-10/12 max-sm:max-w-md col-span-12 grid grid-cols-12 gap-x-6;
+    @apply bg-cream first:max-sm:ml-5 last:max-sm:mr-8 max-sm:flex-shrink-0 max-sm:w-10/12 max-sm:max-w-md col-span-12 grid grid-cols-12 gap-x-6;
   }
 
   .card > .card-illustration {
