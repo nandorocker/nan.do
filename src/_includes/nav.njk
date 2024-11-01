@@ -1,13 +1,19 @@
-<header class="px-5 md:px-16 xl:max-w-screen-2xl m-auto">
-    <nav class="flex items-center justify-between lowercase py-6 text-obsidian text-xl leading-6 border-b border-obsidian"
-        aria-label="Global">
-        <div class="flex lg:flex-1">
-            <a href="#" class="-m-1.5 p-1.5 font-semibold">
+<header
+    class="mx-5 md:mx-16 md:flex md:justify-between md:items-center xl:max-w-screen-2xl m-auto text-xl border-b border-obsidian">
+    <div class="flex items-center justify-between lowercase py-6 text-obsidian text-xl" aria-label="Global">
+        {# Group 1 (left) #}
+        <div class="flex md:flex-1">
+            {# Logo #}
+            <a href="/" class="-m-1.5 p-1.5 font-semibold">
                 <span>nan.do</span>
             </a>
+            {# End Logo #}
         </div>
-        <div class="flex lg:hidden">
-            <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5">
+
+        {# Group 2 (mobile nav toggle) #}
+        <div class="flex md:hidden">
+            <button id="menu-toggle" type="button"
+                class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5">
                 <span class="sr-only">Open main menu</span>
                 <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
                     aria-hidden="true">
@@ -16,11 +22,13 @@
                 </svg>
             </button>
         </div>
-        <div class="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-x-4">
-            <a href="/#work" class="py-1 px-4">Work</a>
-            <a href="/#about-me" class="py-1 px-4">About Me</a>
-            <a href="/#services" class="py-1 px-4">Services</a>
-            <a href="#contact" class="border-2 py-1 px-4 rounded-md border-obsidian shadow-small">Contact</a>
-        </div>
+    </div>
+
+    {# Group 3 (menu items) #}
+    <nav id="menu" class="text-center w-full pb-6 hidden flex-col space-y-4 md:flex-1 md:justify-end md:gap-x-4">
+        <a href="/#work" class="py-1 px-4">Work</a>
+        <a href="/#about-me" class="py-1 px-4">About Me</a>
+        <a href="/#services" class="py-1 px-4">Services</a>
+        <a href="#contact" class="border-2 py-1 px-3 lg:px-4 rounded-md border-obsidian shadow-sm-flat-r">Contact</a>
     </nav>
 </header>
