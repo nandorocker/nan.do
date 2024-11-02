@@ -52,7 +52,8 @@
   }
 
   a:hover {
-    @apply transition-colors text-cream font-semibold;
+    @apply transition-colors duration-200 text-cream font-bold;
+    transition: font-weight 0.3 ease-in-out;
   }
 }
 
@@ -61,13 +62,14 @@
   .hero {
     @apply px-5 md:px-16
       mx-auto
+      mb-24
       min-h-80vh
       xl:max-w-screen-2xl
       md:mb-40 xl:mb-60;
   }
 
   .hero h1 {
-    @apply font-black leading-none;
+    @apply font-black leading-none mb-4;
     font-size: clamp(2.8rem, 6.5vw + 1rem, 7rem);
   }
 
@@ -76,12 +78,26 @@
   }
 
   .hero p {
-    @apply mb-12;
+    @apply mb-20;
   }
   /* Hero Area Ends */
 
   .button {
-    @apply bg-obsidian hover:bg-slate-800 text-cream rounded-full box-border w-full sm:w-auto text-center sm:text-left;
+    @apply relative bg-obsidian text-cream rounded-full w-full sm:w-auto text-center sm:text-left transition-colors duration-300 hover:bg-obsidian-600 hover:shadow-md-flat-r hover:shadow-obsidian;
+  }
+
+  .button::before {
+    @apply absolute inset-0 rounded-full border-4 border-transparent transition-all duration-300;
+    content: "";
+  }
+
+  .button:hover::before {
+    @apply border-obsidian;
+  }
+
+  .button:hover,
+  .button {
+    transition: box-shadow 0.3s ease-in-out;
   }
 
   .button.button-large {
@@ -151,7 +167,7 @@
 
   /* Brands Begins */
   .brands {
-    @apply p-6 md:p-8 xl:p-12 grid gap-4 md:gap-6 grid-cols-2 sm:grid-cols-3 md:grid-cols-5 xl:grid-cols-5;
+    @apply px-6 py-12 md:px-8 md:py-14 xl:px-10 xl:py-16 grid gap-4 md:gap-14 grid-cols-2 sm:grid-cols-3 md:grid-cols-5 xl:grid-cols-5;
   }
 
   .brands-logo {
@@ -212,6 +228,6 @@
   }
 
   .disabled {
-    @apply opacity-20;
+    @apply opacity-25;
   }
 }
