@@ -52,7 +52,7 @@
   }
 
   a:hover {
-    @apply transition-colors text-cream;
+    @apply transition-colors text-cream font-semibold;
   }
 }
 
@@ -209,5 +209,9 @@
 
   .p-smaller {
     @apply text-sm lg:text-base mb-4;
+  }
+
+  .disabled {
+    @apply opacity-20;
   }
 }
