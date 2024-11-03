@@ -51,9 +51,8 @@
     @apply font-bold;
   }
 
-  a:hover {
-    @apply transition-colors duration-200 text-cream font-bold;
-    transition: font-weight 0.3 ease-in-out;
+  a {
+    @apply underline font-semibold hover:text-obsidian-500 active:no-underline;
   }
 }
 
@@ -62,7 +61,7 @@
   .hero {
     @apply px-5 md:px-16
       mx-auto
-      mb-24
+      pb-12 md:pb-24
       min-h-80vh
       xl:max-w-screen-2xl
       md:mb-40 xl:mb-60;
@@ -83,7 +82,11 @@
   /* Hero Area Ends */
 
   .button {
-    @apply relative bg-obsidian text-cream rounded-full w-full sm:w-auto text-center sm:text-left transition-colors duration-300 hover:bg-obsidian-600 hover:shadow-md-flat-r hover:shadow-obsidian;
+    @apply no-underline relative bg-obsidian text-cream rounded-full w-full sm:w-auto text-center sm:text-left transition-colors duration-300 hover:bg-obsidian-600 hover:shadow-md-flat-r hover:shadow-obsidian;
+  }
+
+  .button:hover {
+    @apply text-cream;
   }
 
   .button::before {
@@ -180,9 +183,24 @@
     @apply max-md:text-2xl;
   }
 
+  .services p {
+    @apply mb-0;
+  }
+
   /* Footer Begins */
   footer.footer-global {
     @apply mt-8 lg:pt-16 py-0 pb-0 grid grid-cols-1 sm:grid-cols-3 md:grid-cols-5 lg:text-lg leading-loose;
+  }
+
+  .footer-global a,
+  .nav a {
+    @apply no-underline;
+  }
+
+  .footer-global a:hover,
+  .nav a:hover {
+    @apply transition-colors duration-200 text-cream font-bold;
+    transition: font-weight 0.3 ease-in-out;
   }
   /* Footer Ends */
 }
@@ -220,7 +238,7 @@
   }
 
   .p-bigger {
-    @apply text-lg md:text-xl lg:text-2xl;
+    @apply text-lg md:text-xl lg:text-2xl lg:leading-normal [&:not(:last-child)]:mb-6 md:[&:not(:last-child)]:mb-8 lg:[&:not(:last-child)]:mb-10;
   }
 
   .p-smaller {
