@@ -218,6 +218,27 @@
     transition: font-weight 0.3 ease-in-out;
   }
   /* Footer Ends */
+
+  /* 
+  ================
+  Begin Case Study
+  ================
+  */
+
+  .case-heading {
+    @apply;
+  }
+
+  .reading > p,
+  .reading > ul {
+    @apply mb-20;
+  }
+
+  /* 
+  ================
+  End Case Study
+  ================
+  */
 }
 
 @layer utilities {
