@@ -39,6 +39,19 @@
     @apply mb-5;
   }
 
+  /* Lists */
+  ul {
+    @apply list-disc pl-6 mb-5;
+  }
+
+  ol {
+    @apply list-decimal pl-6 mb-5;
+  }
+
+  li {
+    @apply mb-2;
+  }
+
   small {
     @apply text-sm mb-4;
   }
@@ -217,18 +230,31 @@
   }
 
   /* Sets default margins for site sections/footers/etc */
-  .global-margins {
+  .contain-wide {
+    @apply xl:max-w-screen-2xl mx-auto;
+  }
+
+  .contain-medium {
+    @apply lg:max-w-screen-xl mx-auto;
+  }
+
+  .contain-narrow {
+    @apply lg:max-w-screen-lg mx-auto;
+  }
+
+  .margins-x-wide {
+    @apply px-5
+      md:px-16;
+  }
+
+  .margins-y {
     @apply pt-36
     sm:pt-16
       lg:pt-36
       2xl:pt-48
       pb-8
       lg:pb-10
-      2xl:pb-24
-      px-5
-      md:px-16
-      xl:max-w-screen-2xl
-      mx-auto;
+      2xl:pb-24;
   }
 
   .pic-tall {
