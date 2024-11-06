@@ -253,7 +253,16 @@
     max-w-screen-lg 
     grid
     grid-cols-1 md:grid-cols-[1fr_2fr]
+    text-center sm:text-left
     shadow-md-flat-r bg-white text-sm;
+  }
+
+  .case-summary ul {
+    @apply pl-0 list-none md:list-disc;
+  }
+
+  .case-summary li {
+    @apply list-inside;
   }
 
   .reading > p,
