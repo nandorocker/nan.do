@@ -4,9 +4,14 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addWatchTarget("tailwind.config.js");
 
   // Passthrough copy for assets (JS, images, fonts)
-  eleventyConfig.addPassthroughCopy("src/assets/css/style.css");
+  eleventyConfig.addPassthroughCopy("src/assets/css", {
+    filter: [
+      "**/*.css", //copy these
+      "!tailwind.css", // don't copy this file
+    ],
+  });
   eleventyConfig.addPassthroughCopy("src/assets/js/*");
-  eleventyConfig.addPassthroughCopy("src/assets/images/*");
+  eleventyConfig.addPassthroughCopy("src/assets/images/**/*");
   eleventyConfig.addPassthroughCopy("src/assets/fonts/*");
   eleventyConfig.addPassthroughCopy("src/favicon.png");
 
