@@ -209,17 +209,32 @@
   }
   /* Contact Ends */
 
-  /* Footer Begins */
-  footer.footer-global {
-    @apply mt-8 lg:pt-16 py-0 pb-0 grid grid-cols-1 sm:grid-cols-3 md:grid-cols-5 lg:text-lg leading-loose;
+  /* 
+  ==========
+  Nav Begins
+  ==========
+  */
+
+  /* Adds fixed color background for internal pages */
+  .internal .nav {
+    @apply bg-lavender;
   }
 
-  .footer-global a,
+  footer.footer {
+    @apply mt-24 2xl:mt-40 
+    pt-0
+    pb-8 lg:pb-10 2xl:pb-24 
+    grid grid-cols-1 sm:grid-cols-3 md:grid-cols-5 
+    lg:text-lg 
+    leading-loose;
+  }
+
+  .footer a,
   .nav a {
     @apply no-underline;
   }
 
-  .footer-global a:hover,
+  .footer a:hover,
   .nav a:hover {
     @apply transition-colors duration-200 text-cream font-bold;
     transition: font-weight 0.3 ease-in-out;
