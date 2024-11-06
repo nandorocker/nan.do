@@ -201,6 +201,13 @@
   .services p {
     @apply mb-0;
   }
+  /* Services Ends */
+
+  /* Contact Begins */
+  .contact-social {
+    @apply list-none m-0 p-0;
+  }
+  /* Contact Ends */
 
   /* Footer Begins */
   footer.footer-global {
@@ -216,6 +223,10 @@
   .nav a:hover {
     @apply transition-colors duration-200 text-cream font-bold;
     transition: font-weight 0.3 ease-in-out;
+  }
+
+  footer ul {
+    @apply list-none m-0 p-0;
   }
   /* Footer Ends */
 
