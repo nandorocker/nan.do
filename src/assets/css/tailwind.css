@@ -236,8 +236,24 @@
   ================
   */
 
-  .case-heading {
-    @apply;
+  .case-header {
+    /* Using aleatory values so I can access responsive design */
+    @apply bg-[linear-gradient(177.5deg,_rgb(198,194,242)_0%,_rgba(198,194,242,0.9)_18rem,_rgba(198,194,242,0)_18rem),_var(--image-url)] bg-[position:center_bottom] bg-cover bg-no-repeat;
+    @apply sm:bg-[linear-gradient(177.5deg,_rgb(198,194,242)_0%,_rgba(198,194,242,0.9)_16rem,_rgba(198,194,242,0)_16rem),_var(--image-url)] md:bg-[position:center_bottom_50%];
+    @apply md:bg-[linear-gradient(177.5deg,_rgb(198,194,242)_0%,_rgba(198,194,242,0.9)_18rem,_rgba(198,194,242,0)_18rem),_var(--image-url)];
+    @apply lg:bg-[linear-gradient(177.5deg,_rgb(198,194,242)_0%,_rgba(198,194,242,0.9)_22rem,_rgba(198,194,242,0)_22rem),_var(--image-url)];
+  }
+
+  .case-summary {
+    @apply relative 
+    overflow-y-scroll scroll-smooth md:overflow-y-auto
+    h-80 md:h-auto 
+    -bottom-56 
+    mx-auto 
+    max-w-screen-lg 
+    grid
+    grid-cols-1 md:grid-cols-[1fr_2fr]
+    shadow-md-flat-r bg-white text-sm;
   }
 
   .reading > p,

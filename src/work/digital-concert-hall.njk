@@ -4,19 +4,20 @@ layout: "casestudy.njk"
 ---
 {# todo: bring this whole thing into the template #}
 <div class="bg-cream"> {# todo: convert this into main #}
-
     {# Top Header #}
-    <header class="bg-lavender min-h-80 margins-x-wide pt-32">
+    <header class="min-h-[35rem] margins-x-wide mb-72 pt-8 case-header"
+        style="--image-url: url('/assets/images/works/digital-concert-hall/orchestra.jpg')">
+
         <div class="contain-medium">
             <h6 class="mb-4">Case Study</h6>
             <h3>Digital Concert Hall: <br>
-                Delivering a premium Experience at scale.</h3>
+                Delivering a classic Experience that scales across screens.</h3>
         </div>
 
+
         {# Metadata #}
-        <article
-            class="relative -bottom-32 mx-auto max-w-screen-lg grid grid-cols-3 blog-summary window-rounded border window-rounded-margins shadow-md-flat-r bg-cream">
-            <div class="col-span-1">
+        <article class="case-summary window-rounded border window-rounded-margins">
+            <div>
                 <div>
                     <h6 class="mt-0">Client</h6>
                     <p>Berlin Philharmonic</p>
@@ -31,9 +32,9 @@ layout: "casestudy.njk"
                     </ul>
                 </div>
             </div>
-            <div class="col-span-2">
+            <div>
                 <h6 class="mt-0">Overview</h6>
-                <p class="">
+                <p>
                     The Berlin Philharmonic is ranked one of the top orchestras in the world. Their Digital Concert
                     Hall
                     is a pioneer of its kind, streaming premium, original content to subscribers—on practically any
@@ -44,9 +45,10 @@ layout: "casestudy.njk"
                 </p>
             </div>
         </article>
+
     </header>
 
-    <article class="contain-narrow margins-x-wide margins-y reading">
+    <article class="contain-narrow margins-x-wide reading">
         {# Begin Blog Post #}
         <h3>Background</h3>
         <p>As a streaming service with original, high-quality content and a passionate following around the world, it's
