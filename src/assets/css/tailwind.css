@@ -294,16 +294,14 @@
   }
 
   .case-summary {
-    @apply relative 
-    overflow-y-scroll scroll-smooth md:overflow-y-auto
-    h-80 md:h-auto 
-    -bottom-56 
-    mx-auto 
-    max-w-screen-lg 
-    grid
-    grid-cols-1 md:grid-cols-[1fr_2fr]
-    text-center sm:text-left
-    shadow-md-flat-r bg-white text-sm;
+    @apply mx-auto 
+    py-8
+    sm:px-4
+    grid sm:grid-cols-[1fr_2fr] sm:gap-8
+    text-sm;
+  }
+
+  .case-summary h6 {
   }
 
   .case-summary ul {
@@ -311,7 +309,7 @@
   }
 
   .case-summary li {
-    @apply list-inside;
+    @apply list-inside inline-block px-4 py-1 bg-slate-200 rounded-xl font-bold;
   }
 
   .reading > p,
@@ -346,6 +344,14 @@
 
   .contain-narrow {
     @apply lg:max-w-screen-lg mx-auto;
+  }
+
+  .margins-x-narrow {
+    @apply px-5 md:px-8;
+  }
+
+  .margins-x-medium {
+    @apply px-5 md:px-12;
   }
 
   .margins-x-wide {
