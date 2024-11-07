@@ -7,13 +7,15 @@
 
 <body class="internal">
     {% include 'nav.njk' %}
-    <main class="relative min-h-screen text-obsidian transition-colors duration-700 overflow-hidden" data-bg-scroll>
+    <main class="text-obsidian bg-cream">
         {% include 'scroll_to_top.njk' %}
 
         {{ content | safe }}
 
-        {% include 'contact.njk' %}
+
     </main>
+
+    {% include 'contact.njk' %}
     {% include 'footer.njk' %}
 
     {% include 'scripts.njk' %}

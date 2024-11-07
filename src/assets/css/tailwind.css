@@ -274,21 +274,23 @@
   */
 
   .case-header {
-    @apply pb-24;
-    @apply bg-[url:var(--image-url)] bg-[position:center_bottom] md:bg-[position:center_bottom_50%] bg-cover bg-no-repeat;
+    /* The entire header */
+    @apply pb-24 min-h-[32rem] lg:min-h-[800px] max-h-50vh lg:max-h-80vh;
+    @apply bg-[url:var(--image-url)] bg-[position:center_bottom] md:bg-[position:center_top] xl:bg-[position:center_center] bg-cover bg-no-repeat;
   }
 
   .case-header-titlebox {
+    /* Box with headline & gradient */
     @apply pt-8 pb-40 xl:pb-44 2xl:max-h-[40rem];
     @apply bg-[linear-gradient(355deg,_rgba(198,194,240,0)_10rem,_rgba(198,194,242,.9)_10rem,_rgba(198,194,242,.9)_100%),_linear-gradient(_rgb(198,194,242),rgba(198,194,242,0)_30%)];
   }
 
   .case-header h6 {
-    @apply mb-0;
+    @apply mb-2 uppercase;
   }
 
-  .case-header h2 {
-    @apply capitalize max-sm:text-3xl lg:leading-tight mt-0;
+  .case-header h3 {
+    @apply mt-0 lg:text-6xl xl:text-[clamp(3.75rem,3.75rem+1vw,5rem)] lg:leading-tight xl:leading-[1.125] capitalize;
   }
 
   .case-summary {
@@ -383,5 +385,9 @@
 
   .last-flat {
     @apply last:mb-0;
+  }
+
+  .shadow-up-2xl {
+    box-shadow: 0 -25px 30px rgb(0 0 0 / 0.15);
   }
 }
