@@ -274,11 +274,21 @@
   */
 
   .case-header {
-    /* Using aleatory values so I can access responsive design */
-    @apply bg-[linear-gradient(177.5deg,_rgb(198,194,242)_0%,_rgba(198,194,242,0.9)_18rem,_rgba(198,194,242,0)_18rem),_var(--image-url)] bg-[position:center_bottom] bg-cover bg-no-repeat;
-    @apply sm:bg-[linear-gradient(177.5deg,_rgb(198,194,242)_0%,_rgba(198,194,242,0.9)_16rem,_rgba(198,194,242,0)_16rem),_var(--image-url)] md:bg-[position:center_bottom_50%];
-    @apply md:bg-[linear-gradient(177.5deg,_rgb(198,194,242)_0%,_rgba(198,194,242,0.9)_18rem,_rgba(198,194,242,0)_18rem),_var(--image-url)];
-    @apply lg:bg-[linear-gradient(177.5deg,_rgb(198,194,242)_0%,_rgba(198,194,242,0.9)_22rem,_rgba(198,194,242,0)_22rem),_var(--image-url)];
+    @apply pb-24;
+    @apply bg-[url:var(--image-url)] bg-[position:center_bottom] md:bg-[position:center_bottom_50%] bg-cover bg-no-repeat;
+  }
+
+  .case-header-titlebox {
+    @apply pt-8 pb-40 xl:pb-44 2xl:max-h-[40rem];
+    @apply bg-[linear-gradient(355deg,_rgba(198,194,240,0)_10rem,_rgba(198,194,242,.9)_10rem,_rgba(198,194,242,.9)_100%),_linear-gradient(_rgb(198,194,242),rgba(198,194,242,0)_30%)];
+  }
+
+  .case-header h6 {
+    @apply mb-0;
+  }
+
+  .case-header h2 {
+    @apply capitalize max-sm:text-3xl lg:leading-tight mt-0;
   }
 
   .case-summary {
