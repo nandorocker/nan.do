@@ -5,18 +5,19 @@
     {% include 'head.njk' %}
 </head>
 
-<body>
-    <main class="home relative min-h-screen bg-lavender text-obsidian transition-colors duration-700 overflow-hidden"
+<body class="home">
+    {% include 'nav.njk' %}
+    <main class="relative min-h-screen bg-lavender text-obsidian transition-colors duration-700 overflow-hidden"
         data-bg-scroll>
-        {% include 'nav.njk' %}
         {% include 'scroll_to_top.njk' %}
 
         {{ content | safe }}
 
-        {% include 'footer.njk' %}
     </main>
 
+    {% include 'footer.njk' %}
     {% include 'scripts.njk' %}
+    <script src="{{ '/assets/js/bg_scroll.js' | url }}" type="text/javascript"></script>
 </body>
 
 </html>

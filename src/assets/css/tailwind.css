@@ -142,6 +142,17 @@
   /* Windows End */
 
   /* Contact Begins */
+  .internal .contact {
+    @apply bg-lime pt-12;
+  }
+
+  .home .contact {
+    @apply pt-36
+    sm:pt-16
+      lg:pt-36
+      2xl:pt-48;
+  }
+
   .contact-button {
     @apply rounded-xl border-6 px-6 py-4 mb-8 border-cream shadow-cream transition-colors duration-300 hover:text-obsidian-400 hover:bg-lime-300 overflow-hidden;
     box-shadow: 8px 8px 0 #fff6ee;
@@ -215,18 +226,29 @@
   ==========
   */
 
-  /* Adds fixed color background for internal pages */
+  /* Top Nad */
+  .internal {
+    /* Adds fixed color background for internal pages */
+    @apply bg-cream;
+  }
+
   .internal .nav {
     @apply bg-lavender;
   }
+  /* Top Nav Ends */
 
-  footer.footer {
-    @apply mt-24 2xl:mt-40 
-    pt-0
+  /* Footer Begins */
+  .footer {
+    @apply pt-0
     pb-8 lg:pb-10 2xl:pb-24 
     grid grid-cols-1 sm:grid-cols-3 md:grid-cols-5 
     lg:text-lg 
     leading-loose;
+  }
+
+  .internal .footer-container,
+  .home .footer-container {
+    @apply bg-lime;
   }
 
   .footer a,
