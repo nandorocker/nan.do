@@ -226,7 +226,15 @@
   ==========
   */
 
-  /* Top Nad */
+  /* Top Nav */
+  .nav a {
+    @apply py-4 md:py-6 mx-4;
+  }
+
+  .nav a.current {
+    @apply border-b-obsidian md:border-b-2 font-black underline md:no-underline;
+  }
+
   .internal {
     /* Adds fixed color background for internal pages */
     @apply bg-cream;
