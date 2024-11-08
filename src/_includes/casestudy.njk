@@ -9,8 +9,39 @@
     {% include 'nav.njk' %}
     <main class="text-obsidian bg-cream">
         {% include 'scroll_to_top.njk' %}
+        {# Top Header #}
+        <header class="case-header" style="--image-url: url('/assets/images/works/digital-concert-hall/orchestra.jpg')">
+            <section class="margins-x-wide case-header-titlebox">
+                <div class="contain-medium">
+                    <h6>Case Study</h6>
+                    <h3>{{ title }}</h3>
+                </div>
+            </section>
+        </header>
 
-        {{ content | safe }}
+        <article class="reading relative lg:-top-32 pb-12">
+            {# Summary #}
+            <section class="bg-cream case-summary contain-narrow margins-x-wide shadow-up-2xl">
+                <div>
+                    <h6 class="mt-0">Client</h6>
+                    <p>{{ client }}</p>
+
+                    <h6>Deliverables</h6>
+                    <ul>
+                        {% for item in deliverables %}
+                        <li>{{ item }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div>
+                    <h6 class="mt-0">Overview</h6>
+                    <p>
+                        {{ overview }}
+                    </p>
+                </div>
+            </section>
+            {{ content | safe }}
+        </article>
         {% include 'contact.njk' %}
 
     </main>
