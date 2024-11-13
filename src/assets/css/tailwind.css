@@ -284,7 +284,7 @@
   .case-header {
     /* The entire header */
     @apply pb-24 min-h-[32rem] lg:min-h-[800px] max-h-50vh lg:max-h-80vh;
-    @apply bg-[url:var(--image-url)] bg-[position:center_bottom] md:bg-[position:center_top] xl:bg-[position:center_center] bg-cover bg-no-repeat;
+    @apply bg-[url:var(--image-url)] bg-[position:center_bottom] md:bg-[position:center_top] xl:bg-[position:center_center] bg-cover bg-no-repeat bg-fixed;
   }
 
   .case-header-titlebox {
