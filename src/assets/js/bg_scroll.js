@@ -7,6 +7,8 @@ class BgScroll {
   }
 
   observeSection(entries) {
+    const backgroundElement = document.getElementById("background");
+
     entries.forEach((entry) => {
       // console.log(
       //   "Observed entry:",
@@ -15,15 +17,17 @@ class BgScroll {
       //   entry.isIntersecting
       // );
       if (entry.isIntersecting && entry.target.dataset.bgClass) {
-        // Remove all bg classes
-        this.element.classList.forEach((className) => {
-          if (className.startsWith("bg-")) {
-            this.element.classList.remove(className);
-            // console.log("Added class:", entry.target.dataset.bgClass);
-          }
-        });
-        // Add the proper bg class
-        this.element.classList.add(entry.target.dataset.bgClass);
+        if (entry.isIntersecting && entry.target.dataset.bgClass) {
+          // Remove all bg classes
+          backgroundElement.classList.forEach((className) => {
+            if (className.startsWith("bg-")) {
+              backgroundElement.classList.remove(className);
+            }
+          });
+          // Add the proper bg class if it exists
+          backgroundElement.classList.add(entry.target.dataset.bgClass);
+          console.log("Added class:", entry.target.dataset.bgClass);
+        }
         // console.log("Added class:", entry.target.dataset.bgClass);
       }
     });

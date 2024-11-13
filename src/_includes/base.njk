@@ -6,9 +6,12 @@
 </head>
 
 <body class="home">
+    <div id="background"
+        class=" bg-lavender transition-colors duration-700 fixed top left w-full h-full pointer-events-none z-[-1]"
+        aria-hidden="true">
+    </div>
     {% include 'nav.njk' %}
-    <main class="relative min-h-screen bg-lavender text-obsidian transition-colors duration-700 overflow-hidden"
-        data-bg-scroll>
+    <main class="relative min-h-screen text-obsidian overflow-hidden" data-bg-scroll>
         {% include 'scroll_to_top.njk' %}
 
         {{ content | safe }}
