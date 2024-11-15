@@ -182,7 +182,7 @@
   }
 
   .card > .card-contents h5 {
-    @apply mt-0 max-sm:text-xl max-sm:leading-tight;
+    @apply mt-0 max-sm:text-xl max-sm:leading-tight capitalize;
   }
 
   .card p {
@@ -228,7 +228,7 @@
 
   /* Top Nav */
   .nav a {
-    @apply py-4 md:py-6 mx-4;
+    @apply py-4 md:py-6 mx-4 md:last:mx-0;
   }
 
   .nav a.current {
