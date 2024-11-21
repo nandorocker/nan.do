@@ -76,6 +76,13 @@
   a {
     @apply underline font-semibold hover:text-obsidian-500 active:no-underline;
   }
+
+  figcaption {
+    @apply mt-8 text-center;
+  }
+  figcaption span {
+    @apply bg-cream-300;
+  }
 }
 
 @layer components {
@@ -242,7 +249,7 @@
 
   /* Top Nav */
   .nav a {
-    @apply py-4 md:py-6 mx-4 md:last:mx-0;
+    @apply py-4 md:py-6 mx-4 last:mx-0;
   }
 
   .nav a.current {
