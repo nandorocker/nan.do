@@ -182,12 +182,14 @@
 
   /* Work Cards Begin */
   .card {
-    @apply bg-cream first:max-sm:ml-5 last:max-sm:mr-8 max-sm:flex-shrink-0 max-sm:w-10/12 max-sm:max-w-md col-span-12 grid grid-cols-12 gap-x-6;
+    @apply bg-cream max-sm:first:ml-5 max-sm:last:mr-8 max-sm:flex-shrink-0 max-sm:w-10/12 max-sm:max-w-md col-span-12 grid grid-cols-12 gap-x-6;
     @apply rotate-0 transition duration-500 ease-out;
   }
 
-  .card:hover {
-    @apply sm:rotate-2 transition duration-300 ease-in-out;
+  @media not all and (pointer: coarse) {
+    .card:hover {
+      @apply sm:rotate-2 transition duration-300 ease-in-out;
+    }
   }
 
   .card > .card-illustration {
