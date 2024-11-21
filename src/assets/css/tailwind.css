@@ -12,31 +12,40 @@
   }
 
   /* Headings */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply mt-0;
+  }
+
   h1 {
     @apply text-5xl font-bold leading-none md:leading-tight mb-6 md:mb-12 xl:mb-14 2xl:mb-16 md:text-6xl lg:text-7xl;
   }
 
   h2 {
-    @apply text-4xl font-bold mt-8 mb-5 md:text-5xl lg:text-6xl leading-tight;
+    @apply text-4xl font-bold mb-5 md:text-5xl lg:text-6xl leading-tight;
   }
 
   h3 {
-    @apply text-3xl font-bold mt-6 mb-4 md:text-4xl lg:text-5xl lg:leading-tight;
+    @apply text-3xl font-bold mb-4 md:text-4xl lg:text-5xl lg:leading-tight;
   }
 
   h4 {
-    @apply text-2xl md:text-3xl lg:text-4xl font-bold leading-snug lg:leading-tight mt-6 mb-4;
+    @apply text-2xl md:text-3xl lg:text-4xl font-bold leading-snug lg:leading-tight mb-4;
   }
   h5 {
-    @apply text-xl md:text-2xl lg:text-3xl font-bold leading-relaxed mt-5 mb-3;
+    @apply text-xl md:text-2xl lg:text-3xl font-bold leading-relaxed mb-3;
   }
 
   h6 {
-    @apply text-lg md:text-xl lg:text-2xl font-bold leading-snug mt-5 mb-3;
+    @apply text-lg md:text-xl lg:text-2xl font-bold leading-snug mb-3;
   }
 
   p {
-    @apply mb-5;
+    @apply mb-7;
   }
 
   /* Lists */
@@ -167,6 +176,11 @@
   /* Work Cards Begin */
   .card {
     @apply bg-cream first:max-sm:ml-5 last:max-sm:mr-8 max-sm:flex-shrink-0 max-sm:w-10/12 max-sm:max-w-md col-span-12 grid grid-cols-12 gap-x-6;
+    @apply rotate-0 transition duration-500 ease-out;
+  }
+
+  .card:hover {
+    @apply rotate-2 transition duration-300 ease-in-out;
   }
 
   .card > .card-illustration {

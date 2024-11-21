@@ -26,7 +26,7 @@ class BgScroll {
           });
           // Add the proper bg class if it exists
           backgroundElement.classList.add(entry.target.dataset.bgClass);
-          console.log("Added class:", entry.target.dataset.bgClass);
+          // console.log("Added class:", entry.target.dataset.bgClass);
         }
         // console.log("Added class:", entry.target.dataset.bgClass);
       }
