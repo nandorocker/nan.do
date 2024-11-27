@@ -1,0 +1,173 @@
+---
+title: "Spelling Magic: UX Lessons from Disney Spellstruck"
+layout: "casestudy.njk"
+section: "work"
+client: "Artist Arcade, Disney"
+deliverables:
+- "Game Design"
+- "Multiplatform UX/UI Design"
+- "User Research"
+- "Design System"
+- "Email Design"
+overview: "Disney SpellStruck reimagines the traditional word puzzle as a vibrant adventure through the Disney universe,
+where players engage with beloved characters and delightful surprises. By leveraging Apple’s accessibility and design
+principles, the game was crafted to provide an inclusive, engaging experience for players of all ages. The result was a
+playful and scalable UX/UI design that seamlessly balanced Disney’s iconic charm with cross-platform usability,
+culminating in a global hit that topped charts."
+background: "spellstruck/background.jpg"
+---
+<section class="contain-narrow margins-x-wide">
+    <h3>A Tale of Epic Collaborations</h3>
+    <p>Disney Spellstruck was a project by Artist Arcade in collaboration with David Bettner, the creator of Words with
+        Friends. In collaboration with the most beloved crew of Disney characters and Apple Arcade's commitment to
+        create
+        safe, accessible, and engaging experiences for players of all ages, I focus on seamless UX/UI that embraces the
+        best
+        practices of accessibility, amplifies immersion, and allows intuitive gameplay. This game was a collaborative
+        effort
+        from a small team that was spread out across the globe and required meticulous planning and creative
+        problem-solving.</p>
+</section>
+<section class="contain-narrow margins-x-wide">
+    <h3>W-O-N-D-E-R</h3>
+    <p>Putting a twist on a classic is easy, creating a game that's fun, clever and unexpected is another. Doing all of
+        that, plus using beloved characters and bringing a Disney-worthy experience... well, that presented some
+        challenges:
+    </p>
+    <ul>
+        <li><strong>Multi-Platform Support:</strong> Ensuring seamless gameplay across phones, tablets and TVs—through
+            touch, keyboard + mouse, and gamepads.</li>
+        <li><strong>The Disney Experience:</strong> Creating a magical, engaging experience that honored Disney’s iconic
+            characters.</li>
+        <li><strong>Apple Arcade’s Rules of Play:</strong> Adhering to family-friendly guidelines, with no in-app
+            purchases,
+            and delivering a polished, cohesive game experience.</li>
+        <li><strong>Localization for a Global Audience:</strong> Ensuring the game’s word puzzles and UI were accurately
+            translated into multiple languages while maintaining cultural relevance.</li>
+        <li><strong>Iterative Content Design:</strong> Building systems that allowed frequent additions of Disney
+            characters
+            and features without disrupting existing gameplay mechanics.</li>
+    </ul>
+</section>
+<section class="contain-narrow margins-x-wide">
+    <h3>The Approach</h3>
+    <h4>The Meaning of "UI/UX"</h4>
+    <p>In games, the term UI/UX often means "Visual Design." To me, it's part UI designer, part game designer and part
+        psychologist: I'm here to serve the game experience created by the team, as well as the player, through my
+        knowledge
+        of usability and psychology.</p>
+    <p>In SpellStruck, that comprised of several aspects:</p>
+    <ul>
+        <li><strong>User Flows:</strong> understanding the rhythm of the game, as well as the order of screens, messages
+            were crucial to encourage gameplay, make things intuitive and keep players coming back</li>
+        <li><strong>Screens and overlays:</strong> the layout of areas such as the home screen, as well as in-game
+            overlays,
+            sidebars, popups and messaging</li>
+        <li><strong>Controls:</strong> developing a control system that scaled to all Apple Arcade supported devices
+        </li>
+        <li><strong>Gameplay elements:</strong> the core elements used to play the game, as well as the messaging
+            (verbal
+            &amp; non-verbal) provided by those elements, for example, whether a move is allowed or not, correct or not,
+            or
+            the impact of events like power-ups.</li>
+    </ul>
+    <h4>Iterative Prototyping</h4>
+    <p>We tested frequently across devices. Rapid feedback cycles (both internal AND external) allowed us to hone
+        interactions and address player needs before finalizing features.</p>
+    <h4>Teamwork and Trust</h4>
+    <p>Collaboration was at the heart of this project. Our team worked closely with Disney to ensure their iconic
+        characters
+        were faithfully represented. I worked closely with both artists and engineers to provide solutions that were fun
+        and
+        easy to implement.</p>
+    <h4>Usability and Accessibility</h4>
+    <p>We followed the Apple Human Interface guidelines closely, prioritizing usability and accessibility in every
+        control and information design decision.</p>
+</section>
+<section class="contain-narrow margins-x-wide">
+    <h3>Crafting the Magic</h3>
+    <p>Regardless of project, I always start with some standard practices: wireframing the player journey, and
+        developing a
+        simple and modular design system. The process is validate, test, iterate: start with well-known patterns,
+        validate
+        and then ask yourself: is this fun?</p>
+    <h4>The Tiles</h4>
+    <p>The tile system is the core part of the gameplay. In normal Scrabble, all tiles look about the same, differing
+        only
+        by punctuation (double letter, triple word, etc). In our game, aside from those things, we had power-ups and on
+        top
+        of that, tiles were all individually designed to represent the characters. Things got messy pretty quick, so it
+        was
+        my responsibility to come up with a system. After much iteration, the result was a combination of colors,
+        outlines
+        as well as VFX.</p>
+    <p>But visuals were only one layer. While controlling the touch version was simple, gamepad was a concern. Nobody
+        likes
+        to type on a gamepad, fishing for letters one by one—yet this game is basically that. We needed to try things.
+        Through very focused work sessions with Ferran, we used simple graphics and prototypes to answer the question:
+        which
+        controls are fastest and flow best? </p>
+    <p>Some of our challenges:</p>
+    <ul>
+        <li>How to easily switch between board and tile rack?</li>
+        <li>How to clearly visualize the cursor, among with all the other tile states?</li>
+        <li>How to quickly manipulate letters in the rack (or shuffle them)</li>
+        <li>How to correct mistakes</li>
+    </ul>
+    <p>Each of these problems was addressed in a "barebones" way, not too concerned about creative direction at first
+        and
+        thoroughly tested. Some of what we tried:</p>
+    <ul>
+        <li>Establish one button as "back", another "action"</li>
+        <li>Use a color system exclusive to cursors, outside the art direction (akin to TV outlines)</li>
+        <li>Create a "picked up" state for tiles that make them exaggeratedly big</li>
+        <li>Cancel words with a simple button click</li>
+        <li>and many others.</li>
+    </ul>
+    <p>Some of these immediately worked. Others took iterations, but we ultimately found the best combination that is in
+        the
+        game today.</p>
+    <h4>The World Map</h4>
+    <p>Another challenge was the game map. Initially, we focused on making sure players could intuitively see their
+        progress, access different levels, and understand what lay ahead. The initial challenges were not simple:</p>
+    <ul>
+        <li>Does the player understand the relationship between maps (i.e., the "world")</li>
+        <li>Does the player know how many levels there are in this map?</li>
+        <li>Can the player understand their progress?</li>
+        <li>Can the player navigate without difficulty, on all input devices?</li>
+    </ul>
+    <p>From the start, we used rich graphics, but the interactive parts (paths, levels points, states) as well as
+        transitions took many tries. There were many discussions and iterations about the <strong>active state</strong>,
+        confirmation popups, transition between maps and what our two buttons did, as well as the touch/mouse
+        equivalents.
+    </p>
+    <p>Considering the limitations, we have a robust and fairly usable implementation, where the core interactions are
+        straightforward.</p>
+</section>
+<section class="contain-narrow margins-x-wide">
+    <h3>The Results: A Game Worthy of the Disney Canon</h3>
+    <ul>
+        <li><strong>Top of the Charts:</strong> Achieved #1 on the App Store for weeks, remaining in the Top 20 long
+            after
+            launch.</li>
+        <li><strong>Celebrated Worldwide:</strong> Featured by Apple at WWDC and as part of Disney’s 100th Anniversary.
+        </li>
+        <li><strong>Player Love:</strong> continue to inspire thriving fan communities, tons of social media posts and
+            YouTube walkthroughs.</li>
+        <li><strong>A Lasting Legacy:</strong> Continues to engage players as part of Disney’s official game canon.</li>
+    </ul>
+</section>
+<section class="contain-narrow margins-x-wide">
+    <h3>What I Learned From SpellStruck</h3>
+    <p>Disney Spellstruck took UX to the fore in crafting compelling player experiences. From intuitive controls down to
+        seamless user flows, UX connected creative vision with practical implementation and made the game both
+        delightful
+        and accessible.</p>
+    <p>Equally important was interdiscipline collaboration. Tight collaboration with game designers, artists, and
+        engineers
+        provided an innovative and cohesive solution, be it refining the tile mechanics or preserving the charm of
+        Disney.
+        The project was a testament to the fact that considerate design and good collaboration across disciplines can
+        turn a
+        challenge into an enduring and impactful experience. This is a principle I carry out in every project.</p>
+</section>
