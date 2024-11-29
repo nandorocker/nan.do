@@ -142,16 +142,19 @@
   }
 
   /* Windows Begin */
-  .window-rounded {
-    @apply rounded-xl shadow-obsidian overflow-hidden;
-    box-shadow: 12px 12px 0;
+  .window-md {
+    @apply rounded-xl shadow-obsidian shadow-2xl-flat-r overflow-hidden;
   }
 
-  .window-rounded.border {
+  .window-sm {
+    @apply rounded-md shadow-obsidian shadow-lg-flat-r overflow-hidden;
+  }
+
+  .window-md.border {
     @apply border-8 border-obsidian;
   }
 
-  .window-rounded.window-rounded-margins {
+  .window-md.window-md-margins {
     @apply p-4 lg:p-6;
   }
   /* Windows End */
@@ -350,6 +353,19 @@
   .reading > p,
   .reading > ul {
     @apply mb-20;
+  }
+
+  /* Illustration Layouts */
+  .case .illustration {
+    @apply my-16 md:my-24 grid;
+  }
+
+  .case .illustration-sm-lg-sm {
+    @apply md:grid-cols-3 lg:grid-cols-[1.3fr,_2.4fr,_1.3fr] xl:grid-cols-[1fr,2fr,1fr];
+  }
+
+  .case .illustration-sm-lg {
+    @apply md:grid-cols-3;
   }
 
   /* 
