@@ -88,8 +88,7 @@
 @layer components {
   /* Hero Area Begins */
   .hero {
-    @apply px-5 md:px-16
-      mx-auto
+    @apply mx-auto
       pb-12 md:pb-24
       min-h-90vh
       xl:max-w-screen-2xl
@@ -392,7 +391,7 @@
 
   .margins-x-wide {
     @apply px-5
-      md:px-16;
+      md:px-20;
   }
 
   .margins-y {
