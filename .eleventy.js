@@ -26,6 +26,9 @@ module.exports = function (eleventyConfig) {
     indexFileName: "index.html",
   });
 
+  // Global Data
+  eleventyConfig.addGlobalData("images", "/assets/images/");
+
   return {
     dir: {
       input: "src",
