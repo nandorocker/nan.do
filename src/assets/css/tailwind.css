@@ -5,6 +5,7 @@
 @layer base {
   * {
     @apply box-border;
+    /* @apply border border-gray-300; */
   }
 
   body {
@@ -357,15 +358,15 @@
 
   /* Illustration Layouts */
   .case .illustration {
-    @apply my-16 md:my-24 grid;
+    @apply my-16 md:my-24;
   }
 
   .case .illustration-sm-lg-sm {
-    @apply md:grid-cols-3 lg:grid-cols-[1.3fr,_2.4fr,_1.3fr] xl:grid-cols-[1fr,2fr,1fr];
+    @apply grid md:grid-cols-3 lg:grid-cols-[1.3fr,_2.4fr,_1.3fr] xl:grid-cols-[1fr,2fr,1fr];
   }
 
   .case .illustration-sm-lg {
-    @apply md:grid-cols-3;
+    @apply grid md:grid-cols-[1fr,_2fr];
   }
 
   /* 
