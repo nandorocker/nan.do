@@ -78,10 +78,42 @@
     @apply underline font-semibold hover:text-obsidian-500 active:no-underline;
   }
 
-  figcaption {
+  table {
+    @apply border-collapse;
+  }
+
+  td,
+  th {
+    @apply p-2;
+  }
+
+  th {
+    @apply bg-obsidian-200;
+  }
+
+  td {
+    @apply border border-obsidian text-center;
+  }
+
+  table tr:first-child td {
+    border-top: 0;
+  }
+  table tr td:first-child {
+    border-left: 0;
+  }
+  table tr:last-child td {
+    border-bottom: 0;
+  }
+  table tr td:last-child {
+    border-right: 0;
+  }
+
+  figcaption,
+  caption {
     @apply mt-8 text-center;
   }
-  figcaption span {
+  figcaption span,
+  caption {
     @apply bg-cream-300;
   }
 }
