@@ -284,7 +284,8 @@
   }
 
   .testimonial-card {
-    @apply flex flex-col flex-shrink-0 flex-grow-0 w-[28rem] justify-center items-center space-y-8 rounded-lg px-4 py-6 shadow-md-flat-r shadow-obsidian-200 border-4 border-obsidian-200 bg-cream;
+    @apply flex flex-col flex-shrink-0 flex-grow-0 w-[22rem] lg:w-[28rem] justify-center items-center space-y-4 lg:space-y-8;
+    @apply rounded-lg px-4 py-6 shadow-md-flat-r shadow-lime border-4 border-lime bg-cream;
   }
 
   .testimonial-card blockquote {
@@ -293,7 +294,7 @@
 
   .testimonial-card blockquote:before,
   .testimonial-card blockquote:after {
-    @apply absolute text-6xl font-bold text-obsidian-400;
+    @apply absolute text-6xl font-bold text-lime-400;
   }
 
   .testimonial-card blockquote:before {
@@ -311,7 +312,7 @@
   }
 
   .testimonial-card cite {
-    @apply text-center text-base;
+    @apply text-center text-sm lg:text-base;
   }
 
   .testimonial-card cite::before {
