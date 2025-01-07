@@ -229,7 +229,7 @@
 
   @media not all and (pointer: coarse) {
     .card:hover {
-      @apply sm:rotate-2 transition duration-300 ease-in-out;
+      @apply odd:sm:rotate-[1.5deg] even:sm:-rotate-[1.5deg] transition duration-300 ease-in-out;
     }
   }
 
@@ -280,12 +280,13 @@
 
   /* Testimonials Begins */
   .testimonial-container {
-    @apply flex gap-10 px-5 md:px-20 pb-8 overflow-x-scroll;
+    @apply flex gap-10 px-5 md:px-20 pt-4 pb-8 overflow-x-scroll;
   }
 
   .testimonial-card {
-    @apply flex flex-col flex-shrink-0 flex-grow-0 w-[22rem] lg:w-[28rem] justify-center items-center space-y-4 lg:space-y-8;
+    @apply flex flex-col flex-shrink-0 flex-grow-0 w-[22rem] lg:w-[25rem] justify-center items-center space-y-4 lg:space-y-8;
     @apply rounded-lg px-4 py-6 shadow-md-flat-r shadow-lime border-4 border-lime bg-cream;
+    @apply odd:rotate-1 even:-rotate-1;
   }
 
   .testimonial-card blockquote {
