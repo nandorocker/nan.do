@@ -1,3 +1,5 @@
+const { eleventyImageTransformPlugin } = require("@11ty/eleventy-img");
+
 module.exports = function (eleventyConfig) {
   // Add custom watch targets for CSS and config files
   eleventyConfig.addWatchTarget("src/assets/css/tailwind.css");
@@ -10,10 +12,18 @@ module.exports = function (eleventyConfig) {
       "!tailwind.css", // don't copy this file
     ],
   });
-  eleventyConfig.addPassthroughCopy("src/assets/js/*");
-  eleventyConfig.addPassthroughCopy("src/assets/images/**/*");
+  eleventyConfig.addPassthroughCopy(
+    "src/assets/images/work/digital-concert-hall/bg-orchestra.jpg"
+  );
+  eleventyConfig.addPassthroughCopy(
+    "src/assets/images/work/spellstruck/bg-spellstruck.png"
+  );
+  eleventyConfig.addPassthroughCopy(
+    "src/assets/images/work/testflight/bg-testflight.jpg"
+  );
   eleventyConfig.addPassthroughCopy("src/assets/fonts/*");
   eleventyConfig.addPassthroughCopy("src/favicon.png");
+  eleventyConfig.addPassthroughCopy("src/assets/js/*");
   eleventyConfig.addPassthroughCopy({
     "node_modules/taos/dist/taos.js": "taos.js",
     "node_modules/taos/dist/taos.js.map": "taos.js.map",
@@ -39,6 +49,33 @@ module.exports = function (eleventyConfig) {
     return currentYear === startYear
       ? `${currentYear}`
       : `${startYear}–${currentYear}`;
+  });
+
+  // Images
+  eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
+    // which file extensions to process
+    extensions: "html",
+
+    // Add any other Image utility options here:
+
+    // optional, output image formats
+    formats: ["webp", "jpeg"],
+    // formats: ["auto"],
+
+    // optional, output image widths
+    widths: ["auto", 400, 800],
+    // widths: ["auto"],
+
+    // optional, attributes assigned on <img> override these values.
+    defaultAttributes: {
+      loading: "lazy",
+      decoding: "async",
+      sizes: "auto",
+    },
+
+    // Add these settings
+    urlPath: "/assets/images/", // URL prefix for transformed images
+    outputDir: "./public/assets/images/", // Physical output directory
   });
 
   return {
