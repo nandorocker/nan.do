@@ -6,14 +6,15 @@ class: "home"
 <section id="hero" class="hero margins-x-wide relative flex items-end" data-bg-class="bg-lavender"
   aria-labelledby="intro">
   <div class="lg:max-w-6xl xl:max-w-7xl text-left flex flex-col items-start max-sm:pt-40 lg:pt-20 pb-5 md:pb-0">
-    <h4 class="top-line delay-[600ms] duration-[600ms] taos:translate-y-[-4rem] taos:opacity-0 ease-in-out">👋 Hi, I'm
+    <h1 class="top-line delay-[600ms] duration-[600ms] taos:translate-y-[-4rem] taos:opacity-0 ease-in-out text-h4">👋
+      Hi, I'm
       nando
       rossi <br class="sm:hidden"><wbr>— available for
         freelance work</span>
-    </h4>
-    <h1 id="intro" class="duration-[1200ms] taos:opacity-0 ease-in-out">
-      I make soulful software <br class="sm:hidden"><wbr>that people love to use.
     </h1>
+    <h2 id="intro" class="duration-[1200ms] taos:opacity-0 ease-in-out text-h1">
+      I make soulful software <br class="sm:hidden"><wbr>that people love to use.
+    </h2>
     <span class="delay-[900ms] duration-[600ms] taos:opacity-0 ease-in-out">
       <p class="sm:p-bigger">
         I bring two decades of design expertise creating software that
@@ -36,22 +37,20 @@ class: "home"
   data-bg-class="bg-cherry" aria-labelledby="about-label">
 
   <header class="sm:col-span-2 lg:col-span-1">
-    <h3 id="about-label"
-      class="m-0 max-sm:text-3xl max-sm:mb-6 delay-[300ms] duration-[1200ms] taos:opacity-20 ease-out"
+    <h2 id="about-label"
+      class="text-h3 m-0 max-sm:text-3xl max-sm:mb-6 delay-[300ms] duration-[1200ms] taos:opacity-20 ease-out"
       taos-data-offset="100">
       Turning ideas into beloved
       products through design, process, and
       creativity.
-    </h3>
+    </h2>
   </header>
 
   <picture
     class="window-md pic-tall sm:col-start-1 row-start-3 sm:row-start-2 md:delay-[300ms] duration-[600ms] taos:translate-x-[-200px] taos:opacity-20 ease-out"
     taos-data-offset="100">
     <source media="(max-width:640px)" srcset="assets/images/nando-stairs-crop1.jpg">
-    <img src="assets/images/nando-stairs.jpg"
-      alt="Nando sits on wooden steps, wearing a suit. He is smiling, looking slightly off-camera, and appears relaxed."
-      class="w-full h-auto">
+    <img src="assets/images/nando-stairs.jpg" alt="Profile photo of Nando Rossi" class="w-full h-auto">
   </picture>
 
   <div
@@ -82,9 +81,9 @@ class: "home"
 <section id="work" class="contain-wide margins-x-wide margins-y max-sm:px-0" data-bg-class="bg-lime"
   aria-labelledby="works-label">
   <header>
-    <h1 class="mx-5 delay-[300ms] duration-[1200ms] taos:opacity-20 ease-out" id="works-label">
+    <h2 class="mx-5 delay-[300ms] duration-[1200ms] taos:opacity-20 ease-out text-h2" id="works-label">
       Selected Works
-    </h1>
+    </h2>
   </header>
   <!-- Grid for work cards -->
   <div
@@ -97,8 +96,8 @@ class: "home"
       <div class="card-contents">
         <header>
           <span class="category">App Design</span>
-          <h5>Redefining the digital viewing landscape of the Berlin Philharmonic.
-          </h5>
+          <h2 class="text-h5">Redefining the digital viewing landscape of the Berlin Philharmonic.
+          </h2>
         </header>
         <p>A pioneer in its category, the Berlin Philharmonic's subscription service is available on most platforms.
           In a highly fragmented environment, I helped solve the difficult problems of user experience consistency,
@@ -113,8 +112,8 @@ class: "home"
       <div class="card-contents">
         <header>
           <span class="category">App Testing Platform</span>
-          <h5>TestFlight: Solving Real Problems, with a whole lot of Character.
-          </h5>
+          <h2 class="text-h5">TestFlight: Solving Real Problems, with a whole lot of Character.
+          </h2>
         </header>
         <p>Now an Apple standard, TestFlight began with a small team aiming to simplify app testing and build something
           developers would truly love. From the early hack to the industry favorite, I led the design that balanced
@@ -131,9 +130,9 @@ class: "home"
       <div class="card-contents">
         <header>
           <span class="category">Game Dev</span>
-          <h5>Disney SpellStruck, a twist on a classic—with your favorite
+          <h2 class="text-h5">Disney SpellStruck, a twist on a classic—with your favorite
             characters.
-          </h5>
+          </h2>
         </header>
         <p>Working with indie Artist Arcade and the lead developer
           of
@@ -172,7 +171,7 @@ class: "home"
 
     {# card #}
     <div class="testimonial-card">
-      <img src="{{ images }}/testim-burton.jpg" alt="Profile picture" />
+      <img src="{{ images }}/testim-burton.jpg" alt="Burton Rast profile picture" />
 
       <blockquote>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc massa turpis, gravida at posuere ac,
         porta a erat. Nunc tempor cursus odio. Praesent dignissim orci id cursus porta. Pellentesque in orci diam. Ut et
@@ -184,7 +183,7 @@ class: "home"
 
     {# card #}
     <div class="testimonial-card">
-      <img src="{{ images }}/testim-ferran.jpg" alt="Profile picture" />
+      <img src="{{ images }}/testim-ferran.jpg" alt="Ferran B. Castells Profile picture" />
 
       <blockquote>On SpellStruck,
         Nando created a library of systems and elements
@@ -193,13 +192,13 @@ class: "home"
         observations, raw
         reactions and constructive criticism to both our UI, UX and game design. He has helped me break through design
         roadblocks many times.</blockquote>
-      <cite><a href="https://ferran.games/" target="_blank"><strong>Ferran Castells</strong></a>, Senior Game
+      <cite><a href="https://ferran.games/" target="_blank"><strong>Ferran Bertomeu</strong></a>, Senior Game
         Dev<br>Artist Arcade, indie</cite>
     </div>
 
     {# card #}
     <div class="testimonial-card">
-      <img src="{{ images }}/testim-eduardo.jpg" alt="Profile picture" />
+      <img src="{{ images }}/testim-eduardo.jpg" alt="Eduardo O. Frau Profile picture" />
 
       <blockquote>Nando's UX expertise provided a much needed fresh look into our project's
         design sensibilities. He was able to quickly understand what our project goals were, identify key problems in
@@ -214,14 +213,15 @@ class: "home"
 <section id="services" class="contain-wide margins-x-wide margins-y services" data-bg-class="bg-amber-200"
   aria-labelledby="services-label">
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-5 md:gap-x-16">
-    <h1 class="duration-[1200ms] taos:opacity-20 ease-in-out" id="services-label" data-taos-offset="200">Services</h1>
+    <h2 class="duration-[1200ms] taos:opacity-20 ease-in-out text-h1" id="services-label" data-taos-offset="200">
+      Services</h2>
 
     <div
       class="lg:col-span-2 grid grid-cols-1 lg:grid-cols-2 gap-y-2 lg:gap-y-8 gap-x-8 duration-[1200ms] taos:opacity-20 ease-in-out"
       data-taos-offset="200">
       <article>
         <header>
-          <h5>Strategic Direction &amp; Consultation</h5>
+          <h3 class="text-h5">Strategic Direction &amp; Consultation</h3>
         </header>
         <p class="p-smaller">Drive growth with strategic guidance that aligns your project with the latest market
           trends.</p>
@@ -229,7 +229,7 @@ class: "home"
 
       <article>
         <header>
-          <h5>Product Design &amp; Prototyping</h5>
+          <h3 class="text-h5">Product Design &amp; Prototyping</h3>
         </header>
         <p class="p-smaller">From concept to launch, I bring your product to life with user-centered design and
           efficient
@@ -238,7 +238,7 @@ class: "home"
 
       <article>
         <header>
-          <h5>Workshops &amp; Training</h5>
+          <h3 class="text-h5">Workshops &amp; Training</h3>
         </header>
         <p class="p-smaller">Engage teams through workshops grounded in Design Thinking, Agile, and HCD principles for
           real
@@ -247,7 +247,7 @@ class: "home"
 
       <article>
         <header>
-          <h5>UX for Games &amp; Interactive Media</h5>
+          <h3 class="text-h5">UX for Games &amp; Interactive Media</h3>
         </header>
         <p class="p-smaller">Design immersive experiences with intuitive gameplay and user-centric interfaces to
           captivate
@@ -256,7 +256,7 @@ class: "home"
 
       <article>
         <header>
-          <h5>Innovation Sprints</h5>
+          <h3 class="text-h5">Innovation Sprints</h3>
         </header>
         <p class="p-smaller">Tackle complex challenges and innovate quickly with focused sprints that yield measurable
           progress.</p>
@@ -264,7 +264,7 @@ class: "home"
 
       <article>
         <header>
-          <h5>User Research &amp; Product Audits</h5>
+          <h3 class="text-h5">User Research &amp; Product Audits</h3>
         </header>
         <p class="p-smaller">Gain actionable insights with user research and detailed audits to improve usability and
           accessibility.</p>
