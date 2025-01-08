@@ -12,15 +12,7 @@ module.exports = function (eleventyConfig) {
       "!tailwind.css", // don't copy this file
     ],
   });
-  eleventyConfig.addPassthroughCopy(
-    "src/assets/images/work/digital-concert-hall/bg-orchestra.jpg"
-  );
-  eleventyConfig.addPassthroughCopy(
-    "src/assets/images/work/spellstruck/bg-spellstruck.png"
-  );
-  eleventyConfig.addPassthroughCopy(
-    "src/assets/images/work/testflight/bg-testflight.jpg"
-  );
+  eleventyConfig.addPassthroughCopy("src/assets/images/work/**/*");
   eleventyConfig.addPassthroughCopy("src/assets/fonts/*");
   eleventyConfig.addPassthroughCopy("src/favicon.png");
   eleventyConfig.addPassthroughCopy("src/assets/js/*");
