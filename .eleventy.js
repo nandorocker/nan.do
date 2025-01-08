@@ -31,7 +31,7 @@ module.exports = function (eleventyConfig) {
   });
 
   // Global Data
-  eleventyConfig.addGlobalData("images", "/assets/images/");
+  eleventyConfig.addGlobalData("images", "/assets/images");
   // Add a shortcode for the copyright year
   eleventyConfig.addShortcode("year", () => {
     const startYear = 2024; // Replace with the first year of your portfolio
