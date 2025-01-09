@@ -216,7 +216,7 @@
     box-shadow: 8px 8px 0 #fff6ee;
   }
 
-  .contact-button h5 {
+  .contact-button .text-h5 {
     @apply m-0 max-md:text-3xl;
   }
 
