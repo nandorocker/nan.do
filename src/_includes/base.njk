@@ -2,7 +2,7 @@
 <html class="scroll-smooth" lang="en" dir="ltr">
 
 <head>
-    {% include 'head.njk' %}
+    {% include 'components/head.njk' %}
 </head>
 
 <body class="{{ class }}">
@@ -10,18 +10,18 @@
         class=" bg-lavender transition-colors duration-700 fixed top left w-full h-full pointer-events-none z-[-1]"
         aria-hidden="true">
     </div>
-    {% include 'nav.njk' %}
-    {% include 'consent_banner.njk' %}
+    {% include 'components/nav.njk' %}
+    {% include 'components/consent_banner.njk' %}
 
     <main class="relative min-h-screen text-obsidian overflow-hidden" data-bg-scroll>
-        {% include 'scroll_to_top.njk' %}
+        {% include 'components/scroll_to_top.njk' %}
 
         {{ content | safe }}
 
     </main>
 
-    {% include 'footer.njk' %}
-    {% include 'scripts.njk' %}
+    {% include 'components/footer.njk' %}
+    {% include 'components/scripts.njk' %}
 </body>
 
 </html>

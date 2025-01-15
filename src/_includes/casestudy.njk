@@ -2,15 +2,15 @@
 <html class="scroll-smooth" lang="en" dir="ltr">
 
 <head>
-    {% include 'head.njk' %}
+    {% include 'components/head.njk' %}
 </head>
 
 <body class="internal case">
-    {% include 'nav.njk' %}
-    {% include 'consent_banner.njk' %}
+    {% include 'components/nav.njk' %}
+    {% include 'components/consent_banner.njk' %}
 
     <main class="text-obsidian bg-cream">
-        {% include 'scroll_to_top.njk' %}
+        {% include 'components/scroll_to_top.njk' %}
         {# Top Header #}
         <header class="case-header" style="--image-url: url('{{ images }}/work/{{ background }}')">
             <section class="margins-x-wide case-header-titlebox">
@@ -44,12 +44,12 @@
             </section>
             {{ content | safe }}
         </article>
-        {% include 'contact.njk' %}
+        {% include 'components/contact.njk' %}
 
     </main>
 
-    {% include 'footer.njk' %}
-    {% include 'scripts.njk' %}
+    {% include 'components/footer.njk' %}
+    {% include 'components/scripts.njk' %}
 </body>
 
 </html>
