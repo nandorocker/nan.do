@@ -88,11 +88,12 @@ const siteUrl = "https://nan.do";
     <script src="/assets/js/mobile_nav.js" type="text/javascript" defer></script>
     <script src="/assets/js/bg_scroll.js" type="text/javascript" defer></script>
     <script src="/assets/js/fslightbox.js" type="text/javascript" defer></script>
-    <script type="module" is:inline>
+    <script>
       import AOS from "aos";
 
       const migrateTaosToAos = () => {
-        document.querySelectorAll('[class*="taos:"]').forEach((el) => {
+        document.querySelectorAll('[class*="taos:"]').forEach((element) => {
+          const el = element as HTMLElement;
           if (el.dataset.taosMigrated) return;
 
           const classes = el.className.split(/\s+/);
