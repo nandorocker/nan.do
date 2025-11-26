@@ -91,57 +91,10 @@ const siteUrl = "https://nan.do";
     <script>
       import AOS from "aos";
 
-      const migrateTaosToAos = () => {
-        document.querySelectorAll('[class*="taos:"]').forEach((element) => {
-          const el = element as HTMLElement;
-          if (el.dataset.taosMigrated) return;
-
-          const classes = el.className.split(/\s+/);
-          let delay;
-          let duration;
-
-          const cleaned = classes.filter((cls) => {
-            if (cls.startsWith("delay-[")) {
-              const match = cls.match(/\[(\d+)ms\]/);
-              delay = match?.[1];
-            }
-
-            if (cls.startsWith("duration-[")) {
-              const match = cls.match(/\[(\d+)ms\]/);
-              duration = match?.[1];
-            }
-
-            return !cls.startsWith("taos:");
-          });
-
-          el.className = cleaned.join(" ").trim();
-
-          if (!el.dataset.aos) el.dataset.aos = "fade-up";
-          if (delay) el.dataset.aosDelay = delay;
-          if (duration) el.dataset.aosDuration = duration;
-
-          const offset = el.getAttribute("data-taos-offset") || el.getAttribute("taos-data-offset");
-          if (offset) el.dataset.aosOffset = offset;
-          el.removeAttribute("taos-data-offset");
-
-          el.dataset.taosMigrated = "true";
-        });
-      };
-
-      let aosReady = false;
-
-      const initAOS = () => {
-        if (aosReady) return;
-        aosReady = true;
-        migrateTaosToAos();
-        AOS.init({
-          once: true,
-          easing: "ease-out",
-        });
-      };
-
-      document.addEventListener("astro:page-load", initAOS);
-      document.addEventListener("DOMContentLoaded", initAOS);
+      AOS.init({
+        once: true,
+        easing: "ease-out",
+      });
     </script>
   </body>
 </html>
