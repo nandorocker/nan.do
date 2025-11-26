@@ -4,7 +4,10 @@ const emailAddress = `${emailUser}@${emailDomain}`;
 
 // Render email when DOM is loaded
 document.addEventListener("DOMContentLoaded", () => {
-  document.getElementById("email").textContent = emailAddress;
+  const emailElement = document.getElementById("email");
+  if (!emailElement) return;
+
+  emailElement.textContent = emailAddress;
 });
 
 function copyEmail() {
