@@ -39,3 +39,7 @@ This is an Astro-based personal portfolio website:
 - Leverage Astro's component props and slots pattern
 - Keep components focused and composable
 - Use Tailwind utility classes for styling
+
+## Output Guidelines
+
+**Do not create summary documents** unless explicitly requested. Provide all updates, changes, and summaries directly in chat responses only.
