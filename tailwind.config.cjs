@@ -1,12 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: {
-    relative: true,
-    transform: (content) => content.replace(/taos:/g, ""),
-    files: [
-      "./src/**/*.{html,md,11ty.js,liquid,njk,hbs,mustache,ejs,haml,pug}",
-    ],
-  },
+  content: ["./src/**/*.{astro,html,md,mdx,js,ts,jsx,tsx}"],
   theme: {
     fontFamily: {
       sans: ["Work Sans", "regular"],
@@ -162,12 +156,7 @@ module.exports = {
       },
     },
   },
-  plugins: [require("taos/plugin")],
-  safelist: [
-    "!duration-[0ms]",
-    "!delay-[0ms]",
-    'html.js :where([class*="taos:"]:not(.taos-init))',
-  ],
+  plugins: [],
 };
 
 // see https://tailwindcss.com/docs/configuration

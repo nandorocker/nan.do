@@ -1,6 +1,10 @@
 ---
-layout: "base.njk"
+layout: "../layouts/BaseLayout.astro"
+title: "Cookie Policy"
+pageClass: "internal"
+section: ""
 ---
+
 <section class="contain-narrow margins-x-narrow py-24 mb-16 bg-cream">
 
 # Cookie Policy

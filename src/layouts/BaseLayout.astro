@@ -1,0 +1,146 @@
+---
+import "../assets/css/tailwind.css";
+import "aos/dist/aos.css";
+
+import ConsentBanner from "../components/ConsentBanner.astro";
+import Footer from "../components/Footer.astro";
+import Nav from "../components/Nav.astro";
+import ScrollToTop from "../components/ScrollToTop.astro";
+
+const {
+  title = "nan.do rossi, freelance product designer",
+  description = "👋 Hi, I'm Nando Rossi: 20+ years of UX and product design expertise, creating functional, inspiring digital experiences. Freelance, based in Prague. Available for projects worldwide.",
+  pageClass = "",
+  section = "",
+  ogImage = "/assets/images/nando_rossi_og.jpg",
+} = Astro.props;
+
+const siteTitle = title ? `nan.do: ${title}` : "nan.do rossi, freelance product designer";
+const siteUrl = "https://nan.do";
+---
+
+<html class="scroll-smooth" lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{siteTitle}</title>
+    <meta name="description" content={description} />
+    <meta
+      name="keywords"
+      content="UX designer, product designer, mobile app design, web design, freelance designer, Prague, user-centered design, Tailwind CSS, front-end development, interactive media, digital strategy, game UX"
+    />
+    <meta name="author" content="Nando Rossi" />
+    <meta property="og:title" content="Freelance UX & Product Designer | Nando Rossi" />
+    <meta
+      property="og:description"
+      content="Transforming ideas into engaging, beloved products with 20 years of design experience for brands like Lego, Disney, and Walgreens. Based in Prague, available for freelance and consulting work."
+    />
+    <meta property="og:image" content={`${siteUrl}${ogImage}`} />
+    <meta property="og:url" content={siteUrl} />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="/favicon.png" sizes="32x32" type="image/x-icon" />
+    <script is:inline>
+      document.documentElement.classList.add("js");
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZW8YK10J0Q"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("consent", "default", {
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        ad_storage: "denied",
+        analytics_storage: "denied",
+        wait_for_update: 500,
+      });
+      gtag("js", new Date());
+      gtag("config", "G-ZW8YK10J0Q");
+    </script>
+  </head>
+
+  <body class={pageClass}>
+    <div
+      id="background"
+      class="bg-lavender transition-colors duration-700 fixed top-0 left-0 w-full h-full pointer-events-none z-[-1]"
+      aria-hidden="true"
+    ></div>
+    <Nav section={section} />
+    <ConsentBanner />
+
+    <main class="relative min-h-screen text-obsidian overflow-hidden" data-bg-scroll>
+      <ScrollToTop />
+      <slot />
+    </main>
+
+    <Footer />
+
+    <script src="/assets/js/cookie_consent.js" type="text/javascript" defer></script>
+    <script src="/assets/js/scroll_to_top.js" type="text/javascript" defer></script>
+    <script src="/assets/js/copy_email.js" type="text/javascript" defer></script>
+    <script src="/assets/js/mobile_nav.js" type="text/javascript" defer></script>
+    <script src="/assets/js/bg_scroll.js" type="text/javascript" defer></script>
+    <script src="/assets/js/fslightbox.js" type="text/javascript" defer></script>
+    <script type="module" is:inline>
+      import AOS from "aos";
+
+      const migrateTaosToAos = () => {
+        document.querySelectorAll('[class*="taos:"]').forEach((el) => {
+          if (el.dataset.taosMigrated) return;
+
+          const classes = el.className.split(/\s+/);
+          let delay;
+          let duration;
+
+          const cleaned = classes.filter((cls) => {
+            if (cls.startsWith("delay-[")) {
+              const match = cls.match(/\[(\d+)ms\]/);
+              delay = match?.[1];
+            }
+
+            if (cls.startsWith("duration-[")) {
+              const match = cls.match(/\[(\d+)ms\]/);
+              duration = match?.[1];
+            }
+
+            return !cls.startsWith("taos:");
+          });
+
+          el.className = cleaned.join(" ").trim();
+
+          if (!el.dataset.aos) el.dataset.aos = "fade-up";
+          if (delay) el.dataset.aosDelay = delay;
+          if (duration) el.dataset.aosDuration = duration;
+
+          const offset = el.getAttribute("data-taos-offset") || el.getAttribute("taos-data-offset");
+          if (offset) el.dataset.aosOffset = offset;
+          el.removeAttribute("taos-data-offset");
+
+          el.dataset.taosMigrated = "true";
+        });
+      };
+
+      let aosReady = false;
+
+      const initAOS = () => {
+        if (aosReady) return;
+        aosReady = true;
+        migrateTaosToAos();
+        AOS.init({
+          once: true,
+          easing: "ease-out",
+        });
+      };
+
+      document.addEventListener("astro:page-load", initAOS);
+      document.addEventListener("DOMContentLoaded", initAOS);
+    </script>
+  </body>
+</html>

@@ -1,6 +1,8 @@
 # General
 node_modules/
 public/
+.astro/
+dist/
 .DS_Store
 .AppleDouble
 .LSOverride

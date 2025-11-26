@@ -1,0 +1,225 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Contact from "../components/Contact.astro";
+
+const imagesBase = "/assets/images";
+---
+
+<BaseLayout
+  pageClass="home"
+  section="home"
+  ogImage={`${imagesBase}/nando_rossi_og.jpg`}
+  title="nando rossi, freelance product designer"
+>
+  <!-- Section: Intro -->
+  <section id="hero" class="hero margins-x-wide relative flex items-end" data-bg-class="bg-lavender" aria-labelledby="intro">
+    <div class="lg:max-w-6xl xl:max-w-7xl text-left flex flex-col items-start max-sm:pt-40 lg:pt-20 pb-5 md:pb-0">
+      <h1 class="top-line text-h4" data-aos="fade-up" data-aos-duration="600" data-aos-delay="600">
+        👋 Hi, I'm nando rossi <br class="sm:hidden"><wbr />— available for freelance work
+      </h1>
+      <h2 id="intro" class="text-h1" data-aos="fade-up" data-aos-duration="1200">
+        I make soulful software <br class="sm:hidden"><wbr />that people love to use.
+      </h2>
+      <div data-aos="fade-up" data-aos-duration="600" data-aos-delay="900">
+        <p class="sm:p-bigger">
+          I bring two decades of design expertise creating software that empowers—not controls—the human behind the screen. I
+          believe <em class="bg-lavender-200">thoughtful</em>, <em class="bg-lavender-200">ethical</em> and
+          <em class="bg-lavender-200">accessible</em> design leads to better business—not to mention a better world. If you’re
+          seeking a seasoned collaborator for <strong>design strategy</strong>, <strong>workshops</strong> or
+          <a href="https://adplist.org/mentors/nando-rossi" target="_blank" rel="noopener noreferrer"><strong>mentoring</strong></a>,
+          remote or on-site, let’s talk!
+        </p>
+        <a href="#contact" class="inline-block button button-large">Need a designer?</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: About -->
+  <section
+    id="about-me"
+    class="contain-wide margins-x-wide margins-y grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-12"
+    data-bg-class="bg-cherry"
+    aria-labelledby="about-label"
+  >
+    <header class="sm:col-span-2 lg:col-span-1" data-aos="fade-up" data-aos-duration="1200" data-aos-offset="100">
+      <h2 id="about-label" class="text-h3 m-0 max-sm:text-3xl max-sm:mb-6">
+        Turning ideas into beloved products through design, process, and creativity.
+      </h2>
+    </header>
+
+    <picture class="window-md pic-tall sm:col-start-1 row-start-3 sm:row-start-2" data-aos="fade-right" data-aos-duration="600" data-aos-offset="100">
+      <source media="(max-width:640px)" srcset={`${imagesBase}/nando-stairs-crop1.jpg`} />
+      <img src={`${imagesBase}/nando-stairs.jpg`} alt="Profile photo of Nando Rossi" class="w-full h-auto" />
+    </picture>
+
+    <div class="sm:col-span-2 sm:col-start-2 row-start-2 md:row-start-2 lg:row-start-1" data-aos="fade-up" data-aos-duration="1200" data-aos-offset="100">
+      <p class="p-bigger">
+        As a product designer with <strong>20 years of experience</strong>—15 of those as an independent,
+        <a href="https://www.oysterhr.com/glossary/remote-first-company" target="_blank">remote-first</a> professional— I've had
+        the opportunity to work with brands like <strong class="bg-cherry-300">Lego</strong>, <strong class="bg-cherry-300">Nissan</strong>,
+        <strong class="bg-cherry-300">Walgreens</strong>, and <strong class="bg-cherry-300">Mattel</strong>, and play key roles in
+        projects such as <strong class="bg-cherry-300">TestFlight</strong>, <strong class="bg-cherry-300">Berlin Philharmonic</strong>,
+        <strong class="bg-cherry-300">Disney SpellStruck</strong> and <strong class="bg-cherry-300">Klang Games</strong>.
+      </p>
+      <p class="p-bigger">
+        My passion for design and workflows go hand-in-hand. When <strong>workflows</strong> are thoughtfully designed to
+        <strong>foster creativity</strong>, open communication, and collaboration, you get surprising outcomes—and
+        <strong>products people love</strong>.
+      </p>
+      <p class="p-bigger">Let’s bring your vision to life and create the next success story together.</p>
+    </div>
+  </section>
+
+  <!-- Section: Work -->
+  <section id="work" class="contain-wide margins-x-wide margins-y max-sm:px-0" data-bg-class="bg-lime" aria-labelledby="works-label">
+    <header>
+      <h2 class="mx-5 text-h2" id="works-label" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1200">
+        Selected Works
+      </h2>
+    </header>
+    <div
+      class="max-sm:pb-3 max-sm:mt-12 max-sm:flex max-sm:overflow-x-scroll max-sm:space-x-8 grid grid-cols-12 gap-y-16 md:gap-y-24"
+      data-aos="fade-up"
+      data-aos-duration="1200"
+      data-aos-offset="200"
+    >
+      <article class="card window-md md:col-span-10 lg:col-span-10">
+        <div class="card-illustration">
+          <img src={`${imagesBase}/works-dch-thumb.png`} alt="Berlin Philharmonic app preview" class="h-full object-cover" />
+        </div>
+        <div class="card-contents">
+          <header>
+            <span class="category">App Design</span>
+            <h2 class="text-h5">Redefining the digital viewing landscape of the Berlin Philharmonic.</h2>
+          </header>
+          <p>
+            A pioneer in its category, the Berlin Philharmonic's subscription service is available on most platforms. In a highly
+            fragmented environment, I helped solve the difficult problems of user experience consistency, maintainability and team
+            inclusion leading to increased user satisfaction and subscriptions.
+          </p>
+          <a href="/work/digital-concert-hall" class="button button-small">Read The DCH Story</a>
+        </div>
+      </article>
+
+      <article class="card window-md md:col-start-3 lg:col-start-4 md:col-span-10 lg:col-span-10">
+        <div class="card-illustration">
+          <img src={`${imagesBase}/works-testflight-thumb.png`} alt="TestFlight branding" class="h-full object-cover" />
+        </div>
+        <div class="card-contents">
+          <header>
+            <span class="category">App Testing Platform</span>
+            <h2 class="text-h5">TestFlight: Solving Real Problems, with a whole lot of Character.</h2>
+          </header>
+          <p>
+            Now an Apple standard, TestFlight began with a small team aiming to simplify app testing and build something developers
+            would truly love. From the early hack to the industry favorite, I led the design that balanced robust functionality with a
+            playful, approachable brand, ultimately helping TestFlight grow into the essential tool it is today.
+          </p>
+          <a href="/work/testflight" class="button button-small">Read The TestFlight Story</a>
+        </div>
+      </article>
+
+      <article class="card window-md md:col-span-10 lg:col-span-10">
+        <div class="card-illustration">
+          <img src={`${imagesBase}/works-spellstruck-keyart.png`} alt="Disney SpellStruck key art" class="h-full object-cover" />
+        </div>
+        <div class="card-contents">
+          <header>
+            <span class="category">Game Dev</span>
+            <h2 class="text-h5">Disney SpellStruck, a twist on a classic—with your favorite characters.</h2>
+          </header>
+          <p>
+            Working with indie Artist Arcade and the lead developer of <strong>Words With Friends</strong>, I helped create and launch this
+            exciting word puzzle for Disney. I brought focus on usability and modularity, setting things up for continuous expansion
+            through the years.
+          </p>
+          <a href="/work/disney-spellstruck" class="button button-small disable">Read about SpellStruck</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Section: Services -->
+  <section id="services" class="contain-wide margins-x-wide margins-y services" data-bg-class="bg-amber-200" aria-labelledby="services-label">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-5 md:gap-x-16">
+      <h2 class="text-h1" id="services-label" data-aos="fade-up" data-aos-duration="1200" data-aos-offset="200">Services</h2>
+
+      <div class="lg:col-span-2 grid grid-cols-1 lg:grid-cols-2 gap-y-2 lg:gap-y-8 gap-x-8" data-aos="fade-up" data-aos-duration="1200" data-aos-offset="200">
+        <article>
+          <header>
+            <h3 class="text-h5">Product &amp; UX Design</h3>
+          </header>
+          <p class="p-smaller">
+            I bring years of experience in launching and refining digital products. Whether you're <strong>building something new</strong>
+            or need expert guidance to help an <strong>existing product reach its full potential</strong>, I focus on <strong>user experience</strong>,
+            <strong>business goals</strong>, and <strong>long-term success</strong>.
+          </p>
+        </article>
+
+        <article>
+          <header>
+            <h3 class="text-h5">Web Design &amp; Front-End Development</h3>
+          </header>
+          <p class="p-smaller">
+            I design and build <strong>functional</strong>, <strong>beautiful</strong>, and <strong>accessible</strong> websites—whether it’s a
+            <strong>landing page</strong>, <strong>e-commerce site</strong>, or a <strong>CMS-driven platform</strong>. Using both <strong>code and no-code tools</strong>,
+            I ensure fast, high-quality execution without compromising usability. Every site follows <strong>accessibility best practices</strong>, so more people
+            can use and engage with your product.
+          </p>
+        </article>
+
+        <article>
+          <header>
+            <h3 class="text-h5">AI Prototype Development</h3>
+          </header>
+          <p class="p-smaller">
+            AI tools like <strong>Cursor</strong>, <strong>Claude</strong>, and modern <strong>LLMs</strong> allow us to <strong>rapidly prototype real, working products</strong>—not just mockups.
+            In <strong>days (not months)</strong>, we can <strong>validate ideas</strong>, <strong>automate workflows</strong>, and get <strong>AI-driven solutions</strong> in front of real users for testing.
+            This is a <strong>game-changer</strong> for businesses looking to <strong>innovate quickly</strong>.
+          </p>
+        </article>
+
+        <article>
+          <header>
+            <h3 class="text-h5">Consulting &amp; Workshops</h3>
+          </header>
+          <p class="p-smaller">
+            I help teams <strong>sharpen their product thinking</strong> and <strong>UX strategy</strong> through hands-on consulting and interactive workshops, whether
+            <strong>remote</strong> or <strong>in-person</strong>.
+          </p>
+        </article>
+
+        <article>
+          <header>
+            <h3 class="text-h5">UX &amp; Accessibility Audits</h3>
+          </header>
+          <p class="p-smaller">
+            I assess <strong>usability</strong>, <strong>accessibility</strong>, and overall <strong>product effectiveness</strong>, ensuring your product meets
+            <strong>standards like WCAG</strong> and is <strong>usable by more people</strong>. Beyond audits, I help implement <strong>practical improvements</strong> that make a real impact.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: Brands -->
+  <section id="brands" class="contain-wide margins-x-wide margins-y" data-bg-class="bg-lavender" aria-labelledby="brands-label">
+    <h3 class="mb-6 md:mb-10 lg:text-4xl text-center" id="brands-label" data-aos="fade-up" data-aos-duration="1200" data-aos-offset="200">
+      Leading Brands <wbr />I've Worked With
+    </h3>
+    <article class="window-md bg-cream brands" data-aos="fade-up" data-aos-duration="400" data-aos-offset="200">
+      <img src={`${imagesBase}/logo-artist-arcade.png`} class="brands-logo" alt="Artist Arcade" />
+      <img src={`${imagesBase}/logo-disney.png`} class="brands-logo" alt="Disney" />
+      <img src={`${imagesBase}/logo-bph.png`} class="brands-logo" alt="Berliner Philharmonic" />
+      <img src={`${imagesBase}/logo-nissan.png`} class="brands-logo" alt="Nissan" />
+      <img src={`${imagesBase}/logo-discovery.png`} class="brands-logo" alt="Discovery Channel" />
+      <img src={`${imagesBase}/logo-evenly.png`} class="brands-logo" alt="Evenly" />
+      <img src={`${imagesBase}/logo-walgreens.png`} class="brands-logo" alt="Walgreens" />
+      <img src={`${imagesBase}/logo-beam-suntory.png`} class="brands-logo" alt="Beam Suntory" />
+      <img src={`${imagesBase}/logo-lego.png`} class="brands-logo" alt="Lego" />
+      <img src={`${imagesBase}/logo-mattel.png`} class="brands-logo" alt="Mattel" />
+    </article>
+  </section>
+
+  <Contact imagesBase={imagesBase} />
+</BaseLayout>
