@@ -1,0 +1,78 @@
+---
+export interface SocialLink {
+  name: string;
+  url: string;
+  icon: string;
+  title?: string;
+}
+
+export interface Props {
+  links?: SocialLink[];
+  imagesBase?: string;
+  iconSize?: "sm" | "md" | "lg";
+  layout?: "horizontal" | "vertical";
+  class?: string;
+}
+
+const {
+  links = [],
+  imagesBase = "/assets/images",
+  iconSize = "md",
+  layout = "horizontal",
+  class: className = "",
+} = Astro.props;
+
+const defaultLinks: SocialLink[] = [
+  {
+    name: "LinkedIn",
+    url: "https://www.linkedin.com/in/thenandorossi/",
+    icon: `${imagesBase}/social-linkedin.svg`,
+    title: "LinkedIn",
+  },
+  {
+    name: "Threads",
+    url: "https://www.threads.net/@nandorocker",
+    icon: `${imagesBase}/social-threads.svg`,
+    title: "Threads",
+  },
+  {
+    name: "Dribbble",
+    url: "https://dribbble.com/thenandorossi",
+    icon: `${imagesBase}/social-dribbble.svg`,
+    title: "Dribbble",
+  },
+  {
+    name: "ADPList",
+    url: "https://adplist.org/mentors/nando-rossi",
+    icon: `${imagesBase}/social-adplist.png`,
+    title: "Get Mentored at ADPList",
+  },
+];
+
+const socialLinks = links.length > 0 ? links : defaultLinks;
+
+const iconSizes = {
+  sm: "w-8",
+  md: "w-12",
+  lg: "w-16",
+};
+
+const layoutClasses = {
+  horizontal: "flex flex-row gap-8",
+  vertical: "flex flex-col gap-4",
+};
+
+const classes = [layoutClasses[layout], className].filter(Boolean).join(" ");
+---
+
+<ul class={classes}>
+  {
+    socialLinks.map((link) => (
+      <li>
+        <a href={link.url} target="_blank" rel="noopener noreferrer" title={link.title || link.name}>
+          <img src={link.icon} class={iconSizes[iconSize]} alt={link.name} />
+        </a>
+      </li>
+    ))
+  }
+</ul>

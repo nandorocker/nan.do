@@ -1,6 +1,9 @@
 ---
 import { Image } from "astro:assets";
 import CaseStudyLayout from "../../layouts/CaseStudyLayout.astro";
+import Section from "../../components/Section.astro";
+import Heading from "../../components/Heading.astro";
+import Figure from "../../components/Figure.astro";
 
 const images = "/assets/images";
 const deliverables = ["Multiplatform UX/UI Design", "User Research", "Design System", "Email Design"];
@@ -16,8 +19,8 @@ const overview =
   background="digital-concert-hall/bg-orchestra.jpg"
   imagesBase={images}
 >
-  <section class="contain-narrow margins-x-wide">
-    <h3>Background</h3>
+  <Section container="narrow" marginX="wide" marginY={false}>
+    <Heading level={3}>Background</Heading>
     <p>
       As a streaming service with original, high-quality content and a passionate following around the world, it's no wonder
       the Digital Concert Hall has been a hit from day one. But the device landscape has shifted several times since 2008, and
@@ -25,7 +28,7 @@ const overview =
       recreated for each new client, with different user flows, creating a dissonant experience for users—and a difficult task
       for the BPH team.
     </p>
-    <h3>The Challenges</h3>
+    <Heading level={3}>The Challenges</Heading>
     <ul>
       <li>
         Meet the diverse and constantly evolving requirements of each platform, while maintaining a consistent feel and
@@ -38,18 +41,29 @@ const overview =
       </li>
       <li>Prioritize accessibility and inclusion</li>
     </ul>
-  </section>
+  </Section>
 
-  <section class="contain-wide margins-x-narrow my-16 md:my-24 flex flex-col space-y-8 sm:space-y-16 xl:space-y-24">
-    <a data-fslightbox href={`${images}/work/digital-concert-hall/apple-tv-scene.png`}>
-      <Image src={`${images}/work/digital-concert-hall/apple-tv-scene.png`} alt="" class="sm:w-9/12 rounded-md shadow-lg-flat-r" width="1200" height="800" />
-    </a>
-    <div class="sm:w-9/12 rounded-md shadow-lg-flat-r self-end">
-      <a data-fslightbox href={`${images}/work/digital-concert-hall/apple-tv-app.png`}>
-        <Image src={`${images}/work/digital-concert-hall/apple-tv-app.png`} alt="" width="1200" height="800" />
-      </a>
-    </div>
-  </section>
+  <Section container="wide" marginX="narrow" class="my-16 md:my-24 flex flex-col space-y-8 sm:space-y-16 xl:space-y-24" marginY={false}>
+    <Figure
+      src={`${images}/work/digital-concert-hall/apple-tv-scene.png`}
+      alt=""
+      class="sm:w-9/12"
+      imageClass="rounded-md shadow-lg-flat-r"
+      lightbox={true}
+      width={1200}
+      height={800}
+    />
+    <Figure
+      src={`${images}/work/digital-concert-hall/apple-tv-app.png`}
+      alt=""
+      class="sm:w-9/12 self-end"
+      layout="window-md"
+      imageClass="shadow-lg-flat-r"
+      lightbox={true}
+      width={1200}
+      height={800}
+    />
+  </Section>
 
   <section class="contain-narrow margins-x-wide">
     <h3>Our process</h3>

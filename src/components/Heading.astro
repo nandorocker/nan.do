@@ -1,0 +1,50 @@
+---
+export interface Props {
+  level: 1 | 2 | 3 | 4 | 5 | 6;
+  text?: string;
+  id?: string;
+  class?: string;
+  style?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+  aos?: boolean;
+  aosEffect?: string;
+  aosDuration?: number;
+  aosDelay?: number;
+  aosOffset?: number;
+  aosEasing?: string;
+  dataHeading?: string;
+}
+
+const {
+  level,
+  text,
+  id,
+  class: className = "",
+  style,
+  aos = false,
+  aosEffect = "fade",
+  aosDuration = 1200,
+  aosDelay = 300,
+  aosOffset = 100,
+  aosEasing = "ease-out",
+  dataHeading,
+} = Astro.props;
+
+const Element = `h${level}` as any;
+const styleClass = style ? `text-${style}` : `text-h${level}`;
+
+const classes = [styleClass, className].filter(Boolean).join(" ");
+
+const aosAttrs = aos
+  ? {
+      "data-aos": aosEffect,
+      "data-aos-duration": aosDuration.toString(),
+      "data-aos-delay": aosDelay.toString(),
+      "data-aos-offset": aosOffset.toString(),
+      "data-aos-easing": aosEasing,
+    }
+  : {};
+---
+
+<Element id={id} class={classes} data-heading={dataHeading} {...aosAttrs}>
+  {text || <slot />}
+</Element>

@@ -1,0 +1,55 @@
+---
+import { Image } from "astro:assets";
+
+export interface Props {
+  title: string;
+  category: string;
+  description: string;
+  imageSrc: string;
+  imageAlt: string;
+  linkUrl: string;
+  linkText?: string;
+  linkDisabled?: boolean;
+  imageWidth?: number;
+  imageHeight?: number;
+}
+
+const {
+  title,
+  category,
+  description,
+  imageSrc,
+  imageAlt,
+  linkUrl,
+  linkText = "Read The Story",
+  linkDisabled = false,
+  imageWidth = 800,
+  imageHeight = 600,
+} = Astro.props;
+---
+
+<article class="flex flex-col">
+  <Image
+    src={imageSrc}
+    alt={imageAlt}
+    class="w-full h-52 sm:h-40 object-cover rounded-lg shadow-obsidian shadow-2xl-flat-r"
+    width={imageWidth}
+    height={imageHeight}
+  />
+  <header class="mt-8">
+    <span class="text-sm uppercase font-bold">{category}</span>
+    <h3 class="text-h5 mt-2">{title}</h3>
+  </header>
+  <p class="mt-4 flex-grow">
+    {description}
+  </p>
+  <a
+    href={linkUrl}
+    class:list={[
+      "text-2xl underline decoration-2 hover:decoration-lavender transition-colors duration-300 mt-4 inline-block",
+      { disable: linkDisabled },
+    ]}
+  >
+    {linkText}
+  </a>
+</article>

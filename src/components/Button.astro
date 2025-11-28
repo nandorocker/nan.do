@@ -1,0 +1,60 @@
+---
+export interface Props {
+  href?: string;
+  variant?: "primary" | "secondary" | "outline" | "link" | "contact";
+  size?: "sm" | "md" | "lg";
+  class?: string;
+  ariaLabel?: string;
+  onclick?: string;
+  type?: "button" | "submit" | "reset";
+  fullWidth?: boolean;
+}
+
+const {
+  href,
+  variant = "primary",
+  size = "md",
+  class: className = "",
+  ariaLabel,
+  onclick,
+  type = "button",
+  fullWidth = false,
+} = Astro.props;
+
+const Element = href ? "a" : "button";
+
+const variantClasses = {
+  primary: "button",
+  secondary: "button button-secondary",
+  outline:
+    "border-2 py-1 px-3 lg:px-4 rounded-md border-obsidian shadow-sm-flat-r transition-colors hover:bg-lavender-200 hover:!text-obsidian",
+  link: "text-2xl underline decoration-2 hover:decoration-lavender transition-colors duration-300",
+  contact: "contact-button flex relative",
+};
+
+const sizeClasses = {
+  sm: "button-small",
+  md: "",
+  lg: "button-large",
+};
+
+const classes = [
+  variantClasses[variant],
+  variant === "primary" || variant === "secondary" ? sizeClasses[size] : "",
+  fullWidth ? "w-full" : "",
+  className,
+]
+  .filter(Boolean)
+  .join(" ");
+
+const elementProps = href
+  ? { href }
+  : {
+      type,
+      onclick,
+    };
+---
+
+<Element class={classes} aria-label={ariaLabel} {...elementProps}>
+  <slot />
+</Element>

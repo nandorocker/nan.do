@@ -1,0 +1,60 @@
+---
+export interface Props {
+  id?: string;
+  bgClass?: string;
+  ariaLabel?: string;
+  ariaLabelledBy?: string;
+  class?: string;
+  container?: "wide" | "medium" | "narrow" | "none";
+  marginX?: "wide" | "medium" | "narrow" | "none";
+  marginY?: boolean;
+  element?: "section" | "article" | "div";
+}
+
+const {
+  id,
+  bgClass,
+  ariaLabel,
+  ariaLabelledBy,
+  class: className = "",
+  container = "wide",
+  marginX = "wide",
+  marginY = false,
+  element = "section",
+} = Astro.props;
+
+const Element = element;
+
+const containerClasses = {
+  wide: "contain-wide",
+  medium: "contain-medium",
+  narrow: "contain-narrow",
+  none: "",
+};
+
+const marginXClasses = {
+  wide: "margins-x-wide",
+  medium: "margins-x-medium",
+  narrow: "margins-x-narrow",
+  none: "",
+};
+
+const classes = [
+  containerClasses[container],
+  marginXClasses[marginX],
+  marginY ? "margins-y" : "",
+  className,
+]
+  .filter(Boolean)
+  .join(" ");
+---
+
+<Element
+  id={id}
+  class={classes}
+  data-bg-class={bgClass}
+  aria-label={ariaLabel}
+  aria-labelledby={ariaLabelledBy}
+>
+  <slot />
+</Element>

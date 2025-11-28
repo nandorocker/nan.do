@@ -1,4 +1,6 @@
 ---
+import SocialLinks from "./SocialLinks.astro";
+
 const { imagesBase = "/assets/images" } = Astro.props;
 ---
 
@@ -43,28 +45,7 @@ const { imagesBase = "/assets/images" } = Astro.props;
         </span>
       </button>
 
-      <ul class="flex flex-row items-start gap-8 max-sm:mt-8 contact-social">
-        <li>
-          <a href="https://www.linkedin.com/in/thenandorossi/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
-            <img src={`${imagesBase}/social-linkedin.svg`} class="w-12" alt="LinkedIn" />
-          </a>
-        </li>
-        <li>
-          <a href="https://www.threads.net/@nandorocker" target="_blank" rel="noopener noreferrer" title="Threads">
-            <img src={`${imagesBase}/social-threads.svg`} class="w-12" alt="Threads" />
-          </a>
-        </li>
-        <li>
-          <a href="https://dribbble.com/thenandorossi" target="_blank" rel="noopener noreferrer" title="Dribbble">
-            <img src={`${imagesBase}/social-dribbble.svg`} class="w-12" alt="Dribbble" />
-          </a>
-        </li>
-        <li>
-          <a href="https://adplist.org/mentors/nando-rossi" target="_blank" rel="noopener noreferrer" title="Get Mentored at ADPList">
-            <img src={`${imagesBase}/social-adplist.png`} class="w-12" alt="ADPList" />
-          </a>
-        </li>
-      </ul>
+      <SocialLinks imagesBase={imagesBase} class="items-start max-sm:mt-8 contact-social" />
     </div>
   </div>
 </section>

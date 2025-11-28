@@ -2,6 +2,10 @@
 import { Image } from "astro:assets";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Contact from "../components/Contact.astro";
+import Section from "../components/Section.astro";
+import WorkCard from "../components/WorkCard.astro";
+import Heading from "../components/Heading.astro";
+import Button from "../components/Button.astro";
 
 const imagesBase = "/assets/images";
 ---
@@ -15,12 +19,21 @@ const imagesBase = "/assets/images";
   <!-- Section: Intro -->
   <section id="hero" class="hero margins-x-wide relative flex items-end" data-bg-class="bg-lavender" aria-labelledby="intro">
     <div class="lg:max-w-6xl xl:max-w-7xl text-left flex flex-col items-start max-sm:pt-40 lg:pt-20 pb-5 md:pb-0">
-      <h1 class="top-line text-h4" data-aos="fade-down" data-aos-duration="600" data-aos-delay="600" data-aos-easing="ease-in-out">
+      <Heading
+        level={1}
+        class="top-line"
+        style="h4"
+        aos={true}
+        aosEffect="fade-down"
+        aosDuration={600}
+        aosDelay={600}
+        aosEasing="ease-in-out"
+      >
         👋 Hi, I'm nando rossi <br class="sm:hidden"><wbr />— available for freelance work
-      </h1>
-      <h2 id="intro" class="text-h1" data-aos="fade" data-aos-duration="1200" data-aos-easing="ease-in-out">
+      </Heading>
+      <Heading level={2} id="intro" aos={true} aosDuration={1200} aosDelay={0} aosEasing="ease-in-out">
         I make soulful software <br class="sm:hidden"><wbr />that people love to use.
-      </h2>
+      </Heading>
       <div data-aos="fade" data-aos-duration="600" data-aos-delay="900" data-aos-easing="ease-in-out">
         <p class="sm:p-bigger">
           I bring two decades of design expertise creating software that empowers—not controls—the human behind the screen. I
@@ -30,22 +43,23 @@ const imagesBase = "/assets/images";
           <a href="https://adplist.org/mentors/nando-rossi" target="_blank" rel="noopener noreferrer"><strong>mentoring</strong></a>,
           remote or on-site, let’s talk!
         </p>
-        <a href="#contact" class="inline-block button button-large">Need a designer?</a>
+        <Button href="#contact" size="lg" class="inline-block">Need a designer?</Button>
       </div>
     </div>
   </section>
 
   <!-- Section: About -->
-  <section
+  <Section
     id="about-me"
-    class="contain-wide margins-x-wide margins-y grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-12"
-    data-bg-class="bg-cherry"
-    aria-labelledby="about-label"
+    class="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-12"
+    bgClass="bg-cherry"
+    ariaLabelledBy="about-label"
+    marginY={true}
   >
     <header class="sm:col-span-2 lg:col-span-1" data-aos="fade" data-aos-duration="1200" data-aos-delay="300" data-aos-offset="100" data-aos-easing="ease-out">
-      <h2 id="about-label" class="text-h3 m-0 max-sm:text-3xl max-sm:mb-6">
+      <Heading level={2} id="about-label" style="h3" class="m-0 max-sm:text-3xl max-sm:mb-6">
         Turning ideas into beloved products through design, process, and creativity.
-      </h2>
+      </Heading>
     </header>
 
     <picture class="window-md pic-tall sm:col-start-1 row-start-3 sm:row-start-2" data-aos="fade-right" data-aos-duration="600" data-aos-delay="300" data-aos-offset="100" data-aos-easing="ease-out">
@@ -68,67 +82,53 @@ const imagesBase = "/assets/images";
       </p>
       <p class="p-bigger">Let’s bring your vision to life and create the next success story together.</p>
     </div>
-  </section>
+  </Section>
 
   <!-- Section: Work -->
-  <section id="work" class="contain-wide margins-x-wide margins-y" data-bg-class="bg-lime" aria-labelledby="works-label">
+  <Section id="work" bgClass="bg-lime" ariaLabelledBy="works-label" marginY={true}>
     <header>
-      <h2 class="text-h2" id="works-label" data-aos="fade" data-aos-duration="1200" data-aos-delay="300" data-aos-easing="ease-out">
+      <Heading level={2} id="works-label" aos={true} aosDuration={1200}>
         Selected Works
-      </h2>
+      </Heading>
     </header>
     <div
       class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12"
       data-aos="fade" data-aos-duration="1200" data-aos-delay="300" data-aos-offset="200" data-aos-easing="ease-in-out"
     >
-      <article class="flex flex-col">
-        <Image src={`${imagesBase}/works-dch-thumb.png`} alt="Berlin Philharmonic app preview" class="w-full h-52 sm:h-40 object-cover rounded-lg shadow-obsidian shadow-2xl-flat-r" width="800" height="600" />
-        <header class="mt-8">
-          <span class="text-sm uppercase font-bold">App Design</span>
-          <h3 class="text-h5 mt-2">Redefining the digital viewing landscape of the Berlin Philharmonic.</h3>
-        </header>
-        <p class="mt-4 flex-grow">
-          A pioneer in its category, the Berlin Philharmonic's subscription service is available on most platforms. In a highly
-          fragmented environment, I helped solve the difficult problems of user experience consistency, maintainability and team
-          inclusion leading to increased user satisfaction and subscriptions.
-        </p>
-        <a href="/work/digital-concert-hall" class="text-2xl underline decoration-2 hover:decoration-lavender transition-colors duration-300 mt-4 inline-block">Read The Story</a>
-      </article>
+      <WorkCard
+        title="Redefining the digital viewing landscape of the Berlin Philharmonic."
+        category="App Design"
+        description="A pioneer in its category, the Berlin Philharmonic's subscription service is available on most platforms. In a highly fragmented environment, I helped solve the difficult problems of user experience consistency, maintainability and team inclusion leading to increased user satisfaction and subscriptions."
+        imageSrc={`${imagesBase}/works-dch-thumb.png`}
+        imageAlt="Berlin Philharmonic app preview"
+        linkUrl="/work/digital-concert-hall"
+      />
 
-      <article class="flex flex-col">
-        <Image src={`${imagesBase}/works-testflight-thumb.png`} alt="TestFlight branding" class="w-full h-52 sm:h-40 object-cover rounded-lg shadow-obsidian shadow-2xl-flat-r" width="800" height="600" />
-        <header class="mt-8">
-          <span class="text-sm uppercase font-bold">App Testing Platform</span>
-          <h3 class="text-h5 mt-2">TestFlight: Solving Real Problems, with a whole lot of Character.</h3>
-        </header>
-        <p class="mt-4 flex-grow">
-          It all started with a small team aiming to simplify mobile testing and build something developers
-          would love. From POC to industry favorite, I led the design that balanced robust functionality with a
-          playful, approachable brand, which grew TestFlight into the essential tool it is today.
-        </p>
-        <a href="/work/testflight" class="text-2xl underline decoration-2 hover:decoration-lavender transition-colors duration-300 mt-4 inline-block">Read The Story</a>
-      </article>
+      <WorkCard
+        title="TestFlight: Solving Real Problems, with a whole lot of Character."
+        category="App Testing Platform"
+        description="It all started with a small team aiming to simplify mobile testing and build something developers would love. From POC to industry favorite, I led the design that balanced robust functionality with a playful, approachable brand, which grew TestFlight into the essential tool it is today."
+        imageSrc={`${imagesBase}/works-testflight-thumb.png`}
+        imageAlt="TestFlight branding"
+        linkUrl="/work/testflight"
+      />
 
-      <article class="flex flex-col">
-        <Image src={`${imagesBase}/works-spellstruck-keyart.png`} alt="Disney SpellStruck key art" class="w-full h-52 sm:h-40 object-cover rounded-lg shadow-obsidian shadow-2xl-flat-r" width="800" height="600" />
-        <header class="mt-8">
-          <span class="text-sm uppercase font-bold">Game Dev</span>
-          <h3 class="text-h5 mt-2">Disney SpellStruck, a twist on a classic—with your favorite characters.</h3>
-        </header>
-        <p class="mt-4 flex-grow">
-          Working with indie Artist Arcade and the lead developer of <strong>Words With Friends</strong>, I helped create and launch this
-          exciting word puzzle for Disney. I brought focus on usability and modularity, setting things up for continuous expansion
-          through the years.
-        </p>
-        <a href="/work/disney-spellstruck" class="text-2xl underline decoration-2 hover:decoration-lavender transition-colors duration-300 mt-4 inline-block disable">Read The Story</a>
-      </article>
+      <WorkCard
+        title="Disney SpellStruck, a twist on a classic—with your favorite characters."
+        category="Game Dev"
+        description="Working with indie Artist Arcade and the lead developer of Words With Friends, I helped create and launch this exciting word puzzle for Disney. I brought focus on usability and modularity, setting things up for continuous expansion through the years."
+        imageSrc={`${imagesBase}/works-spellstruck-keyart.png`}
+        imageAlt="Disney SpellStruck key art"
+        linkUrl="/work/disney-spellstruck"
+        linkDisabled={true}
+      />
     </div>
-  </section>
+  </Section>
 
   <!-- Section: Services -->
-  <section id="services" class="contain-wide margins-x-wide margins-y services" data-bg-class="bg-amber-200" aria-labelledby="services-label">
+  <Section id="services" class="services" bgClass="bg-amber-200" ariaLabelledBy="services-label" marginY={true}>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-5 md:gap-x-16">
-      <h2 class="text-h1" id="services-label" data-aos="fade" data-aos-duration="1200" data-aos-offset="200" data-aos-easing="ease-in-out">Services</h2>
+      <Heading level={2} id="services-label" aos={true} aosDuration={1200} aosOffset={200}>Services</Heading>
 
       <div class="lg:col-span-2 grid grid-cols-1 lg:grid-cols-2 gap-y-2 lg:gap-y-8 gap-x-8" data-aos="fade" data-aos-duration="1200" data-aos-offset="200" data-aos-easing="ease-in-out">
         <article>
@@ -222,13 +222,13 @@ const imagesBase = "/assets/images";
         </article>
       </div>
     </div>
-  </section>
+  </Section>
 
   <!-- Section: Brands -->
-  <section id="brands" class="contain-wide margins-x-wide margins-y" data-bg-class="bg-lavender" aria-labelledby="brands-label">
-    <h3 class="mb-6 md:mb-10 lg:text-4xl text-center" id="brands-label" data-aos="fade" data-aos-duration="1200" data-aos-offset="200" data-aos-easing="ease-in-out">
+  <Section id="brands" bgClass="bg-lavender" ariaLabelledBy="brands-label" marginY={true}>
+    <Heading level={3} id="brands-label" class="mb-6 md:mb-10 lg:text-4xl text-center" aos={true} aosDuration={1200} aosOffset={200}>
       Leading Brands <wbr />I've Worked With
-    </h3>
+    </Heading>
     <article class="window-md bg-cream brands" data-aos="fade" data-aos-duration="400" data-aos-offset="200" data-aos-easing="ease-out">
       <img src={`${imagesBase}/logo-artist-arcade.png`} class="brands-logo" data-aos="fade" data-aos-duration="400" data-aos-offset="200" data-aos-easing="ease-out" alt="Artist Arcade" />
       <img src={`${imagesBase}/logo-disney.png`} class="brands-logo" data-aos="fade" data-aos-duration="400" data-aos-delay="100" data-aos-offset="200" data-aos-easing="ease-out" alt="Disney" />
@@ -241,7 +241,7 @@ const imagesBase = "/assets/images";
       <img src={`${imagesBase}/logo-lego.png`} class="brands-logo" data-aos="fade" data-aos-duration="400" data-aos-delay="450" data-aos-offset="200" data-aos-easing="ease-out" alt="Lego" />
       <img src={`${imagesBase}/logo-mattel.png`} class="brands-logo" data-aos="fade" data-aos-duration="400" data-aos-delay="500" data-aos-offset="200" data-aos-easing="ease-out" alt="Mattel" />
     </article>
-  </section>
+  </Section>
 
   <Contact imagesBase={imagesBase} />
 </BaseLayout>

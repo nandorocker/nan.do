@@ -1,5 +1,7 @@
 ---
 import Contact from "../components/Contact.astro";
+import Section from "../components/Section.astro";
+import Heading from "../components/Heading.astro";
 import BaseLayout from "./BaseLayout.astro";
 
 const {
@@ -24,32 +26,36 @@ const backgroundUrl = background ? `${workImagesBase}/${background}` : `${images
 >
   <main class="text-obsidian bg-cream">
     <header class="case-header" style={`--image-url: url('${backgroundUrl}')`}>
-      <section class="margins-x-wide case-header-titlebox">
-        <div class="contain-medium">
-          <h6>Case Study</h6>
-          <h3>{title}</h3>
-        </div>
-      </section>
+      <Section class="case-header-titlebox" container="medium" marginX="wide" marginY={false}>
+        <Heading level={6}>Case Study</Heading>
+        <Heading level={3}>{title}</Heading>
+      </Section>
     </header>
 
     <article class="reading relative lg:-top-32 pb-12">
-      <section class="bg-cream case-summary contain-narrow margins-x-wide shadow-up-2xl">
+      <Section
+        element="section"
+        class="bg-cream case-summary shadow-up-2xl"
+        container="narrow"
+        marginX="wide"
+        marginY={false}
+      >
         <div>
-          <h6 class="mt-0">Client</h6>
+          <Heading level={6} class="mt-0">Client</Heading>
           <p>{client}</p>
 
-          <h6>Deliverables</h6>
+          <Heading level={6}>Deliverables</Heading>
           <ul>
-            {deliverables.map((item) => (
+            {deliverables.map((item: string) => (
               <li>{item}</li>
             ))}
           </ul>
         </div>
         <div>
-          <h6 class="mt-0">Overview</h6>
+          <Heading level={6} class="mt-0">Overview</Heading>
           <p>{overview}</p>
         </div>
-      </section>
+      </Section>
 
       <slot />
     </article>
