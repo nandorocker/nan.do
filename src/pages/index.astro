@@ -70,68 +70,56 @@ const imagesBase = "/assets/images";
   </section>
 
   <!-- Section: Work -->
-  <section id="work" class="contain-wide margins-x-wide margins-y max-sm:px-0" data-bg-class="bg-lime" aria-labelledby="works-label">
+  <section id="work" class="contain-wide margins-x-wide margins-y" data-bg-class="bg-lime" aria-labelledby="works-label">
     <header>
-      <h2 class="mx-5 text-h2" id="works-label" data-aos="fade" data-aos-duration="1200" data-aos-delay="300" data-aos-easing="ease-out">
+      <h2 class="text-h2" id="works-label" data-aos="fade" data-aos-duration="1200" data-aos-delay="300" data-aos-easing="ease-out">
         Selected Works
       </h2>
     </header>
     <div
-      class="max-sm:pb-3 max-sm:mt-12 max-sm:flex max-sm:overflow-x-scroll max-sm:space-x-8 grid grid-cols-12 gap-y-16 md:gap-y-24"
+      class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12"
       data-aos="fade" data-aos-duration="1200" data-aos-delay="300" data-aos-offset="200" data-aos-easing="ease-in-out"
     >
-      <article class="card window-md md:col-span-10 lg:col-span-10">
-        <div class="card-illustration">
-          <img src={`${imagesBase}/works-dch-thumb.png`} alt="Berlin Philharmonic app preview" class="h-full object-cover" />
-        </div>
-        <div class="card-contents">
-          <header>
-            <span class="category">App Design</span>
-            <h2 class="text-h5">Redefining the digital viewing landscape of the Berlin Philharmonic.</h2>
-          </header>
-          <p>
-            A pioneer in its category, the Berlin Philharmonic's subscription service is available on most platforms. In a highly
-            fragmented environment, I helped solve the difficult problems of user experience consistency, maintainability and team
-            inclusion leading to increased user satisfaction and subscriptions.
-          </p>
-          <a href="/work/digital-concert-hall" class="button button-small">Read The DCH Story</a>
-        </div>
+      <article>
+        <img src={`${imagesBase}/works-dch-thumb.png`} alt="Berlin Philharmonic app preview" class="w-full h-52 sm:h-40 object-cover rounded-lg shadow-obsidian shadow-2xl-flat-r" />
+        <header class="mt-4">
+          <span class="text-sm uppercase font-bold">App Design</span>
+          <h3 class="text-h5 mt-2">Redefining the digital viewing landscape of the Berlin Philharmonic.</h3>
+        </header>
+        <p class="mt-4">
+          A pioneer in its category, the Berlin Philharmonic's subscription service is available on most platforms. In a highly
+          fragmented environment, I helped solve the difficult problems of user experience consistency, maintainability and team
+          inclusion leading to increased user satisfaction and subscriptions.
+        </p>
+        <a href="/work/digital-concert-hall" class="inline-block button button-small mt-6">Read The DCH Story</a>
       </article>
 
-      <article class="card window-md md:col-start-3 lg:col-start-4 md:col-span-10 lg:col-span-10">
-        <div class="card-illustration">
-          <img src={`${imagesBase}/works-testflight-thumb.png`} alt="TestFlight branding" class="h-full object-cover" />
-        </div>
-        <div class="card-contents">
-          <header>
-            <span class="category">App Testing Platform</span>
-            <h2 class="text-h5">TestFlight: Solving Real Problems, with a whole lot of Character.</h2>
-          </header>
-          <p>
-            Now an Apple standard, TestFlight began with a small team aiming to simplify app testing and build something developers
-            would truly love. From the early hack to the industry favorite, I led the design that balanced robust functionality with a
-            playful, approachable brand, ultimately helping TestFlight grow into the essential tool it is today.
-          </p>
-          <a href="/work/testflight" class="button button-small">Read The TestFlight Story</a>
-        </div>
+      <article>
+        <img src={`${imagesBase}/works-testflight-thumb.png`} alt="TestFlight branding" class="w-full h-52 sm:h-40 object-cover rounded-lg shadow-obsidian shadow-2xl-flat-r" />
+        <header class="mt-4">
+          <span class="text-sm uppercase font-bold">App Testing Platform</span>
+          <h3 class="text-h5 mt-2">TestFlight: Solving Real Problems, with a whole lot of Character.</h3>
+        </header>
+        <p class="mt-4">
+          Now an Apple standard, TestFlight began with a small team aiming to simplify app testing and build something developers
+          would truly love. From the early hack to the industry favorite, I led the design that balanced robust functionality with a
+          playful, approachable brand, ultimately helping TestFlight grow into the essential tool it is today.
+        </p>
+        <a href="/work/testflight" class="inline-block button button-small mt-6">Read The TestFlight Story</a>
       </article>
 
-      <article class="card window-md md:col-span-10 lg:col-span-10">
-        <div class="card-illustration">
-          <img src={`${imagesBase}/works-spellstruck-keyart.png`} alt="Disney SpellStruck key art" class="h-full object-cover" />
-        </div>
-        <div class="card-contents">
-          <header>
-            <span class="category">Game Dev</span>
-            <h2 class="text-h5">Disney SpellStruck, a twist on a classic—with your favorite characters.</h2>
-          </header>
-          <p>
-            Working with indie Artist Arcade and the lead developer of <strong>Words With Friends</strong>, I helped create and launch this
-            exciting word puzzle for Disney. I brought focus on usability and modularity, setting things up for continuous expansion
-            through the years.
-          </p>
-          <a href="/work/disney-spellstruck" class="button button-small disable">Read about SpellStruck</a>
-        </div>
+      <article>
+        <img src={`${imagesBase}/works-spellstruck-keyart.png`} alt="Disney SpellStruck key art" class="w-full h-52 sm:h-40 object-cover rounded-lg shadow-obsidian shadow-2xl-flat-r" />
+        <header class="mt-4">
+          <span class="text-sm uppercase font-bold">Game Dev</span>
+          <h3 class="text-h5 mt-2">Disney SpellStruck, a twist on a classic—with your favorite characters.</h3>
+        </header>
+        <p class="mt-4">
+          Working with indie Artist Arcade and the lead developer of <strong>Words With Friends</strong>, I helped create and launch this
+          exciting word puzzle for Disney. I brought focus on usability and modularity, setting things up for continuous expansion
+          through the years.
+        </p>
+        <a href="/work/disney-spellstruck" class="inline-block button button-small disable mt-6">Read about SpellStruck</a>
       </article>
     </div>
   </section>
