@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import CaseStudyLayout from "../../layouts/CaseStudyLayout.astro";
 
 const images = "/assets/images";
@@ -81,15 +82,18 @@ const overview =
 
 <section class="contain-medium margins-x-medium illustration">
     <figure class="mx-auto w-full grid grid-cols-2 sm:grid-cols-[.7fr,1.3fr,2fr] gap-4 justify-items-center">
-        <img src={`${images}/work/spellstruck/device-01.png`}
+        <Image src={`${images}/work/spellstruck/device-01.png`}
             class="w-4/6 sm:w-full sm:place-self-center" data-aos="fade-up" data-aos-duration="300" data-aos-delay="250"
-            alt="iPhone displaying the game board, with disney characters and a blue superpower across the screen">
-        <img src={`${images}/work/spellstruck/device-03.png`}
+            alt="iPhone displaying the game board, with disney characters and a blue superpower across the screen"
+            width="400" height="800" />
+        <Image src={`${images}/work/spellstruck/device-03.png`}
             class="w-11/12 sm:w-full place-self-center sm:place-self-end" data-aos="fade-up" data-aos-duration="300" data-aos-delay="150"
-            alt="SpellStruck on an iPad, with a close-up of Stitch licking the screen (using a superpower)">
-        <img src={`${images}/work/spellstruck/device-02.png`}
+            alt="SpellStruck on an iPad, with a close-up of Stitch licking the screen (using a superpower)"
+            width="800" height="1000" />
+        <Image src={`${images}/work/spellstruck/device-02.png`}
             class="w-full col-span-2 sm:col-auto" data-aos="fade-up" data-aos-duration="300" data-aos-delay="300"
-            alt="An iMac displaying the in-game map of an island.">
+            alt="An iMac displaying the in-game map of an island."
+            width="1600" height="1000" />
         <figcaption class="col-span-2 sm:col-span-3"><span>The game had to work for a wide variety of devices and input
                 types.</span>
         </figcaption>
@@ -142,27 +146,27 @@ const overview =
     <figure
         class="mx-auto w-11/12 sm:w-full grid sm:grid-cols-[1.1fr,1.9fr] lg:grid-cols-[1.5fr,2.5fr,1fr] gap-16 max-sm:gap-y-8 sm:gap-x-8 justify-items-center">
         <div class="flex flex-col space-y-6 justify-self-end">
-            <img src={`${images}/work/spellstruck/figma-thumb-01.png`}
+            <Image src={`${images}/work/spellstruck/figma-thumb-01.png`}
                 class="w-2/5 sm:w-2/3 window-sm -rotate-3" data-aos="fade-up" data-aos-duration="300"
-                alt="A thumbnail for Figma organization.">
-            <img src={`${images}/work/spellstruck/figma-thumb-02.png`}
+                alt="A thumbnail for Figma organization." width="400" height="300" />
+            <Image src={`${images}/work/spellstruck/figma-thumb-02.png`}
                 class="w-2/5 sm:w-2/3 window-sm self-center" data-aos="fade-up" data-aos-duration="300" data-aos-delay="150"
-                alt="A thumbnail for Figma organization.">
-            <img src={`${images}/work/spellstruck/figma-thumb-03.png`}
+                alt="A thumbnail for Figma organization." width="400" height="300" />
+            <Image src={`${images}/work/spellstruck/figma-thumb-03.png`}
                 class="w-2/5 sm:w-2/3 window-sm self-end rotate-2" data-aos="fade-up" data-aos-duration="300" data-aos-delay="250"
-                alt="A thumbnail for Figma organization.">
+                alt="A thumbnail for Figma organization." width="400" height="300" />
         </div>
         <div class="flex flex-col space-y-8">
-            <img src={`${images}/work/spellstruck/tools-01.png`}
+            <Image src={`${images}/work/spellstruck/tools-01.png`}
                 class="w-10/12 sm:w-5/6 window-sm" data-aos="fade-up" data-aos-duration="300" data-aos-delay="350"
-                alt="A game type scale with fonts used in the project.">
-            <img src={`${images}/work/spellstruck/tools-03.png`}
+                alt="A game type scale with fonts used in the project." width="800" height="600" />
+            <Image src={`${images}/work/spellstruck/tools-03.png`}
                 class="w-10/12 sm:w-5/6 window-sm self-end" data-aos="fade-up" data-aos-duration="300" data-aos-delay="450"
-                alt="A figma screenshot with icons used in-game.">
+                alt="A figma screenshot with icons used in-game." width="800" height="600" />
         </div>
-        <img src={`${images}/work/spellstruck/tools-02.png`}
+        <Image src={`${images}/work/spellstruck/tools-02.png`}
             class="max-lg:hidden self-center window-sm w-1/2 lg:w-full" data-aos="fade-up" data-aos-duration="300" data-aos-delay="250"
-            alt="A screenshot of the Figma 'Pages' panel, displaying an organization system.">
+            alt="A screenshot of the Figma 'Pages' panel, displaying an organization system." width="400" height="800" />
     </figure>
 </section>
 
@@ -177,12 +181,12 @@ const overview =
 
 <section class="contain-medium margins-x-medium illustration">
     <figure class="grid sm:grid-cols-2 md:grid-cols-3 md:grid-rows-2 gap-x-6 gap-y-8 justify-items-center">
-        <img src={`${images}/work/spellstruck/process-01.png`}
+        <Image src={`${images}/work/spellstruck/process-01.png`}
             class="w-10/12 sm:w-full window-sm" data-aos="fade-up" data-aos-duration="300"
-            alt="A chart entitled 'UI Fidelity'">
-        <img src={`${images}/work/spellstruck/process-02.png`}
+            alt="A chart entitled 'UI Fidelity'" width="600" height="400" />
+        <Image src={`${images}/work/spellstruck/process-02.png`}
             class="w-10/12 sm:w-full sm:col-start-1 sm:row-start-2 md:col-start-auto md:row-start-auto window-sm" data-aos="fade-up" data-aos-duration="300" data-aos-delay="150"
-            alt="Chart entitled 'Module Status' and a table with different fidelity levels at different moments.">
+            alt="Chart entitled 'Module Status' and a table with different fidelity levels at different moments." width="600" height="400" />
         <div
             class="w-10/12 sm:w-full sm:row-span-2 window-sm" data-aos="fade-up" data-aos-duration="300" data-aos-delay="350">
             <video width="640" height="480" autoplay loop class="object-cover h-full"
@@ -193,8 +197,8 @@ const overview =
         </div>
         <div
             class="w-10/12 sm:w-full sm:col-span-2 window-sm" data-aos="fade-up" data-aos-duration="300" data-aos-delay="250">
-            <img src={`${images}/work/spellstruck/process-04.png`} class="object-cover h-full"
-                alt="A big flowchart showing a design team pipeline.">
+            <Image src={`${images}/work/spellstruck/process-04.png`} class="object-cover h-full"
+                alt="A big flowchart showing a design team pipeline." width="1200" height="600" />
         </div>
     </figure>
 </section>
@@ -216,15 +220,15 @@ const overview =
 </section>
 <section class="contain-medium margins-x-medium illustration">
     <figure class="mx-auto grid sm:grid-cols-[1.8fr,1.2fr,1fr] max-sm:gap-y-16 gap-x-16 justify-items-center">
-        <img src={`${images}/work/spellstruck/board-01.png`}
+        <Image src={`${images}/work/spellstruck/board-01.png`}
             class="w-10/12 sm:w-full" data-aos="fade-up" data-aos-duration="300"
-            alt="A display of around 4x6 tiles designed based on disney characters.">
-        <img src={`${images}/work/spellstruck/board-03.png`}
+            alt="A display of around 4x6 tiles designed based on disney characters." width="800" height="1000" />
+        <Image src={`${images}/work/spellstruck/board-03.png`}
             class="w-10/12 sm:w-full" data-aos="fade-up" data-aos-duration="300" data-aos-delay="150"
-            alt="The Scrabble-style game board with Mickey ears at the center.">
-        <img src={`${images}/work/spellstruck/board-02.png`}
+            alt="The Scrabble-style game board with Mickey ears at the center." width="600" height="600" />
+        <Image src={`${images}/work/spellstruck/board-02.png`}
             class="w-10/12 sm:w-full" data-aos="fade-up" data-aos-duration="300" data-aos-delay="250"
-            alt="The squares used in the game board, laid out on a grid.">
+            alt="The squares used in the game board, laid out on a grid." width="500" height="600" />
         <figcaption class="sm:col-span-3"><span>Tons of characters, tons of tiles. The "squares" and the final
                 board.</span>
         </figcaption>
@@ -266,8 +270,8 @@ const overview =
 
         <div
             class="w-3/4 sm:w-full sm:h-60 window-sm justify-self-end" data-aos="fade-up" data-aos-duration="300">
-            <img src={`${images}/work/spellstruck/ui-01.png`} class="object-cover md:h-full lg:w-full"
-                alt="Screenshot of an in-game popup with an illustration.">
+            <Image src={`${images}/work/spellstruck/ui-01.png`} class="object-cover md:h-full lg:w-full"
+                alt="Screenshot of an in-game popup with an illustration." width="600" height="400" />
         </div>
         <div
             class="w-10/12 sm:w-full sm:h-60 sm:row-span-2 window-sm" data-aos="fade-up" data-aos-duration="300" data-aos-delay="150">
@@ -279,8 +283,8 @@ const overview =
         </div>
         <div
             class="w-full sm:h-60 window-sm justify-self-end sm:max-md:col-span-2" data-aos="fade-up" data-aos-duration="300">
-            <img src={`${images}/work/spellstruck/ui-03.png`} class="object-cover sm:max-md:w-full sm:h-full"
-                alt="Line-up of Disney characters used in-game against a night sky.">
+            <Image src={`${images}/work/spellstruck/ui-03.png`} class="object-cover sm:max-md:w-full sm:h-full"
+                alt="Line-up of Disney characters used in-game against a night sky." width="1200" height="400" />
         </div>
 
         <figcaption class="sm:col-span-2 md:col-span-3"><span>Some assorted UI details, and a small prototype.</span>
@@ -309,8 +313,8 @@ const overview =
 
 <section class="contain-wide margins-x-wide illustration">
     <figure class="mx-auto w-full lg:w-2/3">
-        <img src={`${images}/work/spellstruck/map-process.png`} class="window-sm"
-            alt="Screenshot of Figma displaying some map designs, as well as some notes for development.">
+        <Image src={`${images}/work/spellstruck/map-process.png`} class="window-sm"
+            alt="Screenshot of Figma displaying some map designs, as well as some notes for development." width="1400" height="900" />
         <figcaption class=""><span>Map design process as well as handoff notes.</span>
         </figcaption>
     </figure>

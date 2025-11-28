@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Contact from "../components/Contact.astro";
 
@@ -48,7 +49,7 @@ const imagesBase = "/assets/images";
     </header>
 
     <picture class="window-md pic-tall sm:col-start-1 row-start-3 sm:row-start-2" data-aos="fade-right" data-aos-duration="600" data-aos-delay="300" data-aos-offset="100" data-aos-easing="ease-out">
-      <img src={`${imagesBase}/nando-stairs.jpg`} alt="Profile photo of Nando Rossi" class="w-full h-auto" />
+      <Image src={`${imagesBase}/nando-stairs.jpg`} alt="Profile photo of Nando Rossi" class="w-full h-auto" width="800" height="1200" />
     </picture>
 
     <div class="sm:col-span-2 sm:col-start-2 row-start-2 md:row-start-2 lg:row-start-1" data-aos="fade" data-aos-duration="1200" data-aos-delay="300" data-aos-offset="100" data-aos-easing="ease-in-out">
@@ -81,7 +82,7 @@ const imagesBase = "/assets/images";
       data-aos="fade" data-aos-duration="1200" data-aos-delay="300" data-aos-offset="200" data-aos-easing="ease-in-out"
     >
       <article class="flex flex-col">
-        <img src={`${imagesBase}/works-dch-thumb.png`} alt="Berlin Philharmonic app preview" class="w-full h-52 sm:h-40 object-cover rounded-lg shadow-obsidian shadow-2xl-flat-r" />
+        <Image src={`${imagesBase}/works-dch-thumb.png`} alt="Berlin Philharmonic app preview" class="w-full h-52 sm:h-40 object-cover rounded-lg shadow-obsidian shadow-2xl-flat-r" width="800" height="600" />
         <header class="mt-8">
           <span class="text-sm uppercase font-bold">App Design</span>
           <h3 class="text-h5 mt-2">Redefining the digital viewing landscape of the Berlin Philharmonic.</h3>
@@ -95,7 +96,7 @@ const imagesBase = "/assets/images";
       </article>
 
       <article class="flex flex-col">
-        <img src={`${imagesBase}/works-testflight-thumb.png`} alt="TestFlight branding" class="w-full h-52 sm:h-40 object-cover rounded-lg shadow-obsidian shadow-2xl-flat-r" />
+        <Image src={`${imagesBase}/works-testflight-thumb.png`} alt="TestFlight branding" class="w-full h-52 sm:h-40 object-cover rounded-lg shadow-obsidian shadow-2xl-flat-r" width="800" height="600" />
         <header class="mt-8">
           <span class="text-sm uppercase font-bold">App Testing Platform</span>
           <h3 class="text-h5 mt-2">TestFlight: Solving Real Problems, with a whole lot of Character.</h3>
@@ -109,7 +110,7 @@ const imagesBase = "/assets/images";
       </article>
 
       <article class="flex flex-col">
-        <img src={`${imagesBase}/works-spellstruck-keyart.png`} alt="Disney SpellStruck key art" class="w-full h-52 sm:h-40 object-cover rounded-lg shadow-obsidian shadow-2xl-flat-r" />
+        <Image src={`${imagesBase}/works-spellstruck-keyart.png`} alt="Disney SpellStruck key art" class="w-full h-52 sm:h-40 object-cover rounded-lg shadow-obsidian shadow-2xl-flat-r" width="800" height="600" />
         <header class="mt-8">
           <span class="text-sm uppercase font-bold">Game Dev</span>
           <h3 class="text-h5 mt-2">Disney SpellStruck, a twist on a classic—with your favorite characters.</h3>
