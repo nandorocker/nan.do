@@ -34,3 +34,11 @@ This is an Astro-based personal portfolio website with:
 - `/src/layouts/` - Layout templates
 - `/public/` - Static assets
 - `/src/assets/` - Processed assets
+- `/docs/` - Project documentation
+
+## Documentation Guidelines
+
+- All project documentation should be stored in the `/docs/` directory
+- Keep documentation minimal and focused on technical details that can't be easily inferred from code
+- Do not create summary documents or changelogs unless explicitly requested
+- Prefer inline code comments and clear component interfaces over external documentation

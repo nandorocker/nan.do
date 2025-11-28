@@ -32,6 +32,7 @@ This is an Astro-based personal portfolio website:
 - `/src/layouts/` - Layout templates (BaseLayout, CaseStudyLayout)
 - `/public/` - Static assets (images, JavaScript)
 - `/src/assets/` - Processed assets
+- `/docs/` - Project documentation
 
 ## Coding Conventions
 
@@ -40,6 +41,10 @@ This is an Astro-based personal portfolio website:
 - Keep components focused and composable
 - Use Tailwind utility classes for styling
 
-## Output Guidelines
+## Documentation & Output Guidelines
 
-**Do not create summary documents** unless explicitly requested. Provide all updates, changes, and summaries directly in chat responses only.
+- **Do not create summary documents** unless explicitly requested
+- All documentation must be stored in the `/docs/` directory
+- Keep documentation minimal and focused on technical details
+- Prefer clear code and component interfaces over external documentation
+- Provide all updates, changes, and summaries directly in chat responses only
