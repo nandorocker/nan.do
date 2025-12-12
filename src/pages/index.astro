@@ -62,8 +62,9 @@ const imagesBase = "/assets/images";
       </Heading>
     </header>
 
-    <picture class="window-md pic-tall sm:col-start-1 row-start-3 sm:row-start-2" data-aos="fade-right" data-aos-duration="600" data-aos-delay="300" data-aos-offset="100" data-aos-easing="ease-out">
-      <Image src={`${imagesBase}/nando-stairs.jpg`} alt="Profile photo of Nando Rossi" class="w-full h-auto" width="800" height="1200" />
+    <picture class="window-md pic-tall-mobile sm:pic-tall sm:col-start-1 row-start-3 sm:row-start-2" data-aos="fade-right" data-aos-duration="600" data-aos-delay="300" data-aos-offset="100" data-aos-easing="ease-out">
+      <source media="(min-width: 640px)" srcset={`${imagesBase}/nando-stairs.jpg`} />
+      <Image src={`${imagesBase}/nando-stairs-crop1.jpg`} alt="Profile photo of Nando Rossi" class="w-full h-auto" width="800" height="1200" />
     </picture>
 
     <div class="sm:col-span-2 sm:col-start-2 row-start-2 md:row-start-2 lg:row-start-1" data-aos="fade" data-aos-duration="1200" data-aos-delay="300" data-aos-offset="100" data-aos-easing="ease-in-out">
@@ -92,7 +93,7 @@ const imagesBase = "/assets/images";
       </Heading>
     </header>
     <div
-      class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12"
+      class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 md:gap-12"
       data-aos="fade" data-aos-duration="1200" data-aos-delay="300" data-aos-offset="200" data-aos-easing="ease-in-out"
     >
       <WorkCard
