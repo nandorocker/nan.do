@@ -17,6 +17,7 @@ const {
 
 const siteTitle = title ? `nan.do: ${title}` : "nan.do rossi, freelance product designer";
 const siteUrl = "https://nan.do";
+const canonicalURL = new URL(Astro.url.pathname, siteUrl).href;
 ---
 
 <html class="scroll-smooth" lang="en" dir="ltr">
@@ -30,13 +31,14 @@ const siteUrl = "https://nan.do";
       content="UX designer, product designer, mobile app design, web design, freelance designer, Prague, user-centered design, Tailwind CSS, front-end development, interactive media, digital strategy, game UX"
     />
     <meta name="author" content="Nando Rossi" />
+    <link rel="canonical" href={canonicalURL} />
     <meta property="og:title" content="Freelance UX & Product Designer | Nando Rossi" />
     <meta
       property="og:description"
       content="Transforming ideas into engaging, beloved products with 20 years of design experience for brands like Lego, Disney, and Walgreens. Based in Prague, available for freelance and consulting work."
     />
     <meta property="og:image" content={`${siteUrl}${ogImage}`} />
-    <meta property="og:url" content={siteUrl} />
+    <meta property="og:url" content={canonicalURL} />
     <meta property="og:type" content="website" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

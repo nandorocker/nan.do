@@ -1,5 +1,6 @@
 {
   "buildCommand": "bun run build",
   "outputDirectory": "dist",
-  "devCommand": "bun run dev"
+  "devCommand": "bun run dev",
+  "trailingSlash": false
 }
